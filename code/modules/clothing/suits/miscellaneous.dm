@@ -304,3 +304,9 @@ Celebrity
 	desc = "Invisible!"
 	icon_state = "Skit_suit"
 	item_state = "Skit_suit"
+
+/obj/item/clothing/suit/spsykercoat
+	name = "Sanctioned Coat"
+	desc = "A long coat worn by the Sanctioned Psyker on the outpost. A badge on the chest identifies the psyker for what it is."
+	icon_state = "spsykercoat"
+	item_state = "spsykercoat"

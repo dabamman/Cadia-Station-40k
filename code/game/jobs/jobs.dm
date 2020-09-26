@@ -112,7 +112,7 @@ var/list/security_positions = list(
 	"Commissar",
 	"Sergeant",
 	"Enforcer",
-	"Primaris Psyker",
+	"Sanctioned Psyker",
 	"Imperial Guard"
 )
 
