@@ -77,7 +77,7 @@ UltraMarines
 	equip_to_slot_or_del(R, slot_ears)
 	var/namelist = list ("Roman", "Tias", "Tiberias", "Lukas", "Sabius", "Augustus", "Crasius", "Gabriel", "Achilles", "Benedictus", "Cadmus", "Cephas", "Diodorus", "Erastus", "Drusus", "Fabius", "Ferox", "Marcus")
 	var/rndname = pick(namelist)
-	
+
 
 	name = "Brother [rndname]"
 	real_name = "Brother [rndname]"
@@ -95,7 +95,7 @@ UltraMarines
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ultrabolter, slot_s_store)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/umbackpack, slot_back)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				var/obj/item/weapon/card/id/W = new
@@ -120,7 +120,7 @@ UltraMarines
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ultrabolter, slot_s_store)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/industrial, slot_back)
 				equip_to_slot_or_del(new /obj/item/aluminumtube4/clamp, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/gas/TRAP, slot_wear_mask)
@@ -148,8 +148,8 @@ UltraMarines
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ultrabolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol/ultrabpistol, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/umbackpack, slot_back)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				var/obj/item/weapon/card/id/W = new
@@ -174,8 +174,8 @@ UltraMarines
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/book/manual/astartes, slot_l_hand)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ultrabolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol/ultrabpistol, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/umbackpack, slot_back)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				maxHealth = 240 //trait: nerd -10 hp

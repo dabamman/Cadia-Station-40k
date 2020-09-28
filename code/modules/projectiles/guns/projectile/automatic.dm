@@ -265,6 +265,18 @@ Bolters
 	icon_state = "ksonbolter"
 	item_state = "ksonsbolter"
 
+/obj/item/weapon/gun/projectile/automatic/bolter/sallybolter
+	icon_state = "sallybolter"
+	item_state = "sallybolter"
+
+/obj/item/weapon/gun/projectile/automatic/bolter/ravenbolter
+	icon_state = "ravenbolter"
+	item_state = "ravenbolter"
+
+/obj/item/weapon/gun/projectile/automatic/bolter/ultrabolter
+	icon_state = "ultrabolter"
+	item_state = "ultrabolter"
+
 /obj/item/weapon/gun/projectile/automatic/bpistol
 	name = "Bolter Pistol"
 	desc = "A modified version of the Astartes classic. Fires 10 heavilly modified bolts."
@@ -278,6 +290,17 @@ Bolters
 	canscope = 0
 	canattach = 1
 
+/obj/item/weapon/gun/projectile/automatic/bpistol/sallybpistol
+	icon_state = "sallybpistol"
+	item_state = "sallybpistol"
+
+/obj/item/weapon/gun/projectile/automatic/bpistol/ultrabpistol
+	icon_state = "ultrabpistol"
+	item_state = "ultrabpistol"
+
+/obj/item/weapon/gun/projectile/automatic/bpistol/ravenbpistol
+	icon_state = "ravenbpistol"
+	item_state = "ravenbpistol"
 
 /*
 Flamer
