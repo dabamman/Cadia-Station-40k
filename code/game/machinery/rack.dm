@@ -95,7 +95,7 @@
 /obj/machinery/rack/lasgunkreig
 	name = "Lucious Pattern Lasrifle rack"
 	icon_state = "lgr_0"
-	holds_type = /obj/item/weapon/gun/projectile/automatic/lasgunkreig
+	holds_type = /obj/item/weapon/gun/projectile/automatic/evgun
 	base_icon = "lgr"
 
 /obj/machinery/rack/lasgunkreig/full

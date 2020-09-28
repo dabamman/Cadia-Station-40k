@@ -51,7 +51,7 @@
 		playsound(loc, 'sound/items/tape.ogg', 50, 0)
 		return
 
-	if(istype(I, /obj/item/weapon/gun/projectile/automatic/lasgun)||istype(I,/obj/item/weapon/gun/projectile/automatic/lasgunkreig)||istype(I,/obj/item/weapon/gun/projectile/automatic/laspistol2)||istype(I,/obj/item/weapon/gun/projectile/automatic/laspistol))
+	if(istype(I, /obj/item/weapon/gun/projectile/automatic/lasgun)||istype(I,/obj/item/weapon/gun/projectile/automatic/evgun)||istype(I,/obj/item/weapon/gun/projectile/automatic/laspistol2)||istype(I,/obj/item/weapon/gun/projectile/automatic/laspistol))
 		taped = 0
 		las++
 		state++
