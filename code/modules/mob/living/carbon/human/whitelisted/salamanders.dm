@@ -24,7 +24,7 @@ Salamanders
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/smbackpack, slot_back)
 	equip_to_slot_or_del(new /obj/item/weapon/twohanded/mjollnir/samander, slot_r_hand)
-	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/sallybolter, slot_s_store)
 	regenerate_icons()
 
 /mob/living/carbon/human/whitelisted/sm/leader/Life()
@@ -80,7 +80,7 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/sallybolter, slot_s_store)
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
 				W.access = get_all_accesses()
@@ -105,7 +105,7 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/sallybolter, slot_s_store)
 				new /obj/item/weapon/snowshovel/ig970 (loc)
 				maxHealth = 175
 				var/obj/item/weapon/card/id/W = new
@@ -120,7 +120,7 @@ Salamanders
 				regenerate_icons()
 				rename_self("[name]")
 			if("Tactical")
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol/sallybpistol, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/smbackpack, slot_back)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
@@ -132,7 +132,7 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/sallybolter, slot_s_store)
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
 				W.access = get_all_accesses()
@@ -145,7 +145,7 @@ Salamanders
 				regenerate_icons()
 				rename_self("[name]")
 			if("Librarian")
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol/sallybpistol, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/smbackpack, slot_back)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
@@ -157,7 +157,7 @@ Salamanders
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/sallybolter, slot_s_store)
 				maxHealth = 240 //trait: nerd -10 hp
 				maxPsy += 1000
 				verbs += /mob/living/carbon/human/whitelisted/proc/imprison
