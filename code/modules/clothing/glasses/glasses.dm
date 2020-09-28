@@ -259,4 +259,8 @@
 	item_state = "hop"
 	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
 
-
+/obj/item/clothing/glasses/spsykerblindfold
+	name = "Sanctioned Blindfold"
+	desc = "A thick cloth used to cover the eyes or whatever ruined pits dot the face of the Sanctioned Psyker. Strangely enough, you can see just fine with it on."
+	icon_state = "spsykerblindfold"
+	item_state = "spsykerblindfold"

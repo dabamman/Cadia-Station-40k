@@ -169,3 +169,9 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
+
+/obj/item/clothing/gloves/spsykergloves
+	desc = "A pair of elbow-length gloves worn by the Sanctioned Psyker."
+	name = "Sanctioned Gloves"
+	icon_state = "spsykergloves"
+	item_state = "spsykergloves"

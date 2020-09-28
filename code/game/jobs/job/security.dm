@@ -179,10 +179,10 @@ Detective
 			if("Lasgun (Fully Equipped)")
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/lasgun(H), slot_r_hand)
 /*
-Primaris Psyker
+Sanctioned Psyker
 */
 /datum/job/imperialpsyker
-	title = "Primaris Psyker"
+	title = "Sanctioned Psyker"
 	flag = IMPPSYKER
 	department_head = list("Comissar")
 	department_flag = ENGSEC
@@ -196,8 +196,8 @@ Primaris Psyker
 
 	default_pda = /obj/item/device/pda/security
 	default_headset = /obj/item/device/radio/headset/headset_sec
-	default_backpack = /obj/item/weapon/storage/backpack/impguard
-	default_satchel = /obj/item/weapon/storage/backpack/satchel_sec
+	default_backpack = /obj/item/weapon/storage/backpack/satchel
+	default_satchel = /obj/item/weapon/storage/backpack/satchel
 	default_id = /obj/item/weapon/card/id/dogtag
 
 	access = list(access_security, access_sec_doors, access_brig, access_court, access_maint_tunnels, access_morgue)
@@ -207,11 +207,13 @@ Primaris Psyker
 	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
-	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/imperialboots(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/imperium_monk(H), slot_wear_suit) // The idea behind no armor is that, Psykers shouldn't be able to engage in DIRECT combat, they should work together with their fellow Guardsmen to stay safe.
-	H.equip_to_slot_or_del(new /obj/item/clothing/head/chaplain_hood(H), slot_head)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/spsykerboots(H), slot_shoes)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/spsykercoat(H), slot_wear_suit) // The idea behind no armor is that, Psykers shouldn't be able to engage in DIRECT combat, they should work together with their fellow Guardsmen to stay safe.
+	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/spsykergloves(H), slot_gloves)
+	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/spsykerblindfold(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt(H), slot_belt)
 	H.equip_to_slot_or_del(new /obj/item/weapon/staff(H), slot_r_hand)
+	H << "\red An Imperial Sanctioned Psyker is an abomination in the eyes of many, a cursed existence only allowed its life by the mercy and benevolence of the God-Emperor of Mankind. After you were taken by the Black Ships at a young age, you were soulbound to the God-Emperor on Holy Terra and now use your psychic mutation in service of the Imperial Guard. Follow your orders wisely or you may well be put down, like the despicable mutant you are."
 
 	H.equip_to_slot_or_del(new /obj/item/weapon/bible(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/weapon/book/manual/security_space_law(H), slot_in_backpack)

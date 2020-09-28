@@ -213,3 +213,9 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
+
+/obj/item/clothing/shoes/spsykerboots
+	name = "Sanctioned Boots"
+	desc = "A pair of fairly uncomfortable boots usually found on the feet of the Sanctioned Psyker. "
+	icon_state = "spsykerboots"
+	item_state = "spsykerboots"
