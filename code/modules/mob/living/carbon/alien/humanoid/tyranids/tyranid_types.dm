@@ -1014,7 +1014,7 @@ Hormagaunt
 		switch(evol_stage)
 			if(1)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/proc/corrosive_acid)
-				src << "\red You gain acid glands."
+				src << "\red You gain the ability to tear through objects."
 			if(2)
 				src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
 				src << "<b>Your senses adapt to the dark!</b>"
@@ -1459,7 +1459,7 @@ Venomthropes
 		switch(evol_stage)
 			if(1)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/proc/corrosive_acid)
-				src << "\red You gain acid glands."
+				src << "\red You gain the ability to tear through objects."
 			if(2)
 				src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
 				src << "<b>Your senses adapt to the dark!</b>"
@@ -1762,6 +1762,9 @@ This specific genestealer mob is the one used in 1-click antags, it has faster b
 				src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
 				src << "<b>Your senses adapt to the dark!</b>"
 			if(3)
+				src.verbs.Add(/mob/living/carbon/alien/humanoid/proc/corrosive_acid)
+				src << "\red You gain the ability to tear through objects."			
+			if(4)
 				var/choice = alert(src, "Enter an option.",,"Toughened Carapace","Fireproofed Scales")
 				switch(choice)
 					if("Toughened Carapace")
@@ -1770,14 +1773,14 @@ This specific genestealer mob is the one used in 1-click antags, it has faster b
 					if("Fireproofed Scales")
 						src.firearmor += 5
 						src << "\red You grow heat-resistant scales."
-			if(4)
+			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/proc/talons)
 				src << "\red You adapt scything talons."
 				src << "\red Your grab ability is enhanced."
-			if(5)
+			if(6)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/proc/adrenalineglands)
 				src << "\red You adapt genestealer adrenal glands."
-			if(6)
+			if(7)
 				src.name = "brood lord"
 				src.health += 100
 				src.maxHealth += 100
