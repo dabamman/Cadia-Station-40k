@@ -345,7 +345,7 @@ Powersword
 
 /obj/item/weapon/choppa/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/weapon/chainsword) && !istype(W,/obj/item/weapon/chainsword/chainchoppa))
-		user << "You attach the two concealed blade parts."
+		user << "You tape the chainsword to the choppa."
 		new /obj/item/weapon/chainsword/chainchoppa/makeshift(user.loc)
 		del(W)
 		del(src)
