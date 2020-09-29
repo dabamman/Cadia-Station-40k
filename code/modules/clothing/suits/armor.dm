@@ -386,6 +386,12 @@ Lord Inquisitor Armor
 	icon_state = "um_apotharmor"
 	item_state = "um_apotharmor"
 
+/obj/item/clothing/suit/armor/umpowerarmor/librarian
+	name = "Ultra Marine Librarian Power Armor"
+	desc = "Ultra Marine Librarian Armor, covered in holy seals and writs."
+	icon_state = "um_lib"
+	item_state = "um_lib"
+
 /obj/item/clothing/suit/armor/umpowerarmor/tech
 	name = "Ultra TechMarine Power Armor"
 	desc = "Ultra TechMarine Armor"
@@ -416,6 +422,12 @@ Lord Inquisitor Armor
 	desc = "Raven Guard Apothecary Armor"
 	icon_state = "rg_apotharmor"
 	item_state = "rg_apotharmor"
+
+/obj/item/clothing/suit/armor/rgpowerarmor/librarian
+	name = "Raven Guard Librarian Power Armor"
+	desc = "Raven Guard Librarian Armor, decorated in sacred runes."
+	icon_state = "rg_lib"
+	item_state = "rg_lib"
 
 /obj/item/clothing/suit/armor/rgpowerarmor/tech
 	name = "Raven Guard TechMarine Power Armor"
@@ -552,6 +564,12 @@ Lord Inquisitor Armor
 	desc = "Salamander TechMarine Armor"
 	icon_state = "sl_techarmor"
 	item_state = "sl_techarmor"
+
+/obj/item/clothing/suit/armor/spowerarmor/librarian
+	name = "Salamander Marine Librarian Power Armor"
+	desc = "Salamander Marine blessed Librarian Armor"
+	icon_state = "sl_lib"
+	item_state = "sl_lib"	
 
 /obj/item/clothing/suit/armor/sister
 	name = "Sister of Battle Armor"

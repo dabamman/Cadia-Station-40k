@@ -283,6 +283,13 @@ Power Armor Class Helmet
 	item_state = "um_vet"
 	armor = list(melee = 75, bullet = 75, laser = 60, energy = 100, bomb = 55, bio = 75, rad = 95)
 
+/obj/item/clothing/head/helmet/umpowerhelmet/librarian
+	name = "Ultra Marine Librarian Helmet"
+	desc = "Headwear of an UltraMarine Librarian"
+	icon_state = "um_lib"
+	item_state = "um_lib"
+	armor = list(melee = 75, bullet = 75, laser = 60, energy = 100, bomb = 55, bio = 75, rad = 95)
+
 /obj/item/clothing/head/helmet/rgpowerhelmet
 	name = "Raven Guard Helmet"
 	desc = "Headwear of the Raven Guard"
@@ -309,6 +316,12 @@ Power Armor Class Helmet
 	icon_state = "rgcpt_helm"
 	item_state = "rgcpt_helm"
 
+/obj/item/clothing/head/helmet/rgpowerhelmet/librarian
+	name = "Raven Guard Librarian Helmet"
+	desc = "Headwear of the Raven Guard"
+	icon_state = "rg_lib"
+	item_state = "rg_lib"	
+
 /obj/item/clothing/head/helmet/smpowerhelmet
 	name = "Salamander Marine Helmet"
 	desc = "Helm of the Salamander Marines"
@@ -329,6 +342,13 @@ Power Armor Class Helmet
 	icon_state = "slcpt_helm"
 	item_state = "slcpt_helm"
 	armor = list(melee = 75, bullet = 75, laser = 60, energy = 100, bomb = 55, bio = 75, rad = 95)
+
+/obj/item/clothing/head/helmet/smpowerhelmet/librarian
+	name = "Salamander Marine Librarian Helmet"
+	desc = "Headwear of an Salamander Marine Captain"
+	icon_state = "sl_lib"
+	item_state = "sl_lib"
+	armor = list(melee = 75, bullet = 75, laser = 60, energy = 100, bomb = 55, bio = 75, rad = 95)	
 
 /obj/item/clothing/head/helmet/smpowerhelmet/devastator
 	name = "Salamander Marine Devastator Helmet"

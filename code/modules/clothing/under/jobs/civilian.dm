@@ -25,7 +25,7 @@
 
 
 /obj/item/clothing/under/rank/cargotech
-	name = "cargo technician's jumpsuit"
+	name = "Munitorum Adept's Jumpsuit"
 	desc = "Shooooorts! They're comfy and easy to wear!"
 	icon_state = "munitorum"
 	item_state = "munitorum"
