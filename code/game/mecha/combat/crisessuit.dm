@@ -4,7 +4,7 @@
 	icon = 'icons/migrated/alienqueen.dmi'
 	icon_state = "crises"
 	//pixel_x = -10 //And now we don't need this!
-	bound_width = 64 //It's feet stand over two tiles.
+	bound_width = 32 //If it set larger than 32x bullets will clip when firing to the right
 	step_in = 2
 	health = 500 //No more 200,000 health levels...
 	deflect_chance = 25
