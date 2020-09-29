@@ -18,7 +18,8 @@ Assistant
 	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/color/grey(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/cape(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/slave(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/leper(H), slot_head)
 	H << "\red As a citizen of ArchAngel II, you have confessed your crimes to the Ecclesiarchy. Rather than assign punishment they have given you the chance to spend time in their service. If you find favor in the eyes of the Emperor you may one day find... Absolution."
 
 /datum/job/assistant/get_access()
