@@ -277,6 +277,52 @@ Bolters
 	icon_state = "ultrabolter"
 	item_state = "ultrabolter"
 
+/obj/item/weapon/gun/projectile/automatic/bolter/nurglebolter
+	name = "Plague Bolter"
+	desc = "A Bolter filled with disease used by the Plague Marines"
+	pbayonet = 0
+	scoped = 0
+	canscope = 0
+	canattach = 0
+	icon_state = "nurglebolter"
+	item_state = "nurglebolter"
+
+/obj/item/weapon/gun/projectile/automatic/bolter/nurglebolter/attack(mob/living/target as mob, mob/living/carbon/human/user as mob)
+	if(pbayonet)
+		new /obj/effect/gibspawner/blood(target.loc)
+		if(target.reagents)
+			target.reagents.add_reagent("plague", 2)
+		return ..()
+
+/obj/item/weapon/gun/projectile/automatic/bolter/nurglebolter/attack(mob/M as mob, mob/user)
+	if(user.a_intent == "harm") //Flogging
+		..()
+		if(pbayonet)
+			playsound(M.loc, 'sound/weapons/bladeslice.ogg', 75, 0)
+			var/obj/item/weapon/grab/G = user.get_inactive_hand()
+			if(!G)
+				return
+			var/mob/living/target = G.affecting
+			if(target == M)																		//running down to the riptide
+				if(istype(user.get_inactive_hand(), /obj/item/weapon/grab))
+					user.visible_message("<span class='danger'><b>[user] begins to cut [target] in two!</b></span>")
+
+					var/check = 7//X seconds before Gibbed, Totally not stolen from the Ninja Net
+					while(!isnull(M)&&!isnull(src)&&check>0)//While M and net exist, X seconds have not passed.
+						check--
+						sleep(10)
+
+				if(istype(user.get_inactive_hand(), /obj/item/weapon/grab))						//I want to be your left hand man
+					if(isnull(M)||M.loc!=loc)//If mob is gone or not at the location.
+						playsound(loc, 'sound/weapons/bladeslice.ogg', 75, 0)
+						new /obj/effect/gibspawner/blood(target.loc)
+						new /obj/effect/gibspawner/generic(target.loc)
+						user.visible_message("<span class='danger'><b>[user] has slashed [target] in half!</b></span>")
+						target.gib()															//this cowboys running from himself
+						return
+		else
+			return
+
 /obj/item/weapon/gun/projectile/automatic/bpistol
 	name = "Bolter Pistol"
 	desc = "A modified version of the Astartes classic. Fires 10 heavilly modified bolts."
@@ -301,6 +347,12 @@ Bolters
 /obj/item/weapon/gun/projectile/automatic/bpistol/ravenbpistol
 	icon_state = "ravenbpistol"
 	item_state = "ravenbpistol"
+
+/obj/item/weapon/gun/projectile/automatic/bpistol/nurglebpistol
+	name = "Plague Bolter Pistol"
+	desc = "A smaller version of the Plague Bolter"
+	icon_state = "nurglebpistol"
+	item_state = "nurglebpistol"
 
 /*
 Flamer

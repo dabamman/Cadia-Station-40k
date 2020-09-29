@@ -718,7 +718,7 @@ Lord Inquisitor Armor
 	item_state = "pmpowerarmor"
 	w_class = 4//bulky item
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	allowed = list(/obj/item/weapon/gun/syringe/plague, /obj/item/weapon/gun/projectile/shotgun/combat/plague)
+	allowed = list(/obj/item/weapon/gun/syringe/plague, /obj/item/weapon/gun/projectile/shotgun/combat/plague, /obj/item/weapon/gun/projectile/automatic/bolter/nurglebolter)
 	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HANDS|CHEST|LEGS|FEET|ARMS|GROIN
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
