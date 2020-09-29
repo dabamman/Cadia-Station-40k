@@ -1053,6 +1053,7 @@
 #include "code\modules\mob\living\carbon\human\humanvariants\humanservitor.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\kb.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\krieg.dm"
+#include "code\modules\mob\living\carbon\human\humanvariants\saints.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\simulation.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\sm.dm"
 #include "code\modules\mob\living\carbon\human\humanvariants\smurfs.dm"
