@@ -48,40 +48,52 @@
 	slowdown_off = SHOES_SLOWDOWN
 
 /obj/item/clothing/shoes/magboots/um
-	desc = "UltraMarine Boots"
-	name = "UltraMarine Boots"
+	desc = "Ultra Marine Boots"
+	name = "Ultra Marine Boots"
 	icon_state = "um_boots"
 	magboot_state = "um_boots"
 	slowdown_off = SHOES_SLOWDOWN
 	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
 
 /obj/item/clothing/shoes/magboots/um/captain
-	desc = "UltraMarine Captain Boots"
-	name = "UltraMarine Captain Boots"
+	desc = "Ultra Marine Captain Boots"
+	name = "Ultra Marine Captain Boots"
 	icon_state = "umcap"
 	magboot_state = "umcap"
 
+/obj/item/clothing/shoes/magboots/um/librarian
+	desc = "Ultra Marine Librarian Boots"
+	name = "Ultra Marine Librarian Boots"
+	icon_state = "um_lib"
+	magboot_state = "um_lib"	
+
 /obj/item/clothing/shoes/magboots/sm
-	desc = "SalamanderMarine Boots"
-	name = "SalamanderMarine Boots"
+	desc = "Salamander Marine Boots"
+	name = "Salamander Marine Boots"
 	icon_state = "sl_boots"
 	magboot_state = "sl_boots"
 	slowdown_off = SHOES_SLOWDOWN
 	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
 
 /obj/item/clothing/shoes/magboots/rg
-	desc = "RavenGuard Boots"
-	name = "RavenGuard Boots"
+	desc = "Raven Guard Boots"
+	name = "Raven Guard Boots"
 	icon_state = "rg_boots"
 	magboot_state = "rg_boots"
 	slowdown_off = SHOES_SLOWDOWN
 	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
 
 /obj/item/clothing/shoes/magboots/rg/shadowcaptain
-	desc = "RavenGuard Boots"
-	name = "RavenGuard Boots"
+	desc = "Raven Guard Boots"
+	name = "Raven Guard Boots"
 	icon_state = "rgboots2"
 	magboot_state = "rgboots2"
+
+/obj/item/clothing/shoes/magboots/rg/librarian
+	desc = "Raven Guard Librarian Boots"
+	name = "Raven Guard Librarian Boots"
+	icon_state = "rg_lib"
+	magboot_state = "rg_lib"	
 
 /obj/item/clothing/shoes/magboots/pm
 	desc = "PlagueMarine Boots"

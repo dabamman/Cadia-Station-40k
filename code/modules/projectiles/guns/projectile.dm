@@ -10,6 +10,7 @@
 	var/obj/item/ammo_box/magazine/magazine
 	var/ejectcasing = 1
 	var/chainb = 0
+	var/pbayonet = 0
 	var/scoped = 0
 	var/canscope = 1
 	var/zoom = 0
@@ -86,6 +87,20 @@
 			user << "<span class='notice'>You slide the [A] onto the [src]."
 			src.chainb = 1
 			src.force = 32
+			update_icon()
+			qdel(A)
+			return
+	if(istype(A, /obj/item/weapon/pbayonet))
+		if(canattach)
+			user << "<span class='notice'>[src] can't be fitted with an attachment like this."
+			return
+		if(pbayonet)
+			user << "<span class='notice'>There is already an attachment on this [src]."
+			return
+		else
+			user << "<span class='notice'>You slide the [A] onto the [src]."
+			src.pbayonet = 1
+			src.force = 20
 			update_icon()
 			qdel(A)
 			return

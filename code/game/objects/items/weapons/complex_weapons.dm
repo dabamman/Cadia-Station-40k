@@ -751,3 +751,12 @@ Make a warp conduit blade that is really effective against daemons and has null 
 	w_class = 4
 	attack_speedmod = 4
 	origin_tech = "combat=5;powerstorage=5"
+	complex_block = 1
+	complex_click = 1
+	attack_speedmod = 0
+	can_parry = 1
+	piercingpower = 15
+	woundtypes = list(/datum/wound/khopesh)
+	var/stance = "defensive"
+	var/last_attacks = ""
+	var/counter = 0

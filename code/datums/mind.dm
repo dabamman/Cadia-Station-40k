@@ -1003,6 +1003,13 @@ datum/mind
 		current << "\blue You are a Tau FireWarrior!"
 
 		current.loc = get_turf(locate("landmark*tauteam"))
+	
+	proc/make_GS()
+
+		special_role = "Genestealer Cult Member"
+		current << "\blue You are a Tyranid Genestealer! You are tasked with infiltrating and converting these humans to the hivemind. Convert enough and your psychic call will be heard throughout the universe!"
+
+		current.loc = get_turf(locate("landmark*gscult"))
 
 	proc/make_Nuke()
 		if(!(src in ticker.mode.syndicates))
