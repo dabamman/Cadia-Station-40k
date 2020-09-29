@@ -210,6 +210,23 @@ But ideally this will create an actual concept of melee dueling.
 	if (M && (isliving(M)) && (M.stat != DEAD) && (M.stat != UNCONSCIOUS) && (!istype(M, /mob/living/carbon/human/ork))) //Everything before is default attack proc.
 		user.adjustToxLoss(rand(10,20))
 
+/obj/item/weapon/chainsword/chainchoppa/makeshift
+	name = "Makeshift Chain Choppa"
+	desc = "Dis choppa almost da best choppa!"
+	icon_state = "chainchoppa"
+	item_state = "choppa"
+	force = 50
+	piercingpower = 20 //10 less than normal.
+	var/hitPoints = 8
+
+/obj/item/weapon/chainsword/chainchoppa/makeshift/attack(mob/living/M, mob/living/user, def_zone)
+	..()
+	if(prob(50))
+		hitPoints-=1
+		if(hitPoints==0) //Perhaps make it so goose tape can repair it.
+			user.visible_message("[user]'s [src] breaks!")
+			del(src)
+
 /obj/item/weapon/chainsword/generic_chainsword
 	name = "chainsword"
 	desc = "A lightweight blade with rotating monomolecular teeth that can cut through power armor."
