@@ -38,6 +38,7 @@ Research Director
 	if(H.backbag != 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/melee/telebaton(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/weapon/paper/liox(H), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/device/xdetector(H), slot_in_backpack)
 
 /datum/job/rd/get_access()
 	return get_all_accesses()

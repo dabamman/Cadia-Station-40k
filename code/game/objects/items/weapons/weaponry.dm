@@ -343,6 +343,13 @@ Powersword
 	if (M && (isliving(M)) && (M.stat != DEAD) && (M.stat != UNCONSCIOUS) && (!istype(M, /mob/living/carbon/human/ork))) //Everything before is default attack proc.
 		user.adjustToxLoss(rand(5,10))
 
+/obj/item/weapon/choppa/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/weapon/chainsword) && !istype(W,/obj/item/weapon/chainsword/chainchoppa))
+		user << "You tape the chainsword to the choppa."
+		new /obj/item/weapon/chainsword/chainchoppa/makeshift(user.loc)
+		del(W)
+		del(src)
+		return
 
 
 /obj/item/weapon/torture
