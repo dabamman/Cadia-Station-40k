@@ -181,9 +181,12 @@
 	anchored = 1.0
 	layer = 2.8
 	throwpass = 1	//You can throw objects over this, despite it's density.")
+	climbable = TRUE
 	var/parts = /obj/item/weapon/table_parts
 	var/list/table_contents = list()
 	var/busy = 0
+
+
 
 /obj/structure/table/New()
 	..()

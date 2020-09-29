@@ -583,3 +583,4 @@
 		for(var/i in meat_type)
 			new i(get_turf(src))
 		qdel(src)
+
