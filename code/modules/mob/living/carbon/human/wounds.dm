@@ -73,3 +73,9 @@ It's just that the whole "severe bruising" thing is a little silly.
 	desc = "has chemical burns"
 	damtype = "burn"
 	heal_thresh = 10
+
+/datum/wound/khopesh
+	desc = "has a massive slash raggedly torn through it"
+	scarname = "has a long ragged scar twisting across it"
+	damtype = "brute"
+	heal_thresh = 15
