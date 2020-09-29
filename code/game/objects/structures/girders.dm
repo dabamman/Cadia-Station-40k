@@ -377,35 +377,35 @@
 			new /obj/structure/spiderturretbox/projectile(get_turf(src))
 			qdel(W)
 			qdel(src)
-	if(istype(W, /obj/item/weapon/gun/projectile/automatic/lasgun))		//secretly three different types of lasguns for bayonet purposes
+	else if(istype(W, /obj/item/weapon/gun/projectile/automatic/lasgun))		//secretly three different types of lasguns for bayonet purposes
 		user << "<span class='notice'>Now adding a Lasgun...</span>"
 		if(do_after(user,40))
 			user << "<span class='notice'>You added a Lasgun.</span>"
 			new /obj/structure/spiderturretbox/lasgun(get_turf(src))
 			qdel(W)
 			qdel(src)
-	if(istype(W, /obj/item/weapon/gun/projectile/automatic/lasgun))		//type B
+	else if(istype(W, /obj/item/weapon/gun/projectile/automatic/lasgun))		//type B
 		user << "<span class='notice'>Now adding a Lasgun...</span>"
 		if(do_after(user,40))
 			user << "<span class='notice'>You added a Lasgun.</span>"
 			new /obj/structure/spiderturretbox/lasgun(get_turf(src))
 			qdel(W)
 			qdel(src)
-	if(istype(W, /obj/item/weapon/gun/projectile/automatic/lasgunc))		//type C
+	else if(istype(W, /obj/item/weapon/gun/projectile/automatic/lasgunc))		//type C
 		user << "<span class='notice'>Now adding a Lasgun...</span>"
 		if(do_after(user,40))
 			user << "<span class='notice'>You added a Lasgun.</span>"
 			new /obj/structure/spiderturretbox/lasgun(get_turf(src))
 			qdel(W)
 			qdel(src)
-	if(istype(W, /obj/item/weapon/gun/energy/plasma) && !istype(W, /obj/item/weapon/gun/energy/plasma/arcrifle))	//plasma. No limitless Skitarii turrets.
+	else if(istype(W, /obj/item/weapon/gun/energy/plasma) && !istype(W, /obj/item/weapon/gun/energy/plasma/arcrifle))						//plasma
 		user << "<span class='notice'>Now adding a Plasma Pistol...</span>"
 		if(do_after(user,40))
 			user << "<span class='notice'>You added a Plasma Pistol.</span>"
 			new /obj/structure/spiderturretbox/plasma(get_turf(src))
 			qdel(W)
 			qdel(src)
-	if(istype(W, /obj/item/weapon/gun/energy/taser))		//taser
+	else if(istype(W, /obj/item/weapon/gun/energy/taser))		//taser
 		user << "<span class='notice'>Now adding a Taser...</span>"
 		if(do_after(user,40))
 			user << "<span class='notice'>You added a Taser.</span>"
