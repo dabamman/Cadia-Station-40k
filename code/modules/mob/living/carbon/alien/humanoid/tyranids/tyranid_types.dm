@@ -1565,3 +1565,228 @@ datum/reagent/tyranid/on_mob_life(var/mob/living/carbon/M) //Pretty high damage 
 				shake_camera(H, 10, 1)
 		H.reagents.remove_reagent(src.id, 0.05) //Removed indentation so the chem will still be processed when not on weeds.
 	return
+
+/*
+This specific genestealer mob is the one used in 1-click antags, it has faster biomass regen and a different evolution chain, it also cannot evolve into different types of tyranids to prevent it just becoming a normie nid round
+*/
+
+/mob/living/carbon/alien/humanoid/tyranid/genestealerantag
+	name = "genestealer"
+	icon_state = "genestealer"
+	maxHealth = 200
+	health = 200
+	plasma_rate = 40
+	var/convert_range = 0
+	var/speedboost = 1
+	var/converting = 0
+	var/convertstun = 0
+	var/lingual = 0
+
+/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/movement_delay()
+	. = -speedboost
+	. += ..()
+
+/mob/living/carbon/alien/humanoid/tyranid/lictor/say_understands(var/other)
+	if (istype(other, /mob/living/carbon/alien))
+		return 1
+	if(src.lingual) return 1
+	..()
+
+/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/verb/convert()
+	set name = "Convert (50)"
+	set desc = "Depending on your evolution progress, you must either be standing over them or next to the target."
+	set category = "Alien"
+	if(powerc(50))
+		var/mob/living/carbon/human/T = null
+		if(!T)
+			var/list/victims = list()
+			for(var/mob/living/carbon/human/C in view(src, convert_range))
+				victims += C
+			if(victims.len) T = pick(victims)
+		if(T)
+			if(!istype(T))
+				src << "\red We only infect people!"
+				return
+			if(istype(T, /mob/living/carbon/human/whitelisted/) && (!istype(T, /mob/living/carbon/human/whitelisted/eldar)))
+				src << "\red No... it is too difficult! We must find another."
+				return
+			if(iscultist(T))
+				src << "\red This one's mind is already too closely bonded to immaterial forces!"
+				return
+			if(converting)
+				src << "\red We are already converting a cultist."
+				return
+			if (convertstun)
+				src << "\ We are recovering so can't convert again yet."
+				return
+			if(T.mind.special_role == "Genestealer Cult Member")
+				src << "\red This one's mind already belongs to us."
+				return
+			adjustToxLoss(-50) //You won't spend biomass on an invalid target but will spend it regardless of succeeding against armour.
+
+			//Armour and augment defence against genestealer conversion. Unless nested, armour and augments will have a chance to stop conversion attempts. Maximum is 48% from augments and 50% from armour.
+			var/penchance = T.getarmor(null,"melee")/2 //Average melee armour halved.
+//			src << "AO[penchance]" Commented out debug message
+			if (T.getlimb(/obj/item/organ/limb/robot/chest)) // Adds 8% safety chance per limb so a fully augmented person gets 48%. More efficient way to check this then 6 if statements?
+				penchance += 8								 // Also, should augments be this important? Being made of metal should be major but perhaps armour should be more weighted as it's not as easy to max?
+			if (T.getlimb(/obj/item/organ/limb/robot/head))
+				penchance += 8
+			if (T.getlimb(/obj/item/organ/limb/robot/l_arm))
+				penchance += 8
+			if (T.getlimb(/obj/item/organ/limb/robot/r_arm))
+				penchance += 8
+			if (T.getlimb(/obj/item/organ/limb/robot/l_leg))
+				penchance += 8
+			if (T.getlimb(/obj/item/organ/limb/robot/r_leg))
+				penchance += 8
+//			src << "AaA[penchance]" Commented out debug message
+			penchance -= rand(1,100) //Roll a percentage and take it away from pen chance. If positive, the conversion is blocked.
+			if (T.buckled)  //If the target is buckled/nested, their armour doesn't matter. Allows for admech and other full conversions to be converted without a dozen attempts.
+				penchance = -1
+//			src << "Chance[penchance]" Commented out debug message
+			if (penchance >= 20 && rand(1,5) == 5) //If you fail by at least twenty, 20% chance to be stunned.
+				convertstun = 1
+				spawn(200)
+					convertstun = 0
+				src << "\red We critically fail to penetrate [T]'s armour and become stunned. We will need twenty seconds to recover."
+				visible_message("\red <B>[src] tries to jab [T] with its tongue but is stopped by [T]'s armour!</B>")
+				return
+			if (penchance >= 0)
+				convertstun = 1
+				spawn(10)
+					convertstun = 0
+				src << "\red We fail to penetrate [T]'s armour. We will need a second to recover before we can try again."
+				visible_message("\red <B>[src] tries to jab [T] with its tongue but is stopped by [T]'s armour!</B>")
+				return
+			converting=1 //Got through all checks that stop conversion so conversion begins.
+			src << "We jab [T]. We must keep them by us for 15 seconds to convert them."
+			visible_message("\red <B>[src] jabs [T] with its tongue!</B>")
+			T << "\red The [src] jabs you with its tongue!"
+			T.Weaken(5)
+			spawn(0)
+				for(var/stage = 0, stage<=30, stage++)  //Must stay by them for 15 seconds. Hard to get someone if they're in a group as you'll be chased away. 20 stages so that it'll check frequently for the victim breaking free.
+					sleep(5)
+					if(prob(40))    //A lone target should be easy to capture. This could be reduced if nesting should be mandatory.
+						T.Weaken(5)
+					if(get_dist(get_turf(src),get_turf(T)) > convert_range)
+						src.visible_message("\red <b>The [src] withdraws its tongue from [T]!</b>")
+						converting = 0
+						return
+				if(!src.lingual)
+					src << "<b>You can now speak to and understand cultists!</b>"
+					src.lingual = 1
+				src << "\red We convert [T]. They will now serve us loyally." //There isn't a delay after conversion is complete. Could be re-added but this saves having to nest someone after conversion.
+				T << "<font size='4' color='red'>You are suddenly able to sense all the Tyranids on the outpost! You can communicate to them through the hivemind by using the prefix :a in messages<b>!</b></font>"
+				T << "<font size='4' color='red'>As a member of the genestealer cult, you must serve and obey the Tyranids, but follow the genestealer that converted you above all else<b>!</b></font>"
+				converting = 0  //Still haven't managed to fix the old runtime error so this will let the genestealer convert by setting converting to 0 first.
+				T.alien_talk_understand = 1
+				T.mind.special_role = "Genestealer Cult Member"
+				spawn(10)
+					for(var/mob/living/C in world)
+						if(isalien(C) || (C.mind && C.mind.special_role == "Genestealer Cult Member"))   //Right now, this makes the icon appear for Nids but not for the cultists.
+							var/I = image('icons/mob/alien.dmi', loc = T, icon_state = "genestealer")
+							if (isnull(C.client))
+								src << "This is an error when the game tries to add the icon to a client that doesn't exist. The convert will be told that they are a cultist but will not see the icon."
+								src << C.client
+							else //should hopefully stop runtime errors.
+								C.client.images += I
+								for (var/mob/living/D in mob_list) //Should hopefully make it so new cultists can see the icon on old cultists.
+									if(D.mind && D.mind.special_role == "Genestealer Cult Member")
+										var/I2 = image('icons/mob/alien.dmi', loc = D, icon_state = "genestealer")
+										C.client.images += I2
+		else
+			src << "\blue No targets in range!"
+	else
+		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/proc/talons()
+	set name = "Scything Talons (100)"
+	set desc = "Lash out in rapid succession at everyone nearby."
+	set category = "Alien"
+	if(powerc(100))
+		playsound(loc, 'sound/weapons/slice.ogg', 25, 1, -1)
+		for(var/mob/living/carbon/human/C in oview(1))
+			visible_message("\red <B>[src] slashes [C] with scything talons!</B>")
+			spawn(2) visible_message("\red <B>[src] slashes [C] with scything talons!</B>")
+			if(src.evol_stage >= 6)
+				C.take_organ_damage(rand(25, 45), 0)
+				C.drop_item()
+				new /obj/effect/gibspawner/blood(C.loc)
+			else
+				var/obj/item/organ/limb/affecting = C.get_organ(ran_zone(src.zone_sel.selecting))
+				var/armor_block = C.run_armor_check(affecting, "melee")
+				C.apply_damage(rand(15, 45), BRUTE, affecting, armor_block - 35)
+				new /obj/effect/gibspawner/blood(C.loc)
+			adjustToxLoss(-100)
+	else
+		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/proc/adrenalineglands()
+	set name = "Adrenal Glands (300)"
+	set desc = "Use your adrenal glands to negate all knockouts, heal faster, and move faster."
+	set category = "Alien"
+	if(speedboost >= 3)
+		src << "\red They are already active."
+		return
+	if(src.storedPlasma >= 300)
+		adjustToxLoss(-300)
+		status_flags = 0
+		speedboost = 3
+		spawn(0)
+			for(var/i = 0, i<9,i++)
+				adjustBruteLoss(-2)
+				adjustOxyLoss(-2)
+				adjustFireLoss(-2)
+				sleep(10)
+		spawn(90)
+			status_flags = CANPARALYSE|CANPUSH
+			speedboost = 1
+		return
+	else
+		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/verb/evolution()
+	set name = "Evolution (800)"
+	set desc = "Adapt and become more powerful."
+	set category = "Alien"
+	if(evol_stage >= 6)
+		src << "\red You are already fully developed."
+		return
+	if(powerc(800))
+		evol_stage += 1
+		switch(evol_stage)
+			if(1)
+				src.convert_range = 1
+				src << "<b>You can now convert adjacent individuals rather than having to stand over them.</b>"
+			if(2)
+				src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
+				src << "<b>Your senses adapt to the dark!</b>"
+			if(3)
+				var/choice = alert(src, "Enter an option.",,"Toughened Carapace","Fireproofed Scales")
+				switch(choice)
+					if("Toughened Carapace")
+						src.brutearmor += 7
+						src << "\red Your carapace hardens."
+					if("Fireproofed Scales")
+						src.firearmor += 5
+						src << "\red You grow heat-resistant scales."
+			if(4)
+				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/proc/talons)
+				src << "\red You adapt scything talons."
+				src << "\red Your grab ability is enhanced."
+			if(5)
+				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/proc/adrenalineglands)
+				src << "\red You adapt genestealer adrenal glands."
+			if(6)
+				src.name = "brood lord"
+				src.health += 100
+				src.maxHealth += 100
+				src << "\red You have evolved into a brood lord!"
+		adjustToxLoss(-800)
+	else
+		src << "\red You need more biomass."
+
+/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/Life()
+	..()
+	if(evol_stage >= 2)
+		src.see_invisible = SEE_INVISIBLE_OBSERVER_NOLIGHTING
