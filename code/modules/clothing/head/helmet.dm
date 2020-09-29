@@ -288,6 +288,7 @@ Power Armor Class Helmet
 	desc = "Headwear of an UltraMarine Librarian"
 	icon_state = "um_lib"
 	item_state = "um_lib"
+	armor = list(melee = 75, bullet = 85, laser = 60, energy = 100, bomb = 55, bio = 75, rad = 95)
 
 /obj/item/clothing/head/helmet/rgpowerhelmet
 	name = "Raven Guard Helmet"
