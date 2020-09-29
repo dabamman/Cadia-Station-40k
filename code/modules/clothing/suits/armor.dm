@@ -392,7 +392,7 @@ Lord Inquisitor Armor
 	desc = "Ultra Marine Librarian Armor, covered in holy seals and writs."
 	icon_state = "um_lib"
 	item_state = "um_lib"
-	armor = list(melee = 80, bullet = 70, laser = 70, energy = 85, bomb = 80, bio = 95, rad = 90) //Bonus to bio
+	armor = list(melee = 80, bullet = 70, laser = 70, energy = 85, bomb = 80, bio = 95, rad = 90) //Bonus to energy
 
 /obj/item/clothing/suit/armor/umpowerarmor/tech
 	name = "Ultra TechMarine Power Armor"
@@ -433,7 +433,7 @@ Lord Inquisitor Armor
 	desc = "Raven Guard Librarian Armor, decorated in sacred runes."
 	icon_state = "rg_lib"
 	item_state = "rg_lib"
-	armor = list(melee = 90, bullet = 60, laser = 70, energy = 85, bomb = 80, bio = 95, rad = 90) //Bonus to bio
+	armor = list(melee = 90, bullet = 60, laser = 70, energy = 85, bomb = 80, bio = 95, rad = 90) //Bonus to energy
 	
 /obj/item/clothing/suit/armor/rgpowerarmor/tech
 	name = "Raven Guard TechMarine Power Armor"
@@ -573,14 +573,14 @@ Lord Inquisitor Armor
 	desc = "Salamander TechMarine Armor"
 	icon_state = "sl_techarmor"
 	item_state = "sl_techarmor"
-	armor = list(melee = 80, bullet = 60, laser = 70, energy = 90, bomb = 80, bio = 95, rad = 95) //Bonus to bio
+	armor = list(melee = 80, bullet = 60, laser = 70, energy = 90, bomb = 80, bio = 95, rad = 95) //Bonus to rad
 
 /obj/item/clothing/suit/armor/spowerarmor/librarian
 	name = "Salamander Marine Librarian Power Armor"
 	desc = "Salamander Marine blessed Librarian Armor"
 	icon_state = "sl_lib"
 	item_state = "sl_lib"	
-	armor = list(melee = 80, bullet = 60, laser = 70, energy = 95, bomb = 80, bio = 95, rad = 90) //Bonus to bio
+	armor = list(melee = 80, bullet = 60, laser = 70, energy = 95, bomb = 80, bio = 95, rad = 90) //Bonus to energy
 
 /obj/item/clothing/suit/armor/sister
 	name = "Sister of Battle Armor"
