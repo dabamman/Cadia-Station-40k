@@ -194,6 +194,7 @@ UltraMarines
 				equip_to_slot_or_del(W, slot_wear_id)
 				sleep(10)
 				regenerate_icons()
+				rename_self("[name]")
 											//this is a new experimental choose your own loadout build
 	/*spawn(20)
 				var/obj/item/weapon/card/id/W = new
