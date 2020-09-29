@@ -254,6 +254,13 @@
 	caliber = "laser"
 	max_ammo = 150
 
+/obj/item/ammo_box/magazine/evmag
+	name = "Lasgun Mag"
+	icon_state = "evmag"
+	ammo_type = /obj/item/ammo_casing/lasgun
+	caliber = "laser"
+	max_ammo = 150
+
 /obj/item/ammo_box/magazine/stutterlas
 	name = "Stutter Lasgun Mag"
 	icon_state = "lasgunmag"

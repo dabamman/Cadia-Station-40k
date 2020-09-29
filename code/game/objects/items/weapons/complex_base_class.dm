@@ -454,6 +454,161 @@ Complex chainsword class.
 				var/mob/living/carbon/human/H = user
 				H.inertial_speed += 6
 
+/obj/item/weapon/khopesh/verb/switchstance()
+	set name = "Toggle Stance"
+	set desc = "Switch between agressive and defensive stance."
+	set category = "Sword"
+
+	if(stance == "agressive")
+		stance = "defensive"
+	else
+		stance = "agressive"
+	usr.visible_message("\red [usr] falls into [stance] stance.")
+
+/obj/item/weapon/khopesh/attack(mob/living/target as mob, mob/user as mob)
+	if(ishuman(user) && ishuman(target))
+		var/mob/living/carbon/human/H = user
+		var/mob/living/carbon/human/T = target
+		if (H.inertial_speed != null && H.a_intent == "harm")
+			if(H.inertial_speed >= 5 && H.dir == T.dir && !T.lying)
+				add_logs(user, target, "backstabbed")
+				user.visible_message("<span class='danger'>[H] stabs [T] in the back with the [src.name]!</span>")
+				H.inertial_speed = null
+				T.Paralyse(5)
+				step_away(T,H,10)
+				step_away(T,H,10)
+				var/obj/item/organ/limb/affecting = T.get_organ(ran_zone(H.zone_sel.selecting))
+				var/hit_area = parse_zone(affecting.name)
+				var/armor = T.run_armor_check(affecting, "melee", "<span class='warning'>Your armour has softened a hit to your [hit_area].</span>", "<span class='warning'>Your armour has softened a hit to your [hit_area].</span>")
+				armor /= 2 //Armor piercing!
+				T.apply_damage(src.force + 20, src.damtype, affecting, armor , src, deliveredwound=/datum/wound/khopesh)
+				new /obj/effect/gibspawner/blood(T.loc)
+				return
+		if (H.inertial_speed != null && H.a_intent == "grab")
+			H.changeNext_move(CLICK_CD_MELEE*4)
+			if(H.inertial_speed >= 5 && H.dir == T.dir && !T.lying)
+				add_logs(user, target, "backstabbed")
+				user.visible_message("<span class='danger'>[H] stabs [T] in the back with the [src.name]!</span>")
+				H.inertial_speed = null
+				T.Paralyse(5)
+				step_away(T,H,10)
+				step_away(T,H,10)
+				var/obj/item/organ/limb/affecting = T.get_organ(ran_zone(H.zone_sel.selecting))
+				T.apply_damage(src.force + 20, src.damtype, affecting, 0 , src, deliveredwound=/datum/wound/khopesh)
+				new /obj/effect/gibspawner/blood(T.loc)
+				return
+		if (H.a_intent == "grab")
+			add_logs(user, target, "dealt a piercing blow to")
+			H.changeNext_move(CLICK_CD_MELEE*4)
+			var/obj/item/D = target.get_active_hand()
+			if(D && D.complex_block)
+				if(!D.handle_block(src, user, target, -15))
+					return
+			last_attacks += "pierce"
+			counter = 0
+			if("hamstringpiercepiercepierce" == last_attacks && stance == "agressive")
+				target.visible_message("<span class ='danger'>[user] slams the [src] into [target]'s heart!</span>")
+				target.take_organ_damage(200, 0)
+				last_attacks = ""
+				return
+			user.visible_message("<span class='danger'>[H] deals a heavy blow to [T] with the [src.name]!</span>")
+			var/attackforce = src.force
+			if(H.inertial_speed != null)
+				attackforce += H.inertial_speed*2
+			var/obj/item/organ/limb/affecting = T.get_organ(ran_zone(H.zone_sel.selecting))
+			var/hit_area = parse_zone(affecting.name)
+			var/armor = T.run_armor_check(affecting, "melee", "<span class='warning'>Your armour has softened a hit to your [hit_area].</span>", "<span class='warning'>Your armour has softened a hit to your [hit_area].</span>")
+			armor /= 2 //Armor piercing!
+			T.apply_damage(attackforce, src.damtype, affecting, armor , src, deliveredwound=/datum/wound/khopesh)
+			new /obj/effect/gibspawner/blood(T.loc)
+			return
+		if (user.a_intent == "disarm")
+			add_logs(user, target, "attempted to disarm")
+			user.changeNext_move(CLICK_CD_MELEE)
+			var/obj/item/D = target.get_active_hand()
+			if(D && D.complex_block)
+				if(!D.handle_block(src, user, target))
+					return
+			last_attacks += "disarm"
+			counter = 0
+			target.visible_message("<span class ='danger'>[target] has been disarmed with \the [src] by [user]!</span>")
+			playsound(get_turf(src), 'sound/effects/woodhit.ogg', 75, 1, -1)
+			var/obj/item/thing = target.get_active_hand()
+			target.drop_items()
+			if(src.parrying == target && thing)
+				target.visible_message("<span class ='danger'>[user] grabs for the [thing]!</span>")
+				user.put_in_hands(thing)
+			src.add_fingerprint(user)
+			if(!iscarbon(user))
+				target.LAssailant = null
+			else
+				target.LAssailant = user
+			return
+		if (user.a_intent == "help")
+			add_logs(user, target, "attempted to hamstring")
+			user.changeNext_move(CLICK_CD_MELEE)
+			var/obj/item/D = target.get_active_hand()
+			if(D && D.complex_block)
+				if(!D.handle_block(src, user, target, -40))
+					return
+			last_attacks += "hamstring"
+			counter = 0
+			if("knockbackhamstring" == last_attacks)
+				target.visible_message("<span class ='danger'>[user] executes a tripping move!</span>")
+				target.Weaken(6)
+				last_attacks = ""
+			playsound(get_turf(src), 'sound/effects/woodhit.ogg', 75, 1, -1)
+			if(T.reagents_speedmod <= 3) //Reduced from 30.
+				T.reagents_speedmod += 1 //Reduced from 10
+			src.add_fingerprint(user)
+			target.visible_message("<span class ='danger'>[user] sweeps at [target]'s legs with \the [src], hamstringing them!</span>")
+			if(!iscarbon(user))
+				target.LAssailant = null
+			else
+				target.LAssailant = user
+			return
+	..()
+	if(prob(50) && ishuman(target)) new /obj/effect/gibspawner/blood(target.loc)
+
+	var/obj/item/weapon/grab/G = user.get_inactive_hand()
+	if(!istype(G))
+		return
+	var/mob/living/M = G.affecting
+	if(target == M)																		//running down to the riptide
+		if(istype(user.get_inactive_hand(), /obj/item/weapon/grab))
+			user.visible_message("<span class='danger'><b>[user] begins to cut [target] in two!</b></span>")
+
+			var/check = 7//X seconds before Gibbed, Totally not stolen from the Ninja Net
+			while(!isnull(M)&&!isnull(src)&&check>0)//While M and net exist, X seconds have not passed.
+				check--
+				sleep(10)
+
+		if(istype(user.get_inactive_hand(), /obj/item/weapon/grab))						//I want to be your left hand man
+			if(isnull(M)||M.loc!=loc)//If mob is gone or not at the location.
+				add_logs(user, target, "used a khopesh to gib")
+				playsound(loc, 'sound/weapons/chainsword.ogg', 75, 0)
+				new /obj/effect/gibspawner/blood(target.loc)
+				new /obj/effect/gibspawner/generic(target.loc)
+				user.visible_message("<span class='danger'><b>[user] has slashed [target] in half!</b></span>")
+				target.gib()															//this cowboys running from himself
+				if(istype(src, /obj/item/weapon/chainsword/chainaxe2) || istype(src, /obj/item/weapon/chainsword/chainaxe))
+					award(user, "Blood for the blood god!")
+				return
+
+/obj/item/weapon/khopesh/handle_ctrlclick(var/mob/living/user, var/mob/living/target)
+	if(stance == "defensive")
+		..()
+	else
+		if(user.next_click <= world.time)
+			user.changeNext_move(CLICK_CD_MELEE)
+			user.visible_message("\red [user] charges at [target]!")
+			step_towards(user,target)
+			spawn(1) step_towards(user,target)
+			spawn(2) step_towards(user,target)
+			spawn(3) step_towards(user,target)
+			if(ishuman(user))
+				var/mob/living/carbon/human/H = user
+				H.inertial_speed += 6
 /*
 Power Sword Base Class
 */
