@@ -664,6 +664,18 @@ Lord Inquisitor Armor
 	..()
 	icon_state = pick("inq", "inqalt", "inqold", "inqcape", "inqcapeo", "inqaltcape")
 
+/obj/item/clothing/suit/armor/acolyte
+	name = "Acolyte's Suit"
+	desc = "A stylish way to scare the shit out of people."
+	icon_state = "arbit"
+	icon_state = "arbit"
+	blood_overlay_type = "armor"
+	flags = STOPSPRESSUREDMAGE | THICKMATERIAL|HEADCOVERSEYES|HEADCOVERSMOUTH|BLOCKHAIR|!CANSTUN|!CANWEAKEN
+	body_parts_covered = CHEST|ARMS|GROIN
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	armor = list(melee = 55, bullet = 35, laser = 55, energy = 15, bomb = 25, bio = 0, rad = 0)
+
 /obj/item/clothing/suit/armor/fwarmor
 	name = "Fire Caste Armor"
 	desc = "Well, at least it protects from the cold... mostly."

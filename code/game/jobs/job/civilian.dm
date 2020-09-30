@@ -330,10 +330,10 @@ Librarian
 	H.equip_to_slot_or_del(new /obj/item/device/laser_pointer(H), slot_l_store)
 
 /*
-Inquisitor
+Inquisitorial Acolyte
 */
 /datum/job/lawyer
-	title = "Inquisitor"
+	title = "Inquisitorial Acolyte"
 	flag = LAWYER
 	department_head = list("Ordo Hereticus")
 	department_flag = CIVILIAN
@@ -365,9 +365,9 @@ Inquisitor
 /datum/job/lawyer/equip_items(var/mob/living/carbon/human/H)
 	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/inq(H), slot_w_uniform)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/inq/random(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/acolyte(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/head/inqhat(H), slot_head)
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/acohat(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistol2(H), slot_s_store)
 	H.equip_to_slot_or_del(new /obj/item/device/pda/lawyer(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife(H), slot_belt)
