@@ -128,4 +128,10 @@
 	name = "Torn Hood"
 	desc = "The torn hood of a penitent"
 	icon_state = "leper"
-	item_state = "leper"	
+	item_state = "leper"
+
+/obj/item/clothing/under/penitent
+	name = "Tattered clothing"
+	desc = "Torn clothing of a penitent"
+	icon_state = "urchin_body_s"
+	item_state = "urchin_body_s"
