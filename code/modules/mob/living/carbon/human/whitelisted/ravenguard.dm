@@ -26,7 +26,7 @@ RavenGuard
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 	equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/rgbackpack, slot_back)
-	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ravenbolter, slot_s_store)
 
 	var/obj/item/weapon/card/id/W = new
 	W.icon_state = "smcard"
@@ -89,7 +89,7 @@ RavenGuard
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword/generic_chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ravenbolter, slot_s_store)
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
 				W.access = get_all_accesses()
@@ -114,7 +114,7 @@ RavenGuard
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword/generic_chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ravenbolter, slot_s_store)
 				new /obj/item/weapon/snowshovel/ig970 (loc)
 				maxHealth = 175
 				var/obj/item/weapon/card/id/W = new
@@ -129,7 +129,7 @@ RavenGuard
 				regenerate_icons()
 				rename_self("[name]")
 			if("Tactical")
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol/ravenbpistol, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/rgbackpack, slot_back)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
@@ -141,7 +141,7 @@ RavenGuard
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword/generic_chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ravenbolter, slot_s_store)
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "smcard"
 				W.access = get_all_accesses()
@@ -154,19 +154,19 @@ RavenGuard
 				regenerate_icons()
 				rename_self("[name]")
 			if("Librarian")
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol, slot_r_hand)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bpistol/ravenbpistol, slot_r_hand)
 				equip_to_slot_or_del(new /obj/item/weapon/storage/rgbackpack, slot_back)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				equip_to_slot_or_del(new /obj/item/clothing/under/color/black, slot_w_uniform)
-				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/rgpowerarmor, slot_wear_suit)
-				equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/rg, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/armor/rgpowerarmor/librarian, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/magboots/rg/librarian, slot_shoes)
 				equip_to_slot_or_del(new /obj/item/clothing/gloves/rg, slot_gloves)
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-				equip_to_slot_or_del(new /obj/item/clothing/head/helmet/rgpowerhelmet, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/head/helmet/rgpowerhelmet/librarian, slot_head)
 				equip_to_slot_or_del(new /obj/item/weapon/chainsword/generic_chainsword, slot_belt)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_r_store)
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
-				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ravenbolter, slot_s_store)
 				maxHealth = 240 //trait: nerd -10 hp
 				maxPsy += 1000
 				verbs += /mob/living/carbon/human/whitelisted/proc/imprison

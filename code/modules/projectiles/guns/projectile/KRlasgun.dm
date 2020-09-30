@@ -34,3 +34,26 @@
 
 /obj/item/weapon/gun/projectile/automatic/lasgunkreigscope/process_chamber(var/eject_casing = 0, var/empty_chamber = 1)    //be afraid of my skill
 	..()
+
+
+//ev boys newly sprited evgun 
+/*
+/obj/item/weapon/gun/projectile/automatic/evgun
+	name = "Lucious Pattern Lasgun"
+	desc = "Standed issue ranged weapon of the Imperial Guard"
+	icon = 'icons/obj/gun.dmi'
+	icon_state = "evgun"
+	item_state = "evgun"
+	slot_flags = SLOT_BACK
+	origin_tech = "combat=5;materials=1;syndicate=2"
+	mag_type = /obj/item/ammo_box/magazine/lasgunmag
+	fire_sound = 'sound/weapons/lasgun.ogg'
+	scoped = 0
+	chainb = 0
+	canscope = 0
+	canattach = 0
+	ejectcasing = 0 //Technically energy based! None of that!
+
+/obj/item/weapon/gun/projectile/automatic/evgun/process_chamber(var/eject_casing = 0, var/empty_chamber = 1)    //be afraid of my skill
+	..()
+	*/

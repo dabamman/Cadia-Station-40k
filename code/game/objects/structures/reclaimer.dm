@@ -17,7 +17,11 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 		return
 	if(istype(user,/mob/living/carbon/alien/humanoid/tyranid))
 		var/mob/living/carbon/alien/humanoid/tyranid/T = user
-		var/choice = alert(T, "Enter an option.",,"Produce Ripper (80)", "Evolve", "Cont.")
+		var/choice
+		if (istype(user,/mob/living/carbon/alien/humanoid/tyranid/genestealerantag))
+			choice = alert(T, "Enter an option.","Produce Ripper (80)",)
+		else
+			choice = alert(T, "Enter an option.","Produce Ripper (80)", "Evolve", "Cont.")
 		switch(choice)
 			if("Cont.")
 				var/choice2 = alert(T, "Enter an option.",,"Produce Larva (1000)", "Produce Parasite (500)", "Cancel")

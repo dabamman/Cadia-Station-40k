@@ -18,7 +18,7 @@
 	equip_to_slot_or_del(new /obj/item/clothing/mask/gas/sechailer/DK, slot_wear_mask)
 	equip_to_slot_or_del(new /obj/item/clothing/head/DKhelmet, slot_head)
 	equip_to_slot_or_del(new /obj/item/weapon/tank/emergency_oxygen/double/DK, slot_belt)
-	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/lasgunkreig, slot_r_hand)
+	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/evgun, slot_r_hand)
 
 
 

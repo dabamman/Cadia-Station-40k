@@ -67,6 +67,10 @@
 				message_admins("[key_name(usr)] has summoned the wrath of the Goose God!")
 				log_admin("[key_name(usr)] summoned Goosemarines.")
 				src.makeGMsquad()
+			if("14")
+				message_admins("[key_name(usr)] has summoned the hivemind!")
+				log_admin("[key_name(usr)] summoned a Genestealer cult.")
+				src.makeGSCult()
 
 /* DEATH SQUADS
 			if("10")

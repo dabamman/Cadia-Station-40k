@@ -22,6 +22,7 @@ client/proc/one_click_antag()
 		<a href='?src=\ref[src];makeAntag=11'>Make Tau Incursion Team (Requires Ghosts)</a><br>
 		<a href='?src=\ref[src];makeAntag=12'>Make UltraMarine Team (Requires Ghosts)</a><br>
 		<a href='?src=\ref[src];makeAntag=13'>Make GooseMarine Team (Requires Ghosts)</a><br>
+		<a href='?src=\ref[src];makeAntag=14'>Make Genestealer Cult (Requires Ghosts)</a><br>
 		"}
 /* These dont work just yet
 	Ninja, aliens and deathsquad I have not looked into yet
@@ -566,7 +567,7 @@ Shenanigan Spawner
 			return 0
 		else
 			for(var/mob/c in chosen)
-				var/mob/living/carbon/human/dummy/goosemarine/new_character=makeGMBody(c)
+				var/mob/living/carbon/alien/humanoid/tyranid/genestealer/new_character=makeGMBody(c)
 				new_character.mind.make_GM()
 
 	return 1
@@ -575,7 +576,67 @@ Shenanigan Spawner
 	if(!G_found || !G_found.key)	return
 
 	//First we spawn a dude.
-	var/mob/living/carbon/human/dummy/goosemarine/new_character = new(pick(latejoin))//The mob being spawned.
+	var/mob/living/carbon/alien/humanoid/tyranid/genestealer/new_character = new(pick(latejoin))//The mob being spawned.
+
+	ready_dna(new_character)
+	new_character.key = G_found.key
+
+	return new_character
+
+//Spawn in a modified genestealer, this is a holdover until I become smart enough to make my own gamemodes - Wel
+
+/datum/admins/proc/makeGSCult()
+	var/list/mob/dead/observer/candidates = list()
+	var/list/mob/dead/observer/chosen = list()
+	var/mob/dead/observer/theghost = null
+	var/time_passed = world.time
+
+	for(var/mob/dead/observer/G in player_list)
+		if(!jobban_isbanned(G, "operative") && !jobban_isbanned(G, "Syndicate"))
+			spawn(0)
+				switch(alert(G,"A strange hunger claws at your soul, will you give in and follow?","Please answer in 30 seconds!","Yes","No"))
+					if("Yes")
+						if((world.time-time_passed)>300)//If more than 30 game seconds passed.
+							return
+						candidates += G
+					if("No")
+						return
+					else
+						return
+
+	sleep(300)
+
+	if(candidates.len)
+		var/numagents = 6
+		var/agentcount = 0
+
+		for(var/i = 0, i<numagents,i++)
+			shuffle(candidates) //More shuffles means more randoms
+			for(var/mob/j in candidates)
+				if(!j || !j.client)
+					candidates.Remove(j)
+					continue
+
+				theghost = j
+				candidates.Remove(theghost)
+				chosen += theghost
+				agentcount++
+				break
+		//Making sure we have atleast 3 Nuke agents, because less than that is kinda bad
+		if(agentcount < 1)
+			return 0
+		else
+			for(var/mob/c in chosen)
+				var/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/new_character=makegsBody(c)
+				new_character.mind.make_GS()
+
+	return 1
+
+/datum/admins/proc/makegsBody(var/mob/dead/observer/G_found) // Uses stripped down and bastardized code from respawn character
+	if(!G_found || !G_found.key)	return
+
+	//First we spawn a dude.
+	var/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/new_character = new(pick(latejoin))//The mob being spawned.
 
 	ready_dna(new_character)
 	new_character.key = G_found.key

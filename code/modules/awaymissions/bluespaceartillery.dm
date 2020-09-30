@@ -24,13 +24,13 @@
 
 /obj/machinery/computer/artillerycontrol/attack_hand(mob/user as mob)
 	user.set_machine(src)
-	var/dat = "<B>Stargazer Communication Console:</B><BR>"
+	var/dat = "<B>Marinaeque Testudinis Communication Console:</B><BR>"
 	dat += "Locked on<BR>"
 	dat += "<B>Charge progress: [reload]/180:</B><BR>"
 	dat += "<A href='byond://?src=\ref[src];fire=1'>Surgical Strike</A><BR>"
 	if(reinfo)
 		dat += "<A href='byond://?src=\ref[src];reinfo=1'>Request Reinforcements</A><BR>"
-	dat += "Imperial Inquisition Lunar Class Cruiser 'Stargazer' awaiting your request. <br>We will hold position until you need us.<br><br>The Emperor Protects!<HR>"
+	dat += "Imperial Inquisition Black Ship 'Marinaeque Testudinis' awaiting your request. <br>We will hold position until you need us.<br><br>The Emperor Protects!<HR>"
 	user << browse(dat, "window=scroll")
 	onclose(user, "scroll")
 	return
@@ -52,10 +52,10 @@
 		A = input("Area to bombard", "Open Fire", A) in teleportlocs
 		var/area/thearea = teleportlocs[A]
 		if(src.reload < 180)
-			usr << "\red The stargazer is reloading."
+			usr << "\red The Marinaeque Testudinis is reloading."
 			return
 		if ((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))) || (istype(usr, /mob/living/silicon)))
-			priority_announce("Imperial Inquisition Lunar Class Cruiser 'Stargazer'. Orders recieved. Firing on your location.")
+			priority_announce("Imperial Inquisition Black Ship 'Marinaeque Testudinis'. Orders recieved. Firing on your location.")
 			message_admins("[key_name_admin(usr)] has launched an orbital strike.", 1)
 			var/list/L = list()
 			for(var/turf/T in get_area_turfs(thearea.type))

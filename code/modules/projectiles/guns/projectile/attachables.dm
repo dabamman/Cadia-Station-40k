@@ -24,3 +24,14 @@
 	icon_state = "scope"
 	w_class = 2
 	scopetype = 1
+
+/obj/item/weapon/pbayonet
+	name = "Attatchable Plague Bayonet"
+	desc = "An attatchable plague bayonet"
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "pbayonet"
+	w_class = 2
+	force = 20
+	throwforce = 10
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")

@@ -333,6 +333,13 @@
 	damage_type = BRUTE
 	flag = "bullet"
 
+/obj/item/projectile/bullet/dreadgun
+	name = "bullet"
+	icon_state = "bullet"
+	damage = 15
+	damage_type = BRUTE
+	flag = "bullet"
+
 /obj/item/projectile/bullet/shrapnel
 	name = "\proper shrapnel"
 	icon_state = "shrapnel1"

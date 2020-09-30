@@ -80,6 +80,14 @@
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
+/obj/item/clothing/head/acohat
+	name = "An Acolyte's Helm"
+	desc = "Strikes fear via proxy into heretics."
+	icon_state = "cerberus"
+	item_state = "cerberus"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+
 /obj/item/clothing/head/liox
 	name = "Inquisitor Hat"
 	desc = "It's a very nice hat."

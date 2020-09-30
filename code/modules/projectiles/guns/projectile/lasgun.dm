@@ -42,3 +42,26 @@ Adding a lascannon here because I would rather not make a new file for a simple 
 	mag_type = /obj/item/ammo_box/magazine/lascannonmag
 	fire_sound = 'sound/weapons/lasgun.ogg'
 	ejectcasing = 0 //Technically energy based! None of that!
+
+/obj/item/weapon/gun/projectile/automatic/evgun
+	name = "Lucious Pattern Lasgun"
+	desc = "Standed issue ranged weapon of the Imperial Guard"
+	icon_state = "evgun"
+	item_state = "evgun"
+	slot_flags = SLOT_BACK
+	origin_tech = "combat=5;materials=1;syndicate=2"
+	mag_type = /obj/item/ammo_box/magazine/evmag
+	fire_sound = 'sound/weapons/lasgun.ogg'
+	scoped = 0
+	chainb = 0
+	canscope = 0
+	canattach = 0
+	ejectcasing = 0 //Technically energy based! None of that!
+	var/projectiles_per_shot = 3
+	var/deviation = 0
+	var/projectiles = 10000000000
+	var/cooldown = 1
+	var/projectile = /obj/item/projectile/bullet/lasgun
+
+/obj/item/weapon/gun/projectile/automatic/evgun/process_chamber(var/eject_casing = 0, var/empty_chamber = 1)    //be afraid of my skill
+	..()

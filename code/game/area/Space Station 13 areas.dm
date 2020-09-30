@@ -1345,8 +1345,10 @@ Droppod
 	icon_state = "DK"
 
 /area/factions/stargazer
-	name = "Imperial Cruiser 'Stargazer'"
+	name = "Inquisitorial Black Ship 'Marinaeque Testudinis'"
 	icon_state = "SG"
+	requires_power = 1
+	lighting_use_dynamic = 1
 
 
 

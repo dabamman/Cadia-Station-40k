@@ -140,7 +140,7 @@ update_label("John Doe", "Clowny")
 
 /obj/item/weapon/card/id/inquisitor
 	name = "Inquisitorial Seal"
-	desc = "An inquisitorial seal. Grants virtually unlimitted authority to a full inquisitor of the Imperium."
+	desc = "An inquisitorial seal. Commands the power of the Ordo Hereticus via proxy."
 	icon_state = "inquisitor"
 	item_state = "silver_id"
 

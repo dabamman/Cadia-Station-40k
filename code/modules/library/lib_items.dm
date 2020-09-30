@@ -405,3 +405,68 @@
 		else
 			user << "It's just nonsense about a plague ridden father..."
 			return
+
+/obj/item/weapon/kbook
+	name = "A Cryptic Book"
+	icon = 'icons/obj/library.dmi'
+	icon_state ="booksmoke"
+	throw_speed = 1
+	throw_range = 5
+	w_class = 3		 //upped to three because books are, y'know, pretty big. (and you could hide them inside eachother recursively forever)
+	attack_verb = list("bashed", "whacked", "educated")
+	var/dat				//Actual page content
+	var/due_date = 0	//Game time in 1/10th seconds
+	var/author			//Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
+	var/unique = 0		//0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified
+	var/title			//The real name of the book.
+	var/carved = 0		//Has the book been hollowed out for use as a secret storage item?
+	var/obj/item/store	//What's in the book?
+	var/window_size = null // Specific window size for the book, i.e: "1920x1080", Size x Width
+
+/obj/item/weapon/kbook/attack_self(mob/user)
+	if(carved)
+		if(store)
+			user << "<span class='notice'>[store] falls out of [title]!</span>"
+			store.loc = get_turf(loc)
+			store = null
+			return
+		else
+			user << "<span class='notice'>The pages of [title] have been cut out!</span>"
+			return
+
+	if(is_blind(user))
+		return
+
+	if(ticker && istype(ticker.mode,/datum/game_mode/cult) )
+		user << "<span class='notice'>You start the examine the book but stop. You get the feeling like some one is watching you.</span>"
+		return
+
+	if(user.mind in ticker.mode.cult)
+		user << "<span class='notice'>You glance through the index. You are pretty sure you have read this before. Good stuff.</span>"
+		return
+
+	else
+		if(prob (5))
+			user << "\red You catch a glimpse of the Realm of Tzeentch, The Changer of Ways. You now see how flimsy the world is, you see that it should be open to the knowledge of Tzeentch. A tome, a message from your master, appears on the ground."
+			user.mind.special_role = "Cultist"
+			runerandom()
+			ticker.mode.cult += user.mind
+			ticker.mode.add_cultist(user.mind)
+			user.mind.make_Cultist()
+			new /obj/item/weapon/tome(user.loc)
+			var/datum/game_mode/cult/temp = new
+			if(config.protect_roles_from_antagonist)
+				temp.restricted_jobs += temp.protected_jobs
+			user << "\red You remembered one thing from the glimpse... [wordtravel] is travel..."
+			user << "\red You remembered one thing from the glimpse... [wordblood] is blood..."
+			user << "\red You remembered one thing from the glimpse... [wordjoin] is join..."
+			user << "\red You remembered one thing from the glimpse... [wordhell] is Hell..."
+			user << "\red You remembered one thing from the glimpse... [worddestr] is destroy..."
+			user << "\red You remembered one thing from the glimpse... [wordtech] is technology..."
+			user << "\red You remembered one thing from the glimpse... [wordself] is self..."
+			user << "\red You remembered one thing from the glimpse... [wordsee] is see..."
+			qdel(src)
+			return
+		else
+			user << "It's just nonsense about a mysterious old wizard..."
+			return

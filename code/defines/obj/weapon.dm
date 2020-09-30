@@ -271,17 +271,17 @@
 	m_amt = 3750
 
 /obj/item/weapon/staff
-	name = "Psyker staff"
-	desc = "Apparently a staff used by a psyker."
+	name = "aquilla staff"
+	desc = "A metal staff topped with a golden Aquilla with two purity seals affixed to it. Although it's not woven with a Psi-Convertor like many Force Weapons, it still makes for a handy-enough bludgeon. "
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "IG-staff"
-	force = 3.0
+	force = 9.0
 	throwforce = 5.0
 	throw_speed = 2
 	throw_range = 5
 	w_class = 2.0
 	flags = NOSHIELD
-	attack_verb = list("bludgeoned", "whacked", "disciplined")
+	attack_verb = list("bludgeoned", "whacked", "battered", "beaten", "bashed")
 
 /obj/item/weapon/staff/broom
 	name = "broom"
