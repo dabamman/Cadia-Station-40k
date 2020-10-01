@@ -166,3 +166,9 @@
 	icon_state = "billydonka"
 	item_state = "billydonka"
 	item_color = "billydonka"
+
+/obj/item/clothing/under/rank/acolyte
+	name = "acolyte's clothing"
+	desc = "A dark set of nondistinct clothes made of a slighty sturdier material than the usual fabrics available to civilians."
+	icon_state = "acolyteuniform"
+	item_color = "acolyteuniform"
