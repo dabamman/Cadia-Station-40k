@@ -67,7 +67,7 @@
 	set category = "Object"
 	set name = "Enter Dreadnought"
 	set src in oview(1)
-	if(istype(usr, /mob/living/carbon/human/whitelisted) && !istype(usr, /mob/living/carbon/human/whitelisted/eldar))
+	if(istype(usr, /mob/living/carbon/human/whitelisted/um) && !istype(usr, /mob/living/carbon/human/whitelisted/eldar))
 		var/confirm = alert("If you enter the [src.name], you will be entombed in its ceramite casing until death. Are you sure?", "Enter?", "Yes", "No")
 		if(confirm == "Yes")
 			if(enter_after(40,usr))
