@@ -426,7 +426,7 @@ Lord Inquisitor Armor
 	icon_state = "rg_apotharmor"
 	item_state = "rg_apotharmor"
 	armor = list(melee = 90, bullet = 60, laser = 70, energy = 80, bomb = 80, bio = 100, rad = 90) //Bonus to bio
-	
+
 
 /obj/item/clothing/suit/armor/rgpowerarmor/librarian
 	name = "Raven Guard Librarian Power Armor"
@@ -434,7 +434,7 @@ Lord Inquisitor Armor
 	icon_state = "rg_lib"
 	item_state = "rg_lib"
 	armor = list(melee = 90, bullet = 60, laser = 70, energy = 85, bomb = 80, bio = 95, rad = 90) //Bonus to energy
-	
+
 /obj/item/clothing/suit/armor/rgpowerarmor/tech
 	name = "Raven Guard TechMarine Power Armor"
 	desc = "Raven Guard TechMarine Armor"
@@ -579,7 +579,7 @@ Lord Inquisitor Armor
 	name = "Salamander Marine Librarian Power Armor"
 	desc = "Salamander Marine blessed Librarian Armor"
 	icon_state = "sl_lib"
-	item_state = "sl_lib"	
+	item_state = "sl_lib"
 	armor = list(melee = 80, bullet = 60, laser = 70, energy = 95, bomb = 80, bio = 95, rad = 90) //Bonus to energy
 
 /obj/item/clothing/suit/armor/sister
@@ -845,3 +845,15 @@ Lord Inquisitor Armor
 		usr.alpha = 255
 		usr << "\blue You are now visible."
 		return
+
+/obj/item/clothing/suit/armor/acolytecoat
+	name = "acolyte's coat"
+	desc = "A thick brown coat lined with a tough layer of flak-weave, dotted with the occassional Inquisitorial seal or holy sigil."
+	icon_state = "acolytecoat"
+	item_state = "acolytecoat"
+	blood_overlay_type = "coat"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	flags = THICKMATERIAL
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 50, rad = 50)

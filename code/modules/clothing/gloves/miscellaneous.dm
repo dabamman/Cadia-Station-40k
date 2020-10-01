@@ -175,3 +175,14 @@
 	name = "Sanctioned Gloves"
 	icon_state = "spsykergloves"
 	item_state = "spsykergloves"
+
+/obj/item/clothing/gloves/acolytegloves
+	desc = "A pair of dark, stain-resistant gloves with insulated fingertips."
+	name = "acolyte's gloves"
+	icon_state = "acolytegloves"
+	item_state = "acolytegloves"
+	siemens_coefficient = 0
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT

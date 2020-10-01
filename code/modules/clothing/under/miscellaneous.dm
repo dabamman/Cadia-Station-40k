@@ -505,7 +505,7 @@
 	can_roll = 0
 
 /obj/item/clothing/under/stormtroop
-	desc = "Life is too hectic at this time for me to right a valid description #calls for help via code"
+	desc = "A blood-red, fitted uniform worn by the Inquisitorial Stormtroopers."
 	name = "Stormtrooper Uniform"
 	icon_state = "storms"
 	item_state = "storms"
