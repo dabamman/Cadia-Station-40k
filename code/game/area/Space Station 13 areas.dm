@@ -2152,6 +2152,13 @@ Droppod
 	lighting_use_dynamic = 0
 	requires_power = 0
 
+//drukhari
+/area/drukhari_ship
+	name = "\improper Drukhari Ship"
+	icon_state = "yellow"
+	requires_power = 0
+	has_gravity = 1
+
 
 /////////////////////////////////////////////////////////////////////
 /*
