@@ -208,7 +208,7 @@
 	item_state = "Skit_shoes"
 	permeability_coefficient = 0.01
 	flags = NOSLIP
-	armor = list(melee = 60, bullet = 50, laser = 30,energy = 15, bomb = 30, bio = 30, rad = 30)
+	armor = list(melee = 15, bullet = 25, laser = 15,energy = 15, bomb = 25, bio = 30, rad = 30)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET

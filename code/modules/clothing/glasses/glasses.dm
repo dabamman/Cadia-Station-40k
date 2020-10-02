@@ -29,6 +29,14 @@
 	darkness_view = 8
 	invis_view = SEE_INVISIBLE_MINIMUM
 
+/obj/item/clothing/glasses/bioniceye
+	name = "bionic eyes"
+	desc = "A set of mechanical eyes to replace your weaker, fleshy ones. "
+	icon_state = "bioniceye"
+	item_state = "bioniceye"
+	flags = NODROP
+	darkness_view = 8
+
 /obj/item/clothing/glasses/eyepatch
 	name = "eyepatch"
 	desc = "Yarr."
