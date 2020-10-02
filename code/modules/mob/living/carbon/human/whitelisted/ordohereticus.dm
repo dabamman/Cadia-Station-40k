@@ -210,7 +210,12 @@ Ordo Hereticus
 	universal_speak = 1
 	gender = "male"
 	faction = "Inquisitor"
+
 /mob/living/carbon/human/OHinq/leader
+	name = "Lady Inquisitor Eleanora Rose"
+	real_name = "Lady Inquisitor Eleanora Rose"
+	gender = "female"
+
 /mob/living/carbon/human/OHinq/New()
 	..()
 	sleep (5)

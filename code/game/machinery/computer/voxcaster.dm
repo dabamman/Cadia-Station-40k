@@ -203,7 +203,7 @@ Imperial faction variants
 	density = 1
 	anchored = 1.0
 	use_power = 0
-	identity = "<FONT COLOR='green'>•Imperial Cruiser 'Stargazer'</FONT>"
+	identity = "<FONT COLOR='green'>•Inquisitorial Black Ship 'Marinaeque Testudinis'</FONT>"
 	icon_alert = "taua"
 	oldicon = "tau"
 
