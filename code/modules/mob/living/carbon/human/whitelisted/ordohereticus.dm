@@ -175,8 +175,7 @@ Ordo Hereticus
 				rename_self("[name]")
 				verbs += /mob/living/carbon/human/proc/renderaid
 				maxPsyk += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
-				verbs += /mob/living/carbon/human/proc/imprisonn
-				verbs += /mob/living/carbon/human/proc/smitee
+				verbs += /mob/living/carbon/human/proc/psykmode
 				verbs += /mob/living/carbon/human/proc/quickeningg
 				verbs += /mob/living/carbon/human/proc/telepathh
 	//extra letters added on end to avoid duplicate definitions/clash with Librarians, real goose tape code I know - Wel								 //This is how we get the verb!

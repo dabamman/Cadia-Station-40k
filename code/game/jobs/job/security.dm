@@ -221,8 +221,7 @@ Sanctioned Psyker
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
 
 	H.maxPsyk += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
-	H.verbs += /mob/living/carbon/human/proc/imprisonn
-	H.verbs += /mob/living/carbon/human/proc/smitee
+	H.verbs += /mob/living/carbon/human/proc/psykmode
 	H.verbs += /mob/living/carbon/human/proc/quickeningg
 	H.verbs += /mob/living/carbon/human/proc/telepathh
 	//extra letters added on end to avoid duplicate definitions/clash with Librarians, real goose tape code I know - Wel

@@ -146,6 +146,21 @@
 	summon_type = list("/obj/effect/forcefield")
 	summon_lifespan = 300
 
+/obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall
+	name = "Warpwall"
+	desc = "This spell creates an unbreakable wall that lasts for 30 seconds and does not need wizard garb."
+
+	school = "transmutation"
+	charge_max = 100
+	clothes_req = 0
+	invocation = "Warp Field!"
+	invocation_type = "whisper"
+	range = 0
+	cooldown_min = 50 //12 deciseconds reduction per rank
+
+	summon_type = list("/obj/effect/warpfield")
+	summon_lifespan = 300
+
 
 /obj/effect/proc_holder/spell/aoe_turf/conjure/carp
 	name = "Summon Carp"
@@ -253,5 +268,34 @@
 	ex_heavy = -1
 	ex_light = 2
 	ex_flash = 5
+	
+/obj/effect/proc_holder/spell/targeted/projectile/lightningarc
+	name = "Lightning Arc"
+	desc = "This spell fires several, fast moving, bolts of lightning at nearby targets."
 
+	school = "evocation"
+	charge_max = 150
+	clothes_req = 1
+	invocation = "SEEK MY FOES!"
+	invocation_type = "shout"
+	range = 7
+	cooldown_min = 90 //15 deciseconds reduction per rank
+
+	max_targets = 0
+	proj_icon = 'icons/obj/projectiles.dmi'
+	proj_icon_state = "electricity2"
+	proj_name = "a lightning bolt"
+	proj_lingering = 1
+	proj_type = "/obj/effect/proc_holder/spell/targeted/inflict_handler/magic_missile"
+
+	proj_lifespan = 20
+	proj_step_delay = 5
+
+	proj_trail = 1
+	proj_trail_lifespan = 5
+	proj_trail_icon_state = "magicmd"
+
+/obj/effect/proc_holder/spell/targeted/inflict_handler/lightningarc
+	amt_weakened = 5
+	amt_dam_fire = 17
 
