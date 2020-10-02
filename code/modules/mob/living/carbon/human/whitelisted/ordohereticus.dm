@@ -232,7 +232,7 @@ Ordo Hereticus
 	equip_to_slot_or_del(R, slot_ears)
 	var/obj/item/weapon/card/id/ordohereticus/W = new
 	W.access = get_all_accesses()
-	W.access += get_centcom_access("Inquisitor")
+	W.access += get_centcom_access("Inquisitorial Acolyte")
 	W.registered_name = real_name
 	W.update_label()
 	equip_to_slot_or_del(W, slot_wear_id)
