@@ -111,7 +111,9 @@
 
 
 
-//Space Marine specific emotes
+/*
+Space Marine Emotes
+*/
 
 /mob/living/carbon/human/whitelisted/um/verb/empprotex()
 	set name = "For the Emperor"
