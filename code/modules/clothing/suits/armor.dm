@@ -857,3 +857,15 @@ Lord Inquisitor Armor
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 50, rad = 50)
+
+/obj/item/clothing/suit/armor/skitrobe
+	name = "skitarii robe"
+	desc = "A durable, rad-resistant rust red robe marked with the iconography and sigils of the Adeptus Mechanicus."
+	icon_state = "skitrobe"
+	item_state = "skitrobe"
+	blood_overlay_type = "coat"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	flags = THICKMATERIAL
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 50, rad = 50)

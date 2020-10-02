@@ -12,20 +12,21 @@
 
 /mob/living/carbon/human/skitarii_ranger/New()
 	..()
-	immunetofire = 1
-	spawn(5) 
+	spawn(5)
 		if(!src.ckey)
 			isempty = 1 //Then the larva can be possessed by any ghost.
 			request_player()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_eng
 	R.set_frequency(1459)
-	equip_to_slot_or_del(R, slot_ears)
+	equip_to_slot_or_del(new /obj/item/clothing/glasses/bioniceye, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/skitarii, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security, slot_back)
-	equip_to_slot_or_del(new /obj/item/clothing/under/skitunder, slot_w_uniform)
+	equip_to_slot_or_del(new /obj/item/clothing/under/rank/skitunder, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/skitshoes, slot_shoes)
+	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/skitrobe, slot_wear_suit)
 
-	var/rndname = "Sy-Gex([rand(123, 789)])"
+	var/namelist = list ("Sy-Gex-[rand(123, 789)]", "Tyr-[rand(123, 789)]", "Dak-[rand(123, 789)]", "Delyrr-[rand(123, 789)]", "Ar-[rand(123, 789)]", "Zyto-Neumann-[rand(123, 789)]", "Xixos-[rand(123, 789)]", "Rho-[rand(123, 789)]", "Delpha-[rand(123, 789)]",)
+	var/rndname = pick(namelist)
 
 	name = "[rndname]"
 	real_name = "[rndname]"

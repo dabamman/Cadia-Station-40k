@@ -88,15 +88,13 @@
 				G << "\red \b Distress Signal Sent. Krieg Officers now available to deploy."
 //making some skitarii ranger gloves for biotic guns - wel
 /obj/item/clothing/gloves/skitarii
-	desc = "A fine set of biotic weapons forged by the Adeptus Mechanicus"
-	name = "Skitarii Implants"
-	icon_state = "s-ninjan"
-	item_state = "s-ninjan"
+	desc = "An arc rifle integrated into your forearm, forged by the Adeptus Mechanicus."
+	name = "skitarii weapon implants"
+	icon_state = "skithands"
+	item_state = "skithands"
 	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
-	flags_inv = HIDEJUMPSUIT|HANDS|CHEST|LEGS|FEET|ARMS|GROIN
 	var/can_toggle = 1
 	var/is_toggled = 1
-	var/beaconactive = 0
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 
@@ -112,44 +110,17 @@
 		if(src.is_toggled == 2)
 			if(istype(usr.l_hand, /obj/item/weapon/gun/energy/plasma/arcrifle)) //Not the nicest way to do it, but eh
 				qdel(usr.l_hand)
-				usr.visible_message("<span class='warning'>With a snap of metal against metal, [usr] reforms his entire arm into an arc rifle.</span>", "<span class='notice'>You retract your bionic gun.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
+				usr.visible_message("<span class='warning'>With a snap of metal against metal, [usr] reforms his entire arm into an arc rifle.</span>", "<span class='notice'>You retract your integrated weapon.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
 				usr.update_inv_hands()
 			if(istype(usr.r_hand, /obj/item/weapon/gun/energy/plasma/arcrifle)) //Not the nicest way to do it, but eh
 				qdel(usr.r_hand)
-				usr.visible_message("<span class='warning'>With a snap of metal against metal, [usr] reforms his entire arm into an arc rifle.</span>", "<span class='notice'>You retract your bionic gun.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
+				usr.visible_message("<span class='warning'>With a snap of metal against metal, [usr] reforms his entire arm into an arc rifle.</span>", "<span class='notice'>You retract your integrated weapon.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
 				usr.update_inv_hands()
 			src.icon_state = initial(icon_state)
-			usr << "You lower your gun."
+			usr << "You lower your weapon."
 			src.is_toggled = 1
 		else
 			src.icon_state += "_open"
-			usr << "You ready your gun."
+			usr << "You ready your weapon."
 			usr.put_in_hands(new /obj/item/weapon/gun/energy/plasma/arcrifle(usr))
-			src.is_toggled = 2
-
-	verb/toggleshield()
-		set name = "Toggle Defensive Shield"
-		set category = "Biotics"
-		set src in usr
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return
-		if(!can_toggle)
-			usr << "This item cannot be toggled!"
-			return
-		if(src.is_toggled == 2)
-			if(istype(usr.l_hand, /obj/item/weapon/shield/energy)) //Not the nicest way to do it, but eh
-				qdel(usr.l_hand)
-				usr.visible_message("<span class='warning'>With a hum of energy, [usr]'s shield folds neatly back into his arm.</span>", "<span class='notice'>You put the shield away.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
-				usr.update_inv_hands()
-			if(istype(usr.r_hand, /obj/item/weapon/shield/energy)) //Not the nicest way to do it, but eh
-				qdel(usr.r_hand)
-				usr.visible_message("<span class='warning'>With a hum of energy, [usr]'s shield folds neatly back into his arm.</span>", "<span class='notice'>You put the shield away.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
-				usr.update_inv_hands()
-			src.icon_state = initial(icon_state)
-			usr << "You lower your gun."
-			src.is_toggled = 1
-		else
-			src.icon_state += "_open"
-			usr << "You pull out your energy shield and get ready to activate it."
-			usr.put_in_hands(new /obj/item/weapon/shield/energy(usr))
 			src.is_toggled = 2

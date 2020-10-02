@@ -28,3 +28,14 @@
 	icon_state = "robotics"
 	item_state = "robotics"
 	item_color = "robotics"
+
+/obj/item/clothing/under/rank/skitunder
+	desc = "Subdermal armor plating, reinforced cybernetic enhancements, reflec coated augmentations, and other upgrades designed to be more resistant to damage. It can't be removed as it's, y'know, a part of your body. "
+	name = "sturdy cybernetics"
+	icon_state = "skit_s"
+	item_state = "skit_s"
+	item_color = "skit_s"
+	gender = PLURAL
+	body_parts_covered = GROIN|LEGS|HEAD
+	armor = list(melee = 15, bullet = 15, laser = 15, energy = 10, bomb = 10, bio = 20, rad = 20)
+	flags = NODROP
