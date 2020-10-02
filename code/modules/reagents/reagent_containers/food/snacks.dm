@@ -268,6 +268,16 @@
 		reagents.add_reagent("sugar", 3)
 		bitesize = 2
 
+/obj/item/weapon/reagent_containers/food/snacks/poop
+	name = "Poop"
+	desc = "Hella' stinky!"
+	icon_state = "poop2"
+	filling_color = "#754C24"
+	New()
+		..()
+		reagents.add_reagent("nutriment", 1)
+		bitesize = 2
+
 /obj/item/weapon/reagent_containers/food/snacks/ccake
 	name = "Cron Cakes"
 	desc = "Produced by Goose Inc. May contain traces of Thermite."
