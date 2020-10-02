@@ -1926,3 +1926,10 @@ datum/chemical_reaction/pestkiller
 	result = "tranq"
 	required_reagents = list("moonshine" = 1, "stoxin" = 1)
 	result_amount = 2
+
+/datum/chemical_reaction/ravenheart
+	name = "Ravenheart Special"
+	id = "ravenheart"
+	result = "ravenheart"
+	required_reagents = list("blood" = 1, "vodka" = 1,)
+	result_amount = 2

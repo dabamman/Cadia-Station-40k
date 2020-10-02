@@ -744,6 +744,9 @@
 
 				<h2>Manly Dorf:</h2>
 				Mix ale and beer into a glass.
+				
+				<h2>Ravenheart Special:</h2>
+				Mix vodka and blood into a glass.
 
 				<h2>Grog:</h2>
 				Mix rum and water into a glass.
@@ -769,6 +772,9 @@
 				<h2>Classic Martini:</h2>
 				Mix vermouth and gin into a glass.
 
+				<h2>Ravenheart Special:</h2>
+				Mix vodka and blood into a glass.
+
 
 				</body>
 				</html>
@@ -776,10 +782,10 @@
 
 
 /obj/item/weapon/book/manual/detective
-	name = "The Commissar’s Complete Guide to Imperial Propaganda"
+	name = "The Commissarï¿½s Complete Guide to Imperial Propaganda"
 	icon_state ="bookDetective"
 	author = "BlackLibray"
-	title = "The Commissar’s Complete Guide to Imperial Propaganda"
+	title = "The Commissarï¿½s Complete Guide to Imperial Propaganda"
 	dat = {"<html>
 			<head>
 			<style>
@@ -793,9 +799,9 @@
 			<body>
 			<h3>Detective Work</h3>
 
-			Welcome, commissars, to the Complete Guide to Imperial Propaganda. Today, we will introduce you to the most powerful tool in a commissar’s arsenal.<br>
+			Welcome, commissars, to the Complete Guide to Imperial Propaganda. Today, we will introduce you to the most powerful tool in a commissarï¿½s arsenal.<br>
 			Contrary to popular belief, that is not the holy bolt pistol, though it is undoubtedly a weapon of extreme power, or the blessed chainsword. <br>
-			The most powerful weapon in a commissar’s arsenal is the Holy Truth of the God-Emperor.<br>
+			The most powerful weapon in a commissarï¿½s arsenal is the Holy Truth of the God-Emperor.<br>
 			<p>
 			<ol>
 			<li>Be Inspirational. </li>
@@ -803,23 +809,23 @@
 			Repeated rhetoric will help embed your views, so that even in the face of compelling evidence to the contrary, your words <br>
 			will hold true and your men will never flee. Of course, if the odd one does, shoot him. This acts as an excellent deterrent <br>
 			to any other would-be deserters.</li>
-			<li>‘Any soldier who, in the face of the enemy, runs away, or shamefully abandons his post or guard, <br>
+			<li>ï¿½Any soldier who, in the face of the enemy, runs away, or shamefully abandons his post or guard, <br>
 			or induces others to do the like, or casts away his arms or ammunition, or attempts to take his own life shall<br>
-			 be shot on the spot.’ -The Imperial Infantryman’s Handbook Art. 8055/14v</li><br>
+			 be shot on the spot.ï¿½ -The Imperial Infantrymanï¿½s Handbook Art. 8055/14v</li><br>
 			<li>Tell them what they need to know<br>
 			It is up to you to make sure that what you say is law and that no amount of empirical evidence can shake the belief<br>
 			that you have instilled. Be sure to focus on ways to reinforce the belief in your tactical superiority over the myriad <br>
-			foes you will face.‘Genestealers attack in swarms. This means they present a large target.<br>
-			Use frag grenades and volley fire to blow them to ichor.’ -Imperial Infantryman’s Handbook Section 2, iii </li><br>
+			foes you will face.ï¿½Genestealers attack in swarms. This means they present a large target.<br>
+			Use frag grenades and volley fire to blow them to ichor.ï¿½ -Imperial Infantrymanï¿½s Handbook Section 2, iii </li><br>
 			<li>Know your history./li>
 			<li>Make sure you read about all of the most successful crusades to provide you with inspiring examples you can quote<br>
 			to further motivate those under your command. Some excellent examples include the Sabbat Worlds Crusade, particularly the<br>
 			engagements of Colonel-Commissar Ibram Gaunt and his Tanith First, the memoirs of Commissar Ciaphas Cain, Hero of the Imperium,<br>
-			and of course, the Macharian Crusade, led by Lord Solar Macharius.‘The Imperial Guard is a venerable and glorious army,<br>
+			and of course, the Macharian Crusade, led by Lord Solar Macharius.ï¿½The Imperial Guard is a venerable and glorious army,<br>
 			steeped high in history and honour. The armies of the Imperium span the galaxy, and have done so for millennia.<br>
 			Imperial Guard methods in the art of war are fixed, the dogmas of strategy and battlefield policy have secured <br>
-			the Imperium and stemmed the brutish tides of the foul and heretical.’ -The Imperial Infantryman’s Handbook<br></li>
-			<li>Follow these simple rules and keep your copy of The Imperial Infantryman’s Handbook close to your chest, and victory is assured.</li>
+			the Imperium and stemmed the brutish tides of the foul and heretical.ï¿½ -The Imperial Infantrymanï¿½s Handbook<br></li>
+			<li>Follow these simple rules and keep your copy of The Imperial Infantrymanï¿½s Handbook close to your chest, and victory is assured.</li>
 			<li>For the Emperor!</li>
 			</ol>
 			<p>
@@ -869,7 +875,7 @@
 	author = "Uknown"
 	title = "Imperial Infantryman's Uplifting Primer"
 	dat = {"<html>
-	1. You are expendable, prove you’re worth something.<br>
+	1. You are expendable, prove youï¿½re worth something.<br>
 	2. Don't form any deep relationships with your fellow guardsmen, they will drop like flies.<br>
 	3. Orks are not friendly.<br>
 	4. Your lasgun is just a powerful flash light, aim for their eyes.<br>
@@ -881,9 +887,9 @@
 	9. If you are asked by a Commissar why you retreated tell them you were advancing in the other direction.<br>
 	10. There's a litany for everything.<br>
 	11. The Commissar is always right.<br>
-	12. Only buy the Imperial Infantryman’s Uplifting Primer.<br>
+	12. Only buy the Imperial Infantrymanï¿½s Uplifting Primer.<br>
 	13. When in deadly danger, when beset by doubt, run in little circles, wave your arms and shout.<br>
-	14. Don’t hope to get back home: your chances left you when you signed up.<br>
+	14. Donï¿½t hope to get back home: your chances left you when you signed up.<br>
 	15. There is nothing special about you, only the tank you and your comrades are being the shield for.<br>
 	16. Emergency or no emergency, if you melt the battery of your lasgun in a campfire, you're paying for a replacement.<br>
 	17. When facing a force of Chaos, shoot the guy with the glowing eyes first.<br>
@@ -894,7 +900,7 @@
 	Who knows, you could get sainthood if you blow up someone important.<br>
 	20. They are called "Rhinos" not "Metal Boxes", no matter what the heretical forces of Chaos say<br>
 	21. Don't ask for better armour, you won't get it.<br>
-	22. Titans will step on you if you don’t move.<br>
+	22. Titans will step on you if you donï¿½t move.<br>
 	23. Massed fire is your only chance of survival. Pour your shots into the same target as everyone else until it drops, and then jump to the next target.<br>
 	24. Few things can beat a Leman Russ. Stick near it whenever possible.<br>
 	25. Baneblades are the gods of the Imperial arsenal. Just cover your ears when they fire.<br>
@@ -904,7 +910,7 @@
 	29. Your bayonet will break at the most inopportune time, so stick to shooting.<br>
 	30. The techpriests hate your guts and may probably try to rig your gun first chance they get, so be sure to know how to maintain your own weapon.<br>
 	31. Any machine with a red blinking light is going to explode so run away.<br>
-	32. The Inquisition is not your friend. They just don’t see you as much of a threat.<br>
+	32. The Inquisition is not your friend. They just donï¿½t see you as much of a threat.<br>
 	33. When in doubt....refer to rule 1.<br>
 	34. Grots are not worth the las-shot, they're even more pathetic in combat than you<br>
 	35. Orks are still not friendly<br>
@@ -921,10 +927,10 @@
 	45. Your gun is worth more than you. Be nice to it.<br>
 	46. If there are twice as many of you guys as there are the enemy you will still die.<br>
 	47. You will die, get used to it<br>
-	48. Try to get shot, it wastes the enemy’s bullets<br>
+	48. Try to get shot, it wastes the enemyï¿½s bullets<br>
 	49. Don't argue with the end of a pulse rifle, it argues harder.<br>
 	50. Survive 15 hours....... Then read the rest<br>
-	51. You know those heroic Imperial Guardsmen you read about facing down hordes of enemies? Yeah... you’re not one of them<br>
+	51. You know those heroic Imperial Guardsmen you read about facing down hordes of enemies? Yeah... youï¿½re not one of them<br>
 	52. Think positive, VERY positive.<br>
 	53. No pressure.<br>
 	54. Try to be the heavy weapon in your squad you'll be the only one killing anything<br>
@@ -950,10 +956,10 @@
 	74. If you beat a Commissar in game he will see it as heresy<br>
 	75. If you lose a game to a Commissar he will see you as weak and punish you for your insolence<br>
 	76. Don't play games with Commissars<br>
-	77. If you can't avoid rule 76 try to play a team game on the Commissar’s side (rule 75 still applies)<br>
+	77. If you can't avoid rule 76 try to play a team game on the Commissarï¿½s side (rule 75 still applies)<br>
 	78. If there is the result of a tie all participants will be lashed 20 times for lack of effort (except the Commissar.<br>
-	It’s not his fault he was paired up with incompetents)<br>
-	79. You know that nagging thought that lingers in every Guardsman’s head? Just remember, the Inquisition will ask <br>
+	Itï¿½s not his fault he was paired up with incompetents)<br>
+	79. You know that nagging thought that lingers in every Guardsmanï¿½s head? Just remember, the Inquisition will ask <br>
 	why your lasgun shot ended up in your Commissar's face.<br>
 	80. No, for the love of the Emperor, the Sisters of Battle WILL NOT lay you. Ever. You don't matter enough.<br>
 	81. If captured by the Dark Eldar, you will be beaten, raped, forced to fight other horrible monsters,<br>
@@ -982,7 +988,7 @@
 	96. Your Commander holds the right to trade you for any amount of gumballs he so pleases. That's about all your life buys.<br>
 	97. The Commissar never runs out of bullets. Ever.<br>
 	98. Why are you still reading this? Look up.<br>
-	99. If you're dead, stop reading this. If you’re still alive, move to 100<br>
+	99. If you're dead, stop reading this. If youï¿½re still alive, move to 100<br>
 	100. After that bout of bowel clenching horror, use the supplied Guardsmen portable toilet.<br>
 	101. Using the Adeptus Mechanicus toilet will result in being processed into a waste digesting servitor.<br>
 	102. If you get promoted remove your rank insignia. That way snipers won't know you are an officer.<br>
@@ -1005,7 +1011,7 @@
 	The<br>
 	Ah, this is the Emperor. Now that I have finally taken the credit for such a good idea, I will finish writing the book.<br>
 	115. If you have a good idea, make sure it stays a secret.<br>
-	116. Remember, your lasgun is insured, you’re not.<br>
+	116. Remember, your lasgun is insured, youï¿½re not.<br>
 	117. If you lose your armour, find a large cardboard box. Cut out 2 holes in the side,<br> 2 in the bottom and one in the top. This should be an effective substitute for your normal armour.<br>
 	118. That wasn't Chicken.<br>
 	119. See that chain sword? Only important people get them, you are not one of them.<br>
@@ -1014,13 +1020,13 @@
 	122. Your first aid kit only consists of a lasgun battery with enough juice for one shot. Make it count.<br>
 	123. Only the Space Marines are important enough to get Apothecaries. Your healers only fix your tanks.<br>
 	124. When a Chaos Sorcerer causes a Guardsman to see his worst nightmare, all he will see is Frank, the Inquisitor Titan Commissar.<br>
-	125. If you feel that you are treated unfairly, you may join a Guardsman’s Rights Union (note that they are all heretics).<br>
+	125. If you feel that you are treated unfairly, you may join a Guardsmanï¿½s Rights Union (note that they are all heretics).<br>
 	126. When facing Tyranids, don't blame yourself for dying. You had very little chance.<br>
 	127. When facing Tau, pretend to join their Greater Good then shoot them in the back.<br>
 	128. If weapon is taken away while attempting rule 127, say that you are an intelligence officer. You may live another day.<br>
 	129. If rule 128 fails, scream "FOR THE GREATER GOOD!!!" and run wildly for the exit. Results may vary.<br>
 	130. If rule 129 fails to produce good results ask to be made a PoW, then when the Tau try to arrest you grab one and threaten to kill it somehow.<br>
-	131. When carrying out rule 130, grab his windpipe and squeeze. In fact, Tau probably don’t have windpipes.<br>
+	131. When carrying out rule 130, grab his windpipe and squeeze. In fact, Tau probably donï¿½t have windpipes.<br>
 	132. Never start a land war in Asia and never go in against a Sicilian when death is on the line.<br>
 	133. Your mom stops loving you when you stop killing enemies.<br>
 	134. Don't get killed by Chaos, otherwise your souls will hate you<br>
@@ -1028,7 +1034,7 @@
 	136. When fighting Orks, a cork is your best friend.<br>
 	137. When fighting feral Orks, keep your head down, they can actually shoot you.<br>
 	138. When you die, try to position your body in front of the tanks to keep them from getting hit.<br>
-	139. Eldar may not be as tall as you think, but they can still kill you in a hundred different gruesome ways (39-140 in “The Ways to Die Handbook”)<br>
+	139. Eldar may not be as tall as you think, but they can still kill you in a hundred different gruesome ways (39-140 in ï¿½The Ways to Die Handbookï¿½)<br>
 	140. Especially those spiky Dark Eldar.<br>
 	141. The Adeptus Mechanicus does not appreciate you attaching magnets to their craniums, no matter how funny they look when it scrambles their CPU.<br>
 	142. Nor do Necrons.<br>
@@ -1053,8 +1059,8 @@
 	161. Only Yarrick gets two slices<br>
 	162. Write a farewell letter for tomorrow you'll die.<br>
 	163. Hope to stay alive is the first step on the road of Commissar friendly fire.<br>
-	164. Some Orks have been known take guards teeth to pass off as their own. Feeding intravenously isn’t as bad as it sounds.<br>
-	165. Orks, Eldar, Chaos, Tau, the Inquisition, Commissars, and anyone else will try to kill you... Yes,<br> that’s right, you have no friends. If you would like to dispute this go ask the Commissar.<br>
+	164. Some Orks have been known take guards teeth to pass off as their own. Feeding intravenously isnï¿½t as bad as it sounds.<br>
+	165. Orks, Eldar, Chaos, Tau, the Inquisition, Commissars, and anyone else will try to kill you... Yes,<br> thatï¿½s right, you have no friends. If you would like to dispute this go ask the Commissar.<br>
 	166. Orks are still not friendly<br>
 	167. Stop reading and go die for your Emperor<br>
 	168. You are an Imperial Guardsman, it's time you started acting like it.<br>
@@ -1067,7 +1073,7 @@
 	175. Orks are friendly unless otherwise stated in previously stated<br>
 	176. Rule 175 was written by my retarded cousin i swear<br>
 	177. Before battle, inject pure sugar into your veins so that when enough of you die Khorne will get diabetes.<br>
-	178. Remember this when you think you stand out – camouflage is useless under tank treads.<br>
+	178. Remember this when you think you stand out ï¿½ camouflage is useless under tank treads.<br>
 	179. Point your gun at the enemy<br>
 	180. Your Commissar is always on your side. Thank him for shooting you; he wants you to sit beside the Emperor earlier.<br>
 	181. The icons of the most holy and righteous Emperor shall not be referred to as "The goofy lookin' dead guy".<br>
@@ -1082,12 +1088,12 @@
 	190. Giving the enemy your plasma weapon is not the easiest way to kill them.<br>
 	191. You are not allowed to replace lasguns with super soakers. Even if they are more effective.<br>
 	192. It is forbidden to head bang to Noise Marine rock music, no matter how tough the lead guitarist sounds.<br>
-	193. Roll on the floor laughing. That way they’ll think you’re dying and shoot someone else<br>
+	193. Roll on the floor laughing. That way theyï¿½ll think youï¿½re dying and shoot someone else<br>
 	194. Always try to be the last one into a fight, that way you might get a chance to run<br>
 	195. If your lasgun breaks, keep pulling the trigger...you might get lucky and kill yourself with a misfire<br>
 	196. You killing anything is much less likely than an Ork being able to fire his gun using only his imagination<br>
 	197. Fall down as much as possible, you might get lucky and end up in the first aid hut<br>
-	198. That application you filled out wasn’t for tank a tank commander<br>
+	198. That application you filled out wasnï¿½t for tank a tank commander<br>
 	199. While transporting a commissar, drive close to the enemy so the commissar can hit them with his sword. <br>This will keep him entertained and will dissuade him from shooting at you for entertainment.<br>
 	200. By reading up to rule 200, you have spent more time reading and less time dying for the Emperor. Fix this before the commissar finds out.<br>
 	201. Make sure you are the most useful guardsman the techpriest knows, he may give you a weapon that can cause flesh wounds instead of sunburn.  <br>
