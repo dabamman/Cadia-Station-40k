@@ -241,3 +241,7 @@ Hell Pistol
 	silenced = null
 	origin_tech = "combat=3;materials=3"
 	mag_type = /obj/item/ammo_box/magazine/m12mm
+
+/obj/item/weapon/gun/projectile/automatic/pistol/heavy/ox
+	name = "Scipio Pattern Stubber pistol"
+	desc = "A beautifally manufactuered Scipio Pattern stubber pistol with an Inquisitorial Sigil emblazoned boldy into the side, this belongs to a very important person."
