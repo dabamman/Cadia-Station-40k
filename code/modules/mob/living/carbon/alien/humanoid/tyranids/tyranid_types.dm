@@ -944,8 +944,8 @@ Hormagaunt
 /mob/living/carbon/alien/humanoid/tyranid/hormagaunt //A lot easier since I made the tyranid base class do a lot of things automatically.
 	name = "hormagaunt"
 	icon_state = "hormagaunt"
-	maxHealth =200
-	health = 200
+	maxHealth = 125 ///they are fast as fuck, meant to be hit and run not tank bolter blasts and keep going
+	health = 125
 	plasma_rate = 40
 	var/speedmod = 1.8
 
