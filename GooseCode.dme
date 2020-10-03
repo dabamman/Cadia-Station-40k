@@ -308,6 +308,7 @@
 #include "code\game\jobs\job\corruption\mutation.dm"
 #include "code\game\jobs\job\corruption\slaaneshdagger.dm"
 #include "code\game\jobs\job\corruption\soulscythe.dm"
+#include "code\game\jobs\job\corruption\spycorruption.dm"
 #include "code\game\jobs\job\corruption\tentacle.dm"
 #include "code\game\jobs\job\corruption\uquestline.dm"
 #include "code\game\jobs\job\jobverbs\celebverbs.dm"

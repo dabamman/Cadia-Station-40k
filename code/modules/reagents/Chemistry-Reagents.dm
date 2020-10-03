@@ -3684,7 +3684,7 @@ datum
 
 			on_mob_life(var/mob/living/M as mob)
 				if(prob(5))
-					M.say(pick("Wew lad", "Where did I put my gaunties...?", "If I die here, promise to bury me?", "I have a feeling I'm going to lose some chromies soon...",))
+					M.say(pick("Wew lad </span>", "Where did I put my gaunties...?</span>", "If I die here, promise to bury me?</span>", "I have a feeling I'm going to lose some chromies soon...</span>",))
 					..()
 					return
 
