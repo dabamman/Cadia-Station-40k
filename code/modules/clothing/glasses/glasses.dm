@@ -36,6 +36,7 @@
 	item_state = "bioniceye"
 	flags = NODROP
 	darkness_view = 8
+	invis_view = SEE_INVISIBLE_MINIMUM
 
 /obj/item/clothing/glasses/eyepatch
 	name = "eyepatch"
