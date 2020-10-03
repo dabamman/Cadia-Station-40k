@@ -148,6 +148,38 @@ Space Marine Emotes
 	playsound(src,'sound/emotes/marineforbigE.ogg',50,1)
 	next_emote_sound_allowed = world.time+90
 
+/mob/living/carbon/human/whitelisted/sm/verb/cutxeno()
+	set name = "Kill xenos"
+	set category = "Emotes"
+	set desc = "For big E!"
+
+	if(next_emote_sound_allowed > world.time)
+		return
+	say("Cut down the aliens!")
+	playsound(src,'sound/emotes/antixeno.ogg',50,1)
+	next_emote_sound_allowed = world.time+90
+
+/mob/living/carbon/human/whitelisted/rg/verb/cutxeno()
+	set name = "Kill xenos"
+	set category = "Emotes"
+	set desc = "For big E!"
+
+	if(next_emote_sound_allowed > world.time)
+		return
+	say("Cut down the aliens!")
+	playsound(src,'sound/emotes/antixeno.ogg',50,1)
+	next_emote_sound_allowed = world.time+90
+
+/mob/living/carbon/human/whitelisted/um/verb/cutxeno()
+	set name = "Kill xenos"
+	set category = "Emotes"
+	set desc = "For big E!"
+
+	if(next_emote_sound_allowed > world.time)
+		return
+	say("Cut down the aliens!")
+	playsound(src,'sound/emotes/antixeno.ogg',50,1)
+	next_emote_sound_allowed = world.time+90
 /*
 Sisters of Battle Emotes
 */
