@@ -287,9 +287,7 @@ Ordo Hereticus
 				equip_to_slot_or_del(W, slot_wear_id)
 
 			if ("Ordo Xenos - Psyker")
-				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/gyropistol, slot_s_store)
-				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/m75, slot_in_backpack)
-				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/m75, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/plasma/pistol, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/device/refractor, slot_in_backpack)
 				equip_to_slot_or_del (new /obj/item/device/xdetector, slot_in_backpack)
 				maxPsyk += 500
