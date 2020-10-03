@@ -1242,13 +1242,9 @@ Genestealer
 						src.firearmor += 5
 						src << "\red You grow heat-resistant scales."
 			if(4)
-				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/genestealer/proc/talons)
-				src << "\red You adapt scything talons."
-				src << "\red Your grab ability is enhanced."
-			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/genestealer/proc/adrenalineglands)
 				src << "\red You adapt genestealer adrenal glands."
-			if(6)
+			if(5)
 				src.name = "brood lord"
 				src.health += 100
 				src.maxHealth += 100
@@ -1774,13 +1770,9 @@ This specific genestealer mob is the one used in 1-click antags, it has faster b
 						src.firearmor += 5
 						src << "\red You grow heat-resistant scales."
 			if(5)
-				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/proc/talons)
-				src << "\red You adapt scything talons."
-				src << "\red Your grab ability is enhanced."
-			if(6)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/proc/adrenalineglands)
 				src << "\red You adapt genestealer adrenal glands."
-			if(7)
+			if(6)
 				src.name = "brood lord"
 				src.health += 100
 				src.maxHealth += 100
