@@ -459,6 +459,10 @@ Eldar PSword
 	piercingpower = 40
 	attack_speedmod = 2
 
+/obj/item/weapon/powersword/mace/om
+	name = "Power Maul"
+	desc = "A brutal looking maul covered in holy rites and blessings. An Inquisitorial Seal is present on the hilt."
+
 /obj/item/weapon/powersword/burning
 	name = "Burning Blade"
 	desc = "A Loi Pattern Burning Blade. Initially a malfunctioning power sword, the overheating of the blade has been put to use in combat. Good at burning heretics."
