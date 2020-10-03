@@ -4,6 +4,7 @@
 	var/Psy = 0
 	var/maxPsy = 0
 	var/Psy_rate = 20
+	var/psymode = FALSE
 
 /mob/living/carbon/human/whitelisted/Stat()
 	..()
@@ -14,6 +15,32 @@
 	..()
 	if(Psy < maxPsy)
 		Psy = min(Psy+Psy_rate, maxPsy)
+
+/mob/living/carbon/human/whitelisted/proc/psymode()
+	set name = "Psyker Mode"
+	set desc = "Using this puts you into a psychic mode, in this mode you can use your main spells."
+	set category = "Spells"
+	psymode = !psymode
+	if(psymode)
+		src << "\blue Your mind starts casting the powers of the warp in your body, you are able to use your main spells."
+	else
+		src << "\blue Your mind starts to cool down and you feel the warp pressure lifting from your body, you arent able to use your main spells."
+
+/mob/living/carbon/human/whitelisted/RangedAttack(var/atom/A)
+	if(psymode)
+		if(a_intent == "harm")
+			lightningbolt(A)
+
+		if(a_intent == "grab")
+			imprison(A)	
+		
+		if(a_intent == "disarm")
+			var/obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall/M = new /obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall
+			if(Psy>=200)
+				Psy-=200
+				M.cast(list(A), src)
+			else
+				src << "\red You need more psy!"
 
 /mob/living/carbon/human/whitelisted/proc/imprison(var/mob/living/carbon/T in oview(7))
 	set name = "Imprison (300)"
@@ -44,22 +71,22 @@
 	else
 		src << "\red You need more psy!"
 
-/mob/living/carbon/human/whitelisted/proc/smite(var/atom/T)
-	set name = "Smite (60)"
-	set desc = "Smite your foes with a psychic bolt"
+/mob/living/carbon/human/whitelisted/proc/lightningbolt(var/atom/T)
+	set name = "Lightning Bolt (100)"
+	set desc = "Smite your foes with a lightning bolt"
 	set category = "Spells"
 	if (stat != CONSCIOUS)
 		src << "You must be conscious and alive to use psychic abilities."
 		return
-	if(Psy>=60)
-		Psy-=60
+	if(Psy>=100)
+		Psy-=100
 		if(!T)
 			var/list/victims = list()
 			for(var/mob/living/carbon/C in oview(7))
 				victims += C
 			T = input(src, "Who should we shoot?") as null|anything in victims
 		if(T)
-			src.visible_message("<span class='danger'>[src] projects psychic energy!", "<span class='alertalien'>You project psychic energy.</span>")
+			src.visible_message("<span class='danger'>[src] projects a lightning bolt!", "<span class='alertalien'>You project a lightning bolt.</span>")
 			var/turf/curloc = src.loc
 			var/atom/targloc
 			if(!istype(T, /turf/))
@@ -70,7 +97,7 @@
 				return
 			if (targloc == curloc)
 				return
-			var/obj/item/projectile/beam/mindflayer/A = new /obj/item/projectile/beam/mindflayer(src.loc)
+			var/obj/item/projectile/beam/lightningbolt/A = new /obj/item/projectile/beam/lightningbolt(src.loc)
 			A.current = curloc
 			A.yo = targloc.y - curloc.y
 			A.xo = targloc.x - curloc.x

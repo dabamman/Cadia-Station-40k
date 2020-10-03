@@ -103,7 +103,7 @@ Botanist
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/botanic_leather(H), slot_gloves)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/apron(H), slot_wear_suit)
-	H.equip_to_slot_or_del(new /obj/item/device/analyzer/plant_analyzer(H), slot_s_store) 
+	H.equip_to_slot_or_del(new /obj/item/device/analyzer/plant_analyzer(H), slot_s_store)
 
 /*
 Quartermaster
@@ -343,8 +343,8 @@ Inquisitorial Acolyte
 	supervisors = "Ordo Hereticus"
 	selection_color = "#dddddd"
 	var/global/lawyers = 0 //Counts lawyer amount
-	default_backpack = /obj/item/weapon/storage/backpack/inq
-	default_satchel = /obj/item/weapon/storage/backpack/inq
+	default_backpack = /obj/item/weapon/storage/backpack/satchel
+	default_satchel = /obj/item/weapon/storage/backpack/satchel
 	default_pda = /obj/item/device/pda/lawyer
 	default_headset = /obj/item/device/radio/headset/headset_sec
 	default_id = /obj/item/weapon/card/id/inquisitor
@@ -364,17 +364,17 @@ Inquisitorial Acolyte
 
 /datum/job/lawyer/equip_items(var/mob/living/carbon/human/H)
 	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/inq(H), slot_w_uniform)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/acolyte(H), slot_wear_suit)
-	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/head/acohat(H), slot_head)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/acolyte(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/acolytecoat(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/acolyteboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistol2(H), slot_s_store)
 	H.equip_to_slot_or_del(new /obj/item/device/pda/lawyer(H), slot_in_backpack)
-	H.equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife(H), slot_belt)
+	H.equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/acolyte(H), slot_belt)
 	H.equip_to_slot_or_del(new /obj/item/device/hdetector(H), slot_in_backpack)
-	H.equip_to_slot_or_del(new /obj/item/weapon/paper/inq(H), slot_in_backpack)
-	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor(H), slot_gloves)
+	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/acolytegloves(H), slot_gloves)
 	H.faction = "Inquisitor"
+
 	if (prob(50))
 		var/obj/item/weapon/implant/loyalty/E = new/obj/item/weapon/implant/loyalty(H)
 		E.imp_in = H
@@ -396,7 +396,6 @@ Inquisitorial Acolyte
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/inferno(H), slot_r_hand)
 			if("Stubber Pistol")
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/pistol(H), slot_r_hand)
-
 
 //--Eldar Spy--
 

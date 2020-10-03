@@ -175,8 +175,7 @@ Ordo Hereticus
 				rename_self("[name]")
 				verbs += /mob/living/carbon/human/proc/renderaid
 				maxPsyk += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
-				verbs += /mob/living/carbon/human/proc/imprisonn
-				verbs += /mob/living/carbon/human/proc/smitee
+				verbs += /mob/living/carbon/human/proc/psykmode
 				verbs += /mob/living/carbon/human/proc/quickeningg
 				verbs += /mob/living/carbon/human/proc/telepathh
 	//extra letters added on end to avoid duplicate definitions/clash with Librarians, real goose tape code I know - Wel								 //This is how we get the verb!
@@ -211,7 +210,12 @@ Ordo Hereticus
 	universal_speak = 1
 	gender = "male"
 	faction = "Inquisitor"
+
 /mob/living/carbon/human/OHinq/leader
+	name = "Lady Inquisitor Eleanora Rose"
+	real_name = "Lady Inquisitor Eleanora Rose"
+	gender = "female"
+
 /mob/living/carbon/human/OHinq/New()
 	..()
 	sleep (5)
@@ -232,7 +236,7 @@ Ordo Hereticus
 	equip_to_slot_or_del(R, slot_ears)
 	var/obj/item/weapon/card/id/ordohereticus/W = new
 	W.access = get_all_accesses()
-	W.access += get_centcom_access("Inquisitor")
+	W.access += get_centcom_access("Inquisitorial Acolyte")
 	W.registered_name = real_name
 	W.update_label()
 	equip_to_slot_or_del(W, slot_wear_id)

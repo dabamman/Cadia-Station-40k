@@ -2,8 +2,8 @@
 	name = "ork warboss"
 	icon = 'icons/mob/ork.dmi'
 	caste = "q"
-	maxHealth = 450
-	health = 450
+	maxHealth = 400
+	health = 400
 	icon_state = "ork2"
 	status_flags = CANPARALYSE
 	storedwaagh = 500

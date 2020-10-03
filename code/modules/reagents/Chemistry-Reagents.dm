@@ -3675,5 +3675,18 @@ datum
 					..()
 					return
 
+		ethanol/ravenheart
+			name = "Ravenheart Special"
+			id = "ravenheart"
+			description = "A mysterious drink from a forgotten land."
+			color = "#664300" // rgb: 102, 67, 0
+			boozepwr = 35
+
+			on_mob_life(var/mob/living/M as mob)
+				if(prob(5))
+					M.say(pick("Wew lad", "Where did I put my gaunties...?", "If I die here, promise to bury me?", "I have a feeling I'm going to lose some chromies soon...",))
+					..()
+					return
+
 // Undefine the alias for REAGENTS_EFFECT_MULTIPLER
 #undef REM

@@ -279,3 +279,11 @@
 	new /obj/item/ammo_box/magazine/bpistolmag(src)
 	new /obj/item/ammo_box/magazine/bpistolmag(src)
 	new /obj/item/ammo_box/magazine/bpistolmag(src)
+
+/obj/item/weapon/storage/belt/acolyte
+	name = "acolyte's belt"
+	desc = "A rather normal belt with a few bags and pouches for storage, plus a small, golden skull purely for decoration."
+	icon_state = "acolytebelt"
+	item_state = "acolytebelt"
+	storage_slots = 5
+	max_w_class = 3

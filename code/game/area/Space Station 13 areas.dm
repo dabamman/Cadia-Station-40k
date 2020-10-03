@@ -928,8 +928,11 @@ Droppod
 	icon_state = "yellow"
 	requires_power = 0
 
-
-
+/area/ruins/sleptisresearchoutpost
+	name = "Abandoned Research Outpost"
+	icon_state = "blue"
+	requires_power = 1
+	lighting_use_dynamic = 1
 
 
 
@@ -2151,6 +2154,13 @@ Droppod
 	luminosity = 1
 	lighting_use_dynamic = 0
 	requires_power = 0
+
+//drukhari
+/area/drukhari_ship
+	name = "\improper Drukhari Ship"
+	icon_state = "yellow"
+	requires_power = 0
+	has_gravity = 1
 
 
 /////////////////////////////////////////////////////////////////////

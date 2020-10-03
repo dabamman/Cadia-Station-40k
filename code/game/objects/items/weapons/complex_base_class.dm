@@ -615,7 +615,7 @@ Power Sword Base Class
 
 /obj/item/weapon/powersword
 	name = "Power Sword"
-	desc = "A really damn generic power sword."
+	desc = "A mastercraft blade of Imperial design wrapped in a lethal corona of disruptive energy."
 	icon_state = "pk_off"
 	item_state = "pk_off"
 	flags = CONDUCT
@@ -642,7 +642,7 @@ Power Sword Base Class
 	var/icon_off = "pk_off"
 	var/item_on = "pk_on"
 	var/item_off = "pk_off"
-	var/switchsound = 'sound/effects/inq.ogg'
+	var/switchsound = 'sound/weapons/saberon.ogg'
 
 /obj/item/weapon/powersword/New()
 	..()

@@ -505,22 +505,11 @@
 	can_roll = 0
 
 /obj/item/clothing/under/stormtroop
-	desc = "Life is too hectic at this time for me to right a valid description #calls for help via code"
+	desc = "A blood-red, fitted uniform worn by the Inquisitorial Stormtroopers."
 	name = "Stormtrooper Uniform"
 	icon_state = "storms"
 	item_state = "storms"
 	item_color = "storms"
-	gender = PLURAL
-	body_parts_covered = GROIN|LEGS
-	fitted = 0
-	can_roll = 0
-
-/obj/item/clothing/under/skitunder
-	desc = "Invisible, don't remove!"
-	name = "Skit Jumpsuit"
-	icon_state = "skit_s"
-	item_state = "skit_s"
-	item_color = "skit_s"
 	gender = PLURAL
 	body_parts_covered = GROIN|LEGS
 	fitted = 0

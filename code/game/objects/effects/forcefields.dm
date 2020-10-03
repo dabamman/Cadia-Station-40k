@@ -8,6 +8,16 @@
 	density = 1
 	unacidable = 1
 
+/obj/effect/warpfield
+	desc = "A psyker magic wall."
+	name = "WARPWALL"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "shieldwarp"
+	anchored = 1.0
+	opacity = 0
+	density = 1
+	unacidable = 1
+
 /obj/effect/forcefield/refractor
 	name = "Refractor Field"
 	desc = "A field that blocks many projectiles."
