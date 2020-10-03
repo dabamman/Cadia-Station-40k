@@ -393,10 +393,6 @@ Inquisitorial Acolyte
 				H.equip_to_slot_or_del (new /obj/item/weapon/card/id/inquisitor/ordomalleus(H), slot_wear_id)
 				H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
 
-
-	spawn(10)
-		H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
-
 //--Eldar Spy--
 
 /datum/job/eldarspy
