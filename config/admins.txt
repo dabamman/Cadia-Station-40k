@@ -17,4 +17,3 @@ TheDarkKnight224 = Admin
 Sancronis = Coder
 Glarbog = Admin
 Dantzy = Admin
-PlainInsane = Coder
