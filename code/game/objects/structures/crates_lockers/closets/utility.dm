@@ -274,5 +274,5 @@
 	new /obj/item/clothing/gloves/acolytegloves(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
-	new /obj/item/weapon/gun/projectile/automatic/laspistol2(src)
-	new /obj/item/weapon/gun/projectile/automatic/laspistol2(src)
+	new /obj/item/weapon/gun/projectile/automatic/laspistoli(src)
+	new /obj/item/weapon/gun/projectile/automatic/laspistoli(src)

@@ -203,17 +203,6 @@
 		var/list/data = list("viruses"= list(F))
 		reagents.add_reagent("blood", 20, data)
 
-/obj/item/weapon/reagent_containers/glass/bottle/Goose
-	name = "Blessings of Norc"
-	desc = "A small bottle. Contains THE MOTHER FUCKING WARP."
-	icon = 'icons/obj/chemical.dmi'
-	icon_state = "bottle3"
-	New()
-		..()
-		var/datum/disease/F = new /datum/disease/transformation/goose(50)
-		var/list/data = list("viruses"= list(F))
-		reagents.add_reagent("blood", 20, data)
-
 /obj/item/weapon/reagent_containers/glass/bottle/cold
 	name = "Rhinovirus culture bottle"
 	desc = "A small bottle. Contains XY-rhinovirus culture in synthblood medium."

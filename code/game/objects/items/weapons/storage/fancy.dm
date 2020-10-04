@@ -92,8 +92,9 @@
 /obj/item/weapon/storage/fancy/sixpack_beer
 	icon = 'icons/obj/food.dmi'
 	icon_state = "sixpack_beerbox6"
+	desc = "A sixpack of garden-variety beer with the logos scraped off."
 	icon_type = "sixpack_beer"
-	name = "Goose Island Beer sixpack"
+	name = "sixpack of beer"
 	storage_slots = 6
 	can_hold = list(/obj/item/weapon/reagent_containers/food/drinks/beer)
 
