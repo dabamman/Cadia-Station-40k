@@ -373,6 +373,7 @@ Inquisitorial Acolyte
 				H.equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/laspistol2(H), slot_s_store)
 				H.equip_to_slot_or_del (new /obj/item/device/hdetector(H), slot_in_backpack)
 				H.equip_to_slot_or_del (new /obj/item/weapon/card/id/inquisitor(H), slot_wear_id)
+				H.equip_to_slot_or_del (new /obj/item/device/radio/headset/headset_sec(H), slot_ears)
 				H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
 
 			if("Ordo Xenos")
@@ -382,6 +383,7 @@ Inquisitorial Acolyte
 				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/m12mm(H), slot_in_backpack)
 				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/m12mm(H), slot_in_backpack)
 				H.equip_to_slot_or_del (new /obj/item/weapon/card/id/inquisitor/ordoxenos(H), slot_wear_id)
+				H.equip_to_slot_or_del (new /obj/item/device/radio/headset/headset_sec(H), slot_ears)
 				H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
 
 			if("Ordo Malleus")
@@ -391,6 +393,7 @@ Inquisitorial Acolyte
 				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/bpistolmag(H), slot_in_backpack)
 				H.equip_to_slot_or_del (new /obj/item/clothing/tie/medal/gold/sealofpurity(H), slot_in_backpack)
 				H.equip_to_slot_or_del (new /obj/item/weapon/card/id/inquisitor/ordomalleus(H), slot_wear_id)
+				H.equip_to_slot_or_del (new /obj/item/device/radio/headset/headset_sec(H), slot_ears)
 				H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
 
 //--Eldar Spy--

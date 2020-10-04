@@ -263,8 +263,8 @@ Ordo Hereticus
 			if ("Ordo Malleus")
 				equip_to_slot_or_del (new /obj/item/weapon/powersword/mace/om, slot_r_hand)
 				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
-				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/bpistolmag, slot_in_backpack)
-				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/bpistolmag, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
 				var/obj/item/weapon/card/id/ordohereticus/ordomalleus/M = new
 				M.access = get_all_accesses()
 				M.access += get_centcom_access("Inquisitorial Acolyte")
@@ -279,6 +279,7 @@ Ordo Hereticus
 				maxPsyk += 500
 				verbs += /mob/living/carbon/human/proc/psykmode
 				verbs += /mob/living/carbon/human/proc/quickeningg
+				verbs += /mob/living/carbon/human/proc/telepathh
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitorial Acolyte")
@@ -303,10 +304,11 @@ Ordo Hereticus
 			if ("Ordo Malleus - Psyker")
 				equip_to_slot_or_del (new /obj/item/weapon/powersword/mace/om, slot_r_hand)
 				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
-				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/bpistolmag, slot_in_backpack)
-				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/bpistolmag, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
 				maxPsyk += 500
 				verbs += /mob/living/carbon/human/proc/psykmode
+				verbs += /mob/living/carbon/human/proc/telepathh
 				var/obj/item/weapon/card/id/ordohereticus/ordomalleus/M = new
 				M.access = get_all_accesses()
 				M.access += get_centcom_access("Inquisitorial Acolyte")
