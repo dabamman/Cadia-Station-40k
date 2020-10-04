@@ -15,7 +15,7 @@ var/list/blob_nodes = list()
 	required_enemies = 1
 	recommended_enemies = 1
 
-	restricted_jobs = list("Cyborg", "AI", "Undercover Goose")
+	restricted_jobs = list("Cyborg", "AI")
 
 	var/const/waittime_l = 3600 //lower bound on time before intercept arrives (in tenths of seconds)
 	var/const/waittime_h = 6400 //upper bound on time before intercept arrives (in tenths of seconds)

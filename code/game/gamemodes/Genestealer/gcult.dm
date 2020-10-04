@@ -13,7 +13,7 @@ var/list/possible_changeling_IDs = list("Mindbender", "The Corrupter", "Mephila"
 	required_players = 15 // 20 players - 5 players to be the nuke ops = 15 players remaining
 	required_enemies = 3
 	recommended_enemies = 5
-	restricted_jobs = list("AI", "Servitor", "Undercover Goose")
+	restricted_jobs = list("AI", "Servitor")
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain")
 	pre_setup_before_jobs = 1
 	antag_flag = BE_OPERATIVE
@@ -63,7 +63,7 @@ var/list/possible_changeling_IDs = list("Mindbender", "The Corrupter", "Mephila"
 	..()
 	return
 /datum/game_mode/proc/forge_genestealer_objectives(var/datum/mind/genestealer)
-    
+
 /datum/game_mode/proc/forge_genestealer_objectives(var/datum/mind/gcult_mind)
 	var/list/heads = get_living_heads()
 	for(var/datum/mind/head_mind in heads)

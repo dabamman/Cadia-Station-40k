@@ -178,8 +178,8 @@ datum/mind
 		remove_antag("Rev")
 		remove_antag("Malf")
 		remove_antag("Prisoner")
-		
-		
+
+
 
 	proc/show_memory(mob/recipient, window=1)
 		if(!recipient)
@@ -990,20 +990,13 @@ datum/mind
 
 		current.loc = get_turf(locate("landmark*UMteam"))
 
-	proc/make_GM()
-
-		special_role = "GM"
-		current << "\blue You are a GOOSE MARINE! Some one, somewhere in this pocket dimension has harmed a goose! You have been dispatched here from the Galaxy of Canada to locate this person and bear the crap out of them. Reward those who give you bread. Harm those who get in your way. And kill those who harm geese."
-
-		current.loc = get_turf(locate("landmark*GMteam"))
-
 	proc/make_TAU()
 
 		special_role = "TAU"
 		current << "\blue You are a Tau FireWarrior!"
 
 		current.loc = get_turf(locate("landmark*tauteam"))
-	
+
 	proc/make_GS()
 
 		special_role = "Genestealer Cult Member"

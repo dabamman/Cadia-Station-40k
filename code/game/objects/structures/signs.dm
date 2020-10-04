@@ -114,7 +114,7 @@
 
 /obj/structure/sign/maltesefalcon	//The sign is 64x32, so it needs two tiles. ;3 //Not really, you can have a bigger icon. But anyway, I'm changing it to something more... Imperial. -Drake
 	name = "Sanctioned Bar"
-	desc = "The Imperially sanctioned bar for the outpost staff. It flashes a glowing image of goose island beer that makes you thirsty."
+	desc = "The Imperially sanctioned bar for the outpost staff. It flashes a glowing image of beer that makes you thirsty."
 	var/emagged = 0
 
 /obj/structure/sign/maltesefalcon/left

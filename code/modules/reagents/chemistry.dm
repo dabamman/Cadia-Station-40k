@@ -21,7 +21,6 @@ Contains changes to acids, some original drugs (like space drugs, synaptizine, h
 	laserbrain dust- Space coke. Powerful stimulant that can be cut with ID cards, playing cards, and data cards, and inhaled.
 	neurocardiac restart- A chemical that will actually revive you from the dead. It leaves you far in crit still, however. And if your non-oxyloss damage is over 200 you will instantly die again, because you are beyond having your heart just restart.
 	marshellium- Pretty much what was discussed. Forces you to speak in DM. (lol) I don't know where to put this in-game though.
-	norcacillin- See above. Feel free to change this or add to the list you gave me.
 	phenol- A plant derived substance normally in very, very small and nondangerous amounts. A pain to extract but a fast killer.
 	lho- Lho leaf. Addictive inhalent. Also I replaced ambrosia with Lho.
 	pneudelozine- Lexorin's evil twin. High oxygen loss, makes it impossible to speak, and in OD gets way worse.
@@ -1272,31 +1271,6 @@ datum/reagent/marshellium/Del()
 		var/mob/living/carbon/human/M = holder.my_atom
 		if(istype(M))
 			M.DMSpeak = 0
-	..()
-
-datum/reagent/norcacillin //Naturally, if there is anything from the idea that I am missing feel free to put it in. This /is/ your chem, after all.
-	name = "Norcacillin"
-	id = "norcacillin"
-	description = "A substance of unknown origin that appears to be a reasonable effective healing compound. Side effects may include the uncontrollable desire to consume bread."
-	reagent_state = LIQUID
-	color = "#000000" //RGB- black
-
-datum/reagent/norcacillin/on_mob_life(var/mob/living/M as mob)
-	if(!M) M = holder.my_atom
-	if(istype(M, /mob/living/carbon/human))
-		var/mob/living/carbon/human/H = M
-		H.heal_organ_damage(2,2) //Because geese are sturdy.
-		H.norc += 1
-		if(prob(15))
-			H.contract_disease(new /datum/disease/transformation/goose(0),1)
-	..()
-	return
-
-datum/reagent/norcacillin/Del()
-	if(holder && ishuman(holder.my_atom))
-		var/mob/living/carbon/human/M = holder.my_atom
-		if(istype(M))
-			M.norc = 0
 	..()
 
 datum/reagent/toxin/chlorinegas
