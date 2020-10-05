@@ -34,11 +34,6 @@
 	force = 5
 	attack_verb = list("flogged", "whipped", "lashed", "disciplined")
 
-/obj/item/weapon/melee/chainofcommand/cwhip/attack_self(mob/user, slot)
-	playsound(loc, 'sound/ambience/comisar2.ogg', 75, 0)
-	..()
-
-
 /obj/item/weapon/melee/classic_baton
 	name = "police baton"
 	desc = "A wooden truncheon for beating criminal scum."
