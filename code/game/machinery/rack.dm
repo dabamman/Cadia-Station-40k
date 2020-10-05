@@ -81,15 +81,16 @@
 	full = 1
 
 /obj/machinery/rack/lasgun
-	name = "Lasrifle rack"
-	desc = "It can hold four Lasrifles."
+	name = "lasgun rack"
+	desc = "A weapon rack designed to hold about three standard-issue lasguns."
 	icon_state = "gr_0"
 	holds_type = /obj/item/weapon/gun/projectile/automatic/lasgun
 	holds_name = "lasgun"
 	base_icon = "gr"
+	capacity = 3
 
 /obj/machinery/rack/lasgun/full
-	icon_state = "gr_4"
+	icon_state = "gr_3"
 	full = 1
 
 /obj/machinery/rack/lasgunkreig

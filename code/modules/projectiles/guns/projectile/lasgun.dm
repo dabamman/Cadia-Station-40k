@@ -5,8 +5,8 @@ LASGUNS
 //Lasguns
 
 /obj/item/weapon/gun/projectile/automatic/lasgun
-	name = "Lasgun"
-	desc = "Standed issue ranged weapon of the Imperial Guard"
+	name = "lasgun"
+	desc = "The standard-issue rifle of the Astra Militarum as well as one of the most common weapons found in the Imperium of Man. "
 	icon_state = "lasgun"
 	item_state = "lasgun"
 	slot_flags = SLOT_BACK
