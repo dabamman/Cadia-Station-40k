@@ -916,7 +916,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 
 /datum/supply_packs/organic/rations
 	name = "Imperial Rations Crate"
-	contains = list(/obj/machinery/rack/ration)
+	contains = list(/obj/machinery/rack/ration/full)
 	cost = 20
 	containername = "Imperial Rations Crate"
 
