@@ -236,7 +236,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 					/obj/item/clothing/mask/gas/sechailer,
 					/obj/item/clothing/mask/gas/sechailer)
 	cost = 50
-	contains = "Calhallan Clothing Crate"
+	contains = "Valhallan Clothing Crate"
 	contraband = 1
 
 ////// Weapons: Basic
@@ -458,6 +458,13 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 	cost = 1200
 	containername = "Heavy Plasma Gun Crate"
 	access = access_captain //To balance out the rarity of these weapons, the Munitorium wont hand it out like candy
+
+/datum/supply_packs/armory/meltagun
+	name = "Meltagun"
+	contains = list(/obj/item/weapon/gun/projectile/meltagun,
+					/obj/item/weapon/gun/projectile/meltagun)
+	cost = 70
+	containername = "Meltagun Crate"
 
 /datum/supply_packs/armory/refractor
 	name = "Refractor field projector crate"
