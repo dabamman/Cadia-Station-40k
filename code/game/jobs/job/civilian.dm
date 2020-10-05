@@ -335,43 +335,28 @@ Inquisitorial Acolyte
 /datum/job/lawyer
 	title = "Inquisitorial Acolyte"
 	flag = LAWYER
-	department_head = list("Ordo Hereticus")
+	department_head = list("Inquisition")
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Ordo Hereticus"
+	supervisors = "Inquisition"
 	selection_color = "#dddddd"
 	var/global/lawyers = 0 //Counts lawyer amount
 	default_backpack = /obj/item/weapon/storage/backpack/satchel
 	default_satchel = /obj/item/weapon/storage/backpack/satchel
 	default_pda = /obj/item/device/pda/lawyer
 	default_headset = /obj/item/device/radio/headset/headset_sec
-	default_id = /obj/item/weapon/card/id/inquisitor
-
-	access = list(access_security, access_sec_doors, access_brig, access_court, access_forensics_lockers,
-			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
-			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue,
-			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
-			            access_theatre, access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_mineral_storeroom, access_cent_inquisitor, access_cent_general, access_cent_hereticus)
-	minimal_access = list(access_security, access_sec_doors, access_court,
-			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
-			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue,
-			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
-			            access_theatre, access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_mineral_storeroom, access_cent_inquisitor, access_cent_general, access_cent_hereticus)
+	default_id = null
+	idtype = null
 
 /datum/job/lawyer/equip_items(var/mob/living/carbon/human/H)
 	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/acolyte(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/acolytecoat(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/acolyteboots(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistol2(H), slot_s_store)
 	H.equip_to_slot_or_del(new /obj/item/device/pda/lawyer(H), slot_in_backpack)
-	H.equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/acolyte(H), slot_belt)
-	H.equip_to_slot_or_del(new /obj/item/device/hdetector(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/acolytegloves(H), slot_gloves)
 	H.faction = "Inquisitor"
 
@@ -381,21 +366,37 @@ Inquisitorial Acolyte
 		E.implanted = 1
 
 	spawn(10)
-		H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
-
-	spawn(10)
-		var/weaponchoice = input(H, "Select a weapon.","Weapon Selection") as null|anything in list("Power Sword", "Mercy Chainsword", "Hell Pistol", "Stubber Pistol", "Inferno Pistol")
+		var/weaponchoice = input(H, "What Ordo does your Inquisitor belong too?","Ordo Selection") as null|anything in list("Ordo Hereticus", "Ordo Xenos", "Ordo Malleus")
 		switch(weaponchoice)
-			if("Power Sword")
+			if("Ordo Hereticus")
 				H.equip_to_slot_or_del(new /obj/item/weapon/powersword/(H), slot_r_hand)
-			if("Mercy Chainsword")
+				H.equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/laspistoli(H), slot_s_store)
+				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/laspistolmag(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/laspistolmag(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/device/hdetector(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/weapon/card/id/inquisitor(H), slot_wear_id)
+				H.equip_to_slot_or_del (new /obj/item/device/radio/headset/headset_sec(H), slot_ears)
+				H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
+
+			if("Ordo Xenos")
+				H.equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife(H), slot_r_hand)
+				H.equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/pistol/heavy/ox(H), slot_s_store)
+				H.equip_to_slot_or_del (new /obj/item/device/xdetector(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/m12mm(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/m12mm(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/weapon/card/id/inquisitor/ordoxenos(H), slot_wear_id)
+				H.equip_to_slot_or_del (new /obj/item/device/radio/headset/headset_sec(H), slot_ears)
+				H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
+
+			if("Ordo Malleus")
 				H.equip_to_slot_or_del(new /obj/item/weapon/twohanded/chainswordig/inq(H), slot_r_hand)
-			if("Hell Pistol")
-				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/hellpistol(H), slot_r_hand)
-			if("Inferno Pistol")
-				H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/inferno(H), slot_r_hand)
-			if("Stubber Pistol")
-				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/pistol(H), slot_r_hand)
+				H.equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bpistol(H), slot_s_store)
+				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/bpistolmag(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/ammo_box/magazine/bpistolmag(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/clothing/tie/medal/gold/sealofpurity(H), slot_in_backpack)
+				H.equip_to_slot_or_del (new /obj/item/weapon/card/id/inquisitor/ordomalleus(H), slot_wear_id)
+				H.equip_to_slot_or_del (new /obj/item/device/radio/headset/headset_sec(H), slot_ears)
+				H.wear_id.name = "[H.real_name]'s Inquisitorial Seal"
 
 //--Eldar Spy--
 

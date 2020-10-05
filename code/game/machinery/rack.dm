@@ -104,7 +104,7 @@
 
 /obj/machinery/rack/pistol
 	name = "Laspistol rack"
-	desc = "It can hold four Laspistol."
+	desc = "A weapon rack designed to accomdate about four laspistols."
 	icon_state = "pr_0"
 	holds_type = /obj/item/weapon/gun/projectile/automatic/laspistol
 	holds_name = "laspistol"
@@ -153,16 +153,16 @@
 	full = 1
 
 /obj/machinery/rack/hellpistol
-	name = "Hellpistol rack"
-	desc = "It can hold three hellpistols."
+	name = "hellpistol rack"
+	desc = "A weapon rack designed to accomodate about four hellpistols."
 	icon_state = "hpr_0"
 	holds_type = /obj/item/weapon/gun/projectile/automatic/hellpistol
 	holds_name = "hellpistol"
 	base_icon = "hpr"
-	capacity = 3
+	capacity = 4
 
 /obj/machinery/rack/hellpistol/full
-	icon_state = "hpr_3"
+	icon_state = "hpr_4"
 	full = 1
 
 /obj/machinery/rack/hellammo
@@ -333,8 +333,8 @@
 	full = 1
 
 /obj/machinery/rack/firstaid
-	name = "Medi-Packs"
-	desc = "It can hold four medi-packs."
+	name = "medi-pack rack"
+	desc = "A rack for holding standard-issue medi-packs, about four of them from the looks of it."
 	icon_state = "medr_0"
 	holds_type = /obj/item/weapon/storage/firstaid/impguard
 	holds_name = "medi-pack"
@@ -369,4 +369,29 @@
 
 /obj/machinery/rack/heavyslug
 	icon_state = "vla_8"
+	full = 1
+
+/obj/machinery/rack/inqpistol
+	name = "laspistol rack"
+	desc = "A weapon rack designed to accomdate about four laspistols, specifically the Inquisitorial ones for some reason."
+	icon_state = "pr_0"
+	holds_type = /obj/item/weapon/gun/projectile/automatic/laspistoli
+	holds_name = "laspistoli"
+	base_icon = "ipr"
+
+/obj/machinery/rack/inqpistol/full
+	icon_state = "ipr_4"
+	full = 1
+
+/obj/machinery/rack/inqhellpistol
+	name = "hellpistol rack"
+	desc = "A weapon rack designed to accomodate about four hellpistols, specifically the Inquisitorial ones for some reason."
+	icon_state = "hpr_0"
+	holds_type = /obj/item/weapon/gun/projectile/automatic/hellpistoli
+	holds_name = "hellpistoli"
+	base_icon = "ihpr"
+	capacity = 4
+
+/obj/machinery/rack/inqhellpistol/full
+	icon_state = "ihpr_4"
 	full = 1

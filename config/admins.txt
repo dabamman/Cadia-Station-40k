@@ -16,3 +16,4 @@ apple5382 = Admin
 TheDarkKnight224 = Admin
 Sancronis = Coder
 Glarbog = Admin
+Dantzy = Admin

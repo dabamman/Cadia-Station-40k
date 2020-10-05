@@ -614,7 +614,7 @@ Update: What have we created? something awful -wel ard
 
 		if("ORDOHERETICUS")
 			message_admins("[usr.key] executed RTD faction: OrdoHereticus Inquisitor.", 0)
-			usr << "\blue You are an Ordo Hereticus Inquisitor. The Acolytes on ArchAngel IV have reported all kinds of heresy. It's time to shut this little project down."
+			usr << "\blue You are an Inquisitor attached to a conclave stationed aboard a Black Ship operated by the Ordo Hereticus. The Acolytes on ArchAngel IV have reported all kinds of heresy. It's time to shut this little project down."
 			usr.loc = get_turf(locate("landmark*OHstart"))
 			var/mob/living/carbon/human/OHinq/new_character = new(usr.loc)
 			new_character.key = usr.key

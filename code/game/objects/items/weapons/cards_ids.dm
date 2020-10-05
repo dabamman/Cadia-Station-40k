@@ -140,9 +140,25 @@ update_label("John Doe", "Clowny")
 
 /obj/item/weapon/card/id/inquisitor
 	name = "Inquisitorial Seal"
-	desc = "An inquisitorial seal. Commands the power of the Ordo Hereticus via proxy."
+	desc = "An inquisitorial seal. Commands the pure and righteous power of the Ordo Hereticus via proxy. This one is covered in dried blood and is slightly charred from laser fire. Intimidating."
 	icon_state = "inquisitor"
 	item_state = "silver_id"
+	assignment = "Inquisitorial Acolyte - Ordo Hereticus"
+	access = list(access_security, access_sec_doors, access_brig, access_court, access_forensics_lockers,
+			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
+			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue,
+			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
+			            access_theatre, access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
+			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_mineral_storeroom, access_cent_inquisitor, access_cent_general, access_cent_hereticus)
+
+
+/obj/item/weapon/card/id/inquisitor/ordoxenos
+	desc = "An inquisitorial seal. Commands the obsessive and neurotic power of the Ordo Xenos via proxy. This one is covered in pieces of odd looking fur, and smells like an Ork. Disgusting."
+	assignment = "Inquisitorial Acolyte - Ordo Xenos"
+
+/obj/item/weapon/card/id/inquisitor/ordomalleus
+	desc = "An inquisitorial seal. Commands the grave and dreadful power of the Ordo Malleus via proxy. This one is covered in sigils, prayers, and blessings. Very holy."
+	assignment = "Inquisitorial Acolyte - Ordo Malleus"
 
 /obj/item/weapon/card/id/inquisitor/New()
 	..()
@@ -233,6 +249,13 @@ update_label("John Doe", "Clowny")
 		..()
 		icon_state = pick("inquisitor", "inquisitor", "inquisitor2", "inquisitor3")
 		name = "Inquisitorial Seal"
+
+/obj/item/weapon/card/id/ordohereticus/ordoxenos
+	assignment = "Ordo Xenos"
+	desc = "An Inquisitorial seal that grants virtually unlimited authority to a full Inquisitor of the Imperium. This one is covered in a suspicious goo like substance and smells like Eldar."
+/obj/item/weapon/card/id/ordohereticus/ordomalleus
+	assignment = "Ordo Malleus"
+	desc = "An Inquisitorial seal that grants virtually unlimited authority to a full Inquisitor of the Imperium. This one is covered in daemon-wards and purity seals."
 
 
 /obj/item/weapon/card/id/ultramarine

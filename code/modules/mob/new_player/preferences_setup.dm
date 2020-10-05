@@ -349,14 +349,6 @@ datum/preferences
 						clothes_s.Blend(new /icon('icons/mob/back.dmi', "backpack"), ICON_OVERLAY)
 					else if(backbag == 3)
 						clothes_s.Blend(new /icon('icons/mob/back.dmi', "satchel"), ICON_OVERLAY)
-				if(UGOOSE)
-					clothes_s = new /icon('icons/mob/uniform.dmi', "grey_s")
-					clothes_s.Blend(new /icon('icons/mob/feet.dmi', "black"), ICON_UNDERLAY)
-					if(backbag == 2)
-						clothes_s.Blend(new /icon('icons/mob/back.dmi', "backpack"), ICON_OVERLAY)
-					else if(backbag == 3)
-						clothes_s.Blend(new /icon('icons/mob/back.dmi', "satchel"), ICON_OVERLAY)
-
 
 		preview_icon.Blend(eyes_s, ICON_OVERLAY)
 		if(clothes_s)
