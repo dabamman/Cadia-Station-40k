@@ -461,9 +461,8 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 
 /datum/supply_packs/armory/meltagun
 	name = "Meltagun"
-	contains = list(/obj/item/weapon/gun/projectile/meltagun,
-					/obj/item/weapon/gun/projectile/meltagun)
-	cost = 70
+	contains = list(/obj/item/weapon/gun/projectile/meltagun)
+	cost = 600
 	containername = "Meltagun Crate"
 
 /datum/supply_packs/armory/refractor
