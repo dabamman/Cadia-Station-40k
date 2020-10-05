@@ -432,6 +432,20 @@ Lets turn marine powersources into backpacks - wel
 	max_w_class = 3
 	max_combined_w_class = 16
 
+/obj/item/weapon/storage/rgbackpack/verb/activatejetpack()
+    set name = "Activate Jetpack"
+    set category = "Raven Guard"
+    set src in usr
+    if(!usr.canmove || usr.stat || usr.restrained())
+        return
+    activate()
+    playsound(loc, 'sound/effects/bin_close.ogg', 75, 0)
+
+/obj/item/weapon/storage/rgbackpack/proc/activate()
+	usr.equip_to_slot(new /obj/item/weapon/tank/oxygen/jump/rg, slot_back)
+	usr.drop_item()
+	qdel(src)
+
 /obj/item/weapon/storage/pmbackpack
 	name = "Plague Marine Power Pack"
 	desc = "Powers the heavy armor of the Plague Marines"
