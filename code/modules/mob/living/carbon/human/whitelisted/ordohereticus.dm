@@ -174,10 +174,10 @@ Ordo Hereticus
 				regenerate_icons()
 				rename_self("[name]")
 				verbs += /mob/living/carbon/human/proc/renderaid
-				maxPsyk += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
-				verbs += /mob/living/carbon/human/proc/psykmode
-				verbs += /mob/living/carbon/human/proc/quickeningg
-				verbs += /mob/living/carbon/human/proc/telepathh
+				maxPsy += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/quickening
+				verbs += /mob/living/carbon/human/proc/telepath
 	//extra letters added on end to avoid duplicate definitions/clash with Librarians, real goose tape code I know - Wel								 //This is how we get the verb!
 /mob/living/carbon/human/OHstormtrooper/leader/New()
 	..()
@@ -277,10 +277,10 @@ Ordo Hereticus
 				equip_to_slot_or_del (new /obj/item/weapon/powersword/burning, slot_r_hand)
 				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/inferno, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/device/hdetector, slot_in_backpack)
-				maxPsyk += 500
-				verbs += /mob/living/carbon/human/proc/psykmode
-				verbs += /mob/living/carbon/human/proc/quickeningg
-				verbs += /mob/living/carbon/human/proc/telepathh
+				maxPsy += 500
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/quickening
+				verbs += /mob/living/carbon/human/proc/telepath
 				var/obj/item/weapon/card/id/ordohereticus/W = new
 				W.access = get_all_accesses()
 				W.access += get_centcom_access("Inquisitorial Acolyte")
@@ -292,9 +292,9 @@ Ordo Hereticus
 				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/plasma/pistol, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/device/refractor, slot_in_backpack)
 				equip_to_slot_or_del (new /obj/item/device/xdetector, slot_in_backpack)
-				maxPsyk += 500
-				verbs += /mob/living/carbon/human/proc/psykmode
-				verbs += /mob/living/carbon/human/proc/telepathh
+				maxPsy += 500
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/telepath
 				var/obj/item/weapon/card/id/ordohereticus/ordoxenos/X = new
 				X.access = get_all_accesses()
 				X.access += get_centcom_access("Inquisitorial Acolyte")
@@ -307,9 +307,9 @@ Ordo Hereticus
 				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
 				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
-				maxPsyk += 500
-				verbs += /mob/living/carbon/human/proc/psykmode
-				verbs += /mob/living/carbon/human/proc/telepathh
+				maxPsy += 500
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/telepath
 				var/obj/item/weapon/card/id/ordohereticus/ordomalleus/M = new
 				M.access = get_all_accesses()
 				M.access += get_centcom_access("Inquisitorial Acolyte")

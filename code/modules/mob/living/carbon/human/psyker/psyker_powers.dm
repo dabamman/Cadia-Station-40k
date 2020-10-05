@@ -1,40 +1,56 @@
-//For all non-librarian psyker goodness, modified slightly to avoid duplicate errors with librarians
+//psyker code here
 
 /mob/living/carbon/human/
-	var/Psyk = 0
-	var/maxPsyk = 0
-	var/Psyk_rate = 20
-	var/psykmode = FALSE
+	var/Psy = 0
+	var/maxPsy = 0
+	var/Psy_rate = 20
+	var/psymode = NON_PSYKERS
 
 /mob/living/carbon/human/Stat()
 	..()
-	if(maxPsyk>0)
-		stat(null, "Psy: [Psyk]/[maxPsyk]")
+	if(maxPsy>0)
+		stat(null, "Psy: [Psy]/[maxPsy]")
 
 /mob/living/carbon/human/Life()
 	..()
-	if(Psyk < maxPsyk)
-		Psyk = min(Psyk+Psyk_rate, maxPsyk)
+	if(Psy < maxPsy)
+		Psy = min(Psy+Psy_rate, maxPsy)
 
-/mob/living/carbon/human/proc/psykmode()
-	set name = "Psyker Mode"
+/mob/living/carbon/human/proc/psymode()
+	set name = "Psyker Mode (ON)"
 	set desc = "Using this puts you into a psychic mode, in this mode you can use your main spells."
-	set category = "Spells"
-	psykmode = !psykmode
-	if(psykmode)
+	set category = "Psy"
+	psymode = HUMANPSYKER
+
+	if(istype(src, /mob/living/carbon/human/whitelisted))
+		psymode = MUHREENPSYKER
+			
+	if(psymode == HUMANPSYKER || psymode == MUHREENPSYKER)
 		src << "\blue Your mind starts casting the powers of the warp in your body, you are able to use your main spells."
 	else
 		src << "\blue Your mind starts to cool down and you feel the warp pressure lifting from your body, you arent able to use your main spells."
 	
-/mob/living/carbon/human/proc/imprisonn(var/mob/living/carbon/T in oview(7))
+	verbs += /mob/living/carbon/human/proc/psymodeoff
+	verbs -= /mob/living/carbon/human/proc/psymode
+
+/mob/living/carbon/human/proc/psymodeoff()
+	set name = "Psyker Mode (OFF)"
+	set desc = "Using this will put off the psyker mode, making you unable to use your main spells."
+	set category = "Psy"
+	psymode = NON_PSYKERS
+
+	verbs += /mob/living/carbon/human/proc/psymode
+	verbs -= /mob/living/carbon/human/proc/psymodeoff
+
+/mob/living/carbon/human/proc/imprison(var/mob/living/carbon/T in oview(7))
 	set name = "Imprison (300)"
 	set desc = "Uses your psychic abilities to imprison someone in their own mental barriers."
 	set category = "Spells"
 	if (stat != CONSCIOUS)
 		src << "You must be conscious and alive to use psychic abilities."
 		return
-	if(Psyk>=300)
-		Psyk-=300
+	if(Psy>=300)
+		Psy-=300
 		if(!T)
 			var/list/victims = list()
 			for(var/mob/living/carbon/C in oview(7))
@@ -55,15 +71,15 @@
 	else
 		src << "\red You need more psy!"
 
-/mob/living/carbon/human/proc/lightningboltt(var/atom/T)
+/mob/living/carbon/human/proc/lightningbolt(var/atom/T)
 	set name = "Lightning Bolt (100)"
 	set desc = "Smite your foes with a lightning bolt"
 	set category = "Spells"
 	if (stat != CONSCIOUS)
 		src << "You must be conscious and alive to use psychic abilities."
 		return
-	if(Psyk>=100)
-		Psyk-=100
+	if(Psy>=100)
+		Psy-=100
 		if(!T)
 			var/list/victims = list()
 			for(var/mob/living/carbon/C in oview(7))
@@ -91,18 +107,18 @@
 	else
 		src << "\red You need more psy."
 
-/mob/living/carbon/human/proc/quickeningg()
+/mob/living/carbon/human/proc/quickening()
 	set name = "Mind Over Matter (300)"
 	set desc = "Use your psychich energy to stimulate reflexes to insane levels and negate all knockouts."
-	set category = "Spells"
+	set category = "Psy"
 	if (stat != CONSCIOUS)
 		src << "You must be conscious and alive to use psychic abilities."
 		return
 	if(dodging)
 		src << "\red They are already active."
 		return
-	if(Psyk>=300)
-		Psyk-=300
+	if(Psy>=300)
+		Psy-=300
 		dodging = 1
 		status_flags = 0
 		src << "\red Adrenaline active."
@@ -114,10 +130,10 @@
 	else
 		src << "\red You need more psy."
 
-/mob/living/carbon/human/proc/telepathh(mob/M as mob in orange(30,src)) //Like whisper but free, and much farther range.
+/mob/living/carbon/human/proc/telepath(mob/M as mob in orange(30,src)) //Like whisper but free, and much farther range.
 	set name = "Telepathy"
 	set desc = "Project your mind to others."
-	set category = "Spells"
+	set category = "Psy"
 
 	if(stat != CONSCIOUS)
 		return
