@@ -25,24 +25,7 @@
 		src << "\blue Your mind starts casting the powers of the warp in your body, you are able to use your main spells."
 	else
 		src << "\blue Your mind starts to cool down and you feel the warp pressure lifting from your body, you arent able to use your main spells."
-
-/mob/living/carbon/human/RangedAttack(var/atom/A)
-	if(psykmode)
-		if(a_intent == "harm")
-			lightningboltt(A)
-
-		if(a_intent == "grab")
-			imprisonn(A)	
-		
-		if(a_intent == "disarm")
-			var/obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall/M = new /obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall
-			if(Psyk>=200)
-				Psyk-=200
-				M.cast(list(A), src)
-			else
-				src << "\red You need more psy!"
-		
-
+	
 /mob/living/carbon/human/proc/imprisonn(var/mob/living/carbon/T in oview(7))
 	set name = "Imprison (300)"
 	set desc = "Uses your psychic abilities to imprison someone in their own mental barriers."
