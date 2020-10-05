@@ -284,6 +284,7 @@ Security Officer
 		switch(weaponchoice)
 			if("Standard Guardsman")
 				H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/lasgun(H), slot_r_hand)
+				H.equip_to_slot_or_del(new /obj/item/weapon/complexknife/combatknife(H), slot_in_backpack)
 			if("Field Chiurgeon")
 				if(!H.unEquip(H.gloves))
 					qdel(H.gloves)
