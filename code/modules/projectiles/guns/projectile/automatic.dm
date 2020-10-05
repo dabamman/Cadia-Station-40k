@@ -216,6 +216,16 @@ Bolters
 	canscope = 0
 	canattach = 0
 
+/obj/item/weapon/gun/projectile/automatic/bolter/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, flag, params)
+	if(!istype(user, /mob/living/carbon/human/ork) && !istype(user, /mob/living/carbon/human/sob) && !istype(user, /mob/living/carbon/human/whitelisted))
+		usr << "<span class='notice'>The recoil knocks you flat!!</span>"
+		user.Weaken(3)
+		return
+	else
+		if(istype(user, /mob/living/carbon/human/whitelisted))
+			var/sobshout = pick('sound/voice/umshout1.ogg','sound/voice/umshout2.ogg')
+			playsound(loc, sobshout, 60, 0)
+
 //a glowing bolter
 
 /obj/item/weapon/gun/projectile/automatic/bolter/glow
