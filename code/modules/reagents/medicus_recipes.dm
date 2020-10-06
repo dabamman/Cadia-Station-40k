@@ -313,7 +313,14 @@
 /datum/chemical_reaction/mannitol
 	name = "Mannitol"
 	id = "brainburn"
-	result = "brainburn"
+	result = "mannitol"
 	required_reagents = list("sugar" = 1, "hydrogen" = 1, "water" = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/suboxone
+	name = "Suboxone"
+	id = "brainburn"
+	result = "Suboxone"
+	required_reagents = list("space_drugs" = 1, "hydrogen" = 1, "water" = 1, "anti_toxin" = 1)
 	result_amount = 2
 
