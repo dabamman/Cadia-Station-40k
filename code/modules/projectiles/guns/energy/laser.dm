@@ -170,6 +170,18 @@ obj/item/weapon/gun/energy/laser/retro
 		update_icon()
 		return 1
 
+/obj/item/weapon/gun/energy/latherifle
+	name = "integrated lathe-crafted lasrifle"
+	desc = "An integrated lasrifle hooked up to your internal power supply and controlled through a Mind Impulse Unit. The direct connection to your power supply ensures thousands of shots before the capacitor needs to be recharged."
+	icon_state = "latherifle"
+	item_state = "latherifle"
+	ammo_type = list(/obj/item/ammo_casing/energy/latherifle)
+	cell_type = "/obj/item/weapon/stock_parts/cell/infinite"
+	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
+
+/obj/item/weapon/gun/energy/latherifle/dropped()
+	qdel(src)
+
 /*
 Fully Automatic
 */

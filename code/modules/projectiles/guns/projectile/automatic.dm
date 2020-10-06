@@ -216,16 +216,6 @@ Bolters
 	canscope = 0
 	canattach = 0
 
-/obj/item/weapon/gun/projectile/automatic/bolter/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, flag, params)
-	if(!istype(user, /mob/living/carbon/human/ork) && !istype(user, /mob/living/carbon/human/sob) && !istype(user, /mob/living/carbon/human/whitelisted))
-		usr << "<span class='notice'>The recoil knocks you flat!!</span>"
-		user.Weaken(3)
-		return
-	else
-		if(istype(user, /mob/living/carbon/human/whitelisted))
-			var/sobshout = pick('sound/voice/umshout1.ogg','sound/voice/umshout2.ogg')
-			playsound(loc, sobshout, 60, 0)
-
 //a glowing bolter
 
 /obj/item/weapon/gun/projectile/automatic/bolter/glow
@@ -669,10 +659,6 @@ Shoota
 
 
 /obj/item/weapon/gun/projectile/shoota/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, flag, params)
-	if(!istype(user, /mob/living/carbon/human/ork/) && !istype(user, /mob/living/carbon/human/whitelisted/))
-		usr << "<span class='notice'>The recoil knocks you flat!!</span>"
-		user.Weaken(3)
-		return
 	if(!cooldown)
 		cooldown = 1
 		spawn (0)
@@ -728,10 +714,6 @@ Shoota
 
 
 /obj/item/weapon/gun/projectile/snazzgun/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, flag, params)
-	if(!istype(user, /mob/living/carbon/human/ork/) && !istype(user, /mob/living/carbon/human/whitelisted/))
-		usr << "<span class='notice'>The recoil knocks you flat!!</span>"
-		user.Weaken(3)
-		return
 	if(!cooldown)
 		cooldown = 1
 		spawn (0)
@@ -791,10 +773,6 @@ Storm Bolter
 
 
 /obj/item/weapon/gun/projectile/sbolter/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, flag, params)
-	if(!istype(user, /mob/living/carbon/human/ork) && !istype(user, /mob/living/carbon/human/sob) && !istype(user, /mob/living/carbon/human/whitelisted))
-		usr << "<span class='notice'>The recoil knocks you flat!!</span>"
-		user.Weaken(3)
-		return
 	if(!cooldown)
 		cooldown = 1
 		spawn (0)
@@ -826,11 +804,6 @@ Storm Bolter
 				sleep(3)
 			sleep (10)
 			cooldown = 0
-	else
-		if(istype(user, /mob/living/carbon/human/whitelisted))
-			var/sobshout = pick('sound/voice/umshout1.ogg','sound/voice/umshout2.ogg')
-			playsound(loc, sobshout, 60, 0)
-
 
 /*
 AutoCannon

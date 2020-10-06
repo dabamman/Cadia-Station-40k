@@ -120,3 +120,13 @@ pulseb
 	pixel_shot = 1
 	diagnostic = 1
 	delay = 50
+
+/obj/item/projectile/energy/laslathe
+	name = "lasbolt"
+	icon_state = "laser"
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
+	damage = 20
+	damage_type = BURN
+	flag = "laser"
+	trace_residue = "Focused charring patterns."
+	woundtype = /datum/wound/laser

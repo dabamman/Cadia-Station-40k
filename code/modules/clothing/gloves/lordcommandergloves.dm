@@ -88,8 +88,8 @@
 				G << "\red \b Distress Signal Sent. Krieg Officers now available to deploy."
 //making some skitarii ranger gloves for biotic guns - wel
 /obj/item/clothing/gloves/skitarii
-	desc = "An arc rifle integrated into your forearm, forged by the Adeptus Mechanicus."
-	name = "skitarii weapon implants"
+	desc = "A set of augmetic limbs  with a lathe-crafted lasrifle integrated into the forearm."
+	name = "skitarii weapon implant"
 	icon_state = "skithands"
 	item_state = "skithands"
 	flags = NODROP|THICKMATERIAL | STOPSPRESSUREDMAGE
@@ -99,7 +99,7 @@
 	permeability_coefficient = 0.05
 
 	verb/togglegun()
-		set name = "Transform your arm into an arc rifle"
+		set name = "Activate implanted lasrifle"
 		set category = "Biotics"
 		set src in usr
 		if(!usr.canmove || usr.stat || usr.restrained())
@@ -108,13 +108,13 @@
 			usr << "This weapon cannot be toggled!"
 			return
 		if(src.is_toggled == 2)
-			if(istype(usr.l_hand, /obj/item/weapon/gun/energy/plasma/arcrifle)) //Not the nicest way to do it, but eh
+			if(istype(usr.l_hand, /obj/item/weapon/gun/energy/latherifle)) //Not the nicest way to do it, but eh
 				qdel(usr.l_hand)
-				usr.visible_message("<span class='warning'>With a snap of metal against metal, [usr] reforms his entire arm into an arc rifle.</span>", "<span class='notice'>You retract your integrated weapon.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
+				usr.visible_message("<span class='warning'>With a snap of metal against metal, [usr] reforms their entire forearm into a lasrifle.</span>", "<span class='notice'>You retract your integrated weapon.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
 				usr.update_inv_hands()
-			if(istype(usr.r_hand, /obj/item/weapon/gun/energy/plasma/arcrifle)) //Not the nicest way to do it, but eh
+			if(istype(usr.r_hand, /obj/item/weapon/gun/energy/latherifle)) //Not the nicest way to do it, but eh
 				qdel(usr.r_hand)
-				usr.visible_message("<span class='warning'>With a snap of metal against metal, [usr] reforms his entire arm into an arc rifle.</span>", "<span class='notice'>You retract your integrated weapon.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
+				usr.visible_message("<span class='warning'>With a snap of metal against metal, [usr] reforms their entire forearm into a lasrifle.</span>", "<span class='notice'>You retract your integrated weapon.</span>", "<span class='warning>You hear mechanical joints rumbling.</span>")
 				usr.update_inv_hands()
 			src.icon_state = initial(icon_state)
 			usr << "You lower your weapon."
@@ -122,5 +122,5 @@
 		else
 			src.icon_state += "_open"
 			usr << "You ready your weapon."
-			usr.put_in_hands(new /obj/item/weapon/gun/energy/plasma/arcrifle(usr))
+			usr.put_in_hands(new /obj/item/weapon/gun/energy/latherifle(usr))
 			src.is_toggled = 2
