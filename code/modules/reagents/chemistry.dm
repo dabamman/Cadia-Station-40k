@@ -2317,3 +2317,12 @@ datum/reagent/growth2/on_mob_life(var/mob/living/H as mob)
 		M.health += 100
 	..()
 	return
+
+/datum/reagent/medicine/mannitol
+	name = "Mannitol"
+	description = "Efficiently restores brain damage."
+	color = "#A0A0A0" //mannitol is light grey, neurine is lighter grey
+
+/datum/reagent/medicine/mannitol/on_mob_life(mob/living/carbon/C)
+	C.adjustBrainLoss(-10)
+	..()

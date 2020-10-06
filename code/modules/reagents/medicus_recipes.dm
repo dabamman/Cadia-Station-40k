@@ -309,3 +309,11 @@
 	result = "rotgut"
 	required_reagents = list("hooch" = 1, "moonshine" = 1)
 	result_amount = 2
+
+/datum/chemical_reaction/mannitol
+	name = "Mannitol"
+	id = "brainburn"
+	result = "brainburn"
+	required_reagents = list("sugar" = 1, "hydrogen" = 1, "water" = 1)
+	result_amount = 2
+
