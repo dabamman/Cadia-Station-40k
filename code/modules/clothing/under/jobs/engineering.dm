@@ -35,7 +35,8 @@
 	icon_state = "skit_s"
 	item_state = "skit_s"
 	item_color = "skit_s"
+	has_sensor = 2 // As if the Adeptus Mechanicus would let the Skitarii turn off a way to gather more data.
 	gender = PLURAL
 	body_parts_covered = GROIN|LEGS|HEAD
-	armor = list(melee = 15, bullet = 15, laser = 15, energy = 10, bomb = 10, bio = 20, rad = 20)
+	armor = list(melee = 15, bullet = 15, laser = 10, energy = 10, bomb = 10, bio = 25, rad = 25)
 	flags = NODROP
