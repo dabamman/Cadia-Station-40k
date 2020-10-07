@@ -620,7 +620,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 	containername = "Imperium of Man Lot# 277301"
 
 /datum/supply_packs/engineering/skitariiparts
-	name = "Skitarii cryostorage coffin"
+	name = "Skitarii cryostasis coffin"
 	contains = null
 	cost = 450
 	containertype = /obj/structure/skitariiparts
