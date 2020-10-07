@@ -624,7 +624,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 	contains = null
 	cost = 450
 	containertype = /obj/structure/skitariiparts
-	containername = "Adeptus Mechanicus, from Mars, Lot# 5743501"
+	containername = "Skitarii cryostasis coffin"
 
 
 /datum/supply_packs/engineering/tools		//the most robust crate

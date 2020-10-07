@@ -131,7 +131,7 @@ Repackaged Spider Turrets
 	name = "Skitarii Hypaspist cryostasis coffin"
 	desc = "A Skitarii Hypaspist contained in a cryostasis coffin for long-term storage, picked up by the Rogue Trader from the last forge world visit. A Tech-Priest is needed to activate the Skitarii with the correct techna-lingua access codes."
 	icon = 'icons/obj/storage.dmi'
-	icon_state = "boxstuff"
+	icon_state = "cryostasiscoffin"
 	density = 1
 
 /obj/structure/skitariiparts/attackby(var/obj/item/W as obj,mob/user as mob)
