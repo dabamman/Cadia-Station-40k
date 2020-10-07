@@ -33,19 +33,11 @@
 	real_name = "[rndname]"
 	var/obj/item/weapon/card/id/W = new
 	W.icon_state = "dogtag"
-	W.access = list(access_security, access_sec_doors, access_brig, access_armory, access_forensics_lockers, access_court,
-	            access_medical, access_genetics, access_morgue, access_rd,
-	            access_tox, access_tox_storage, access_chemistry, access_engine, access_engine_equip, access_maint_tunnels,
-	            access_external_airlocks, access_change_ids, access_ai_upload,
-	            access_teleporter, access_eva, access_heads, access_captain, access_all_personal_lockers,
-	            access_tech_storage, access_chapel_office, access_atmospherics, access_kitchen,
-	            access_bar, access_janitor, access_crematorium, access_robotics, access_cargo, access_construction,
-	            access_hydroponics, access_library, access_lawyer, access_virology, access_cmo, access_qm, access_surgery,
-	            access_theatre, access_research, access_mining, access_mailsorting,
-	            access_heads_vault, access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce,
-	            access_keycard_auth, access_tcomsat, access_gateway, access_mineral_storeroom) //Skitarii are treated similar to Imp Guard
-	W.access += get_centcom_access("Captain") //They can have centcomm access though.
-	W.assignment = "Adeptus Mechanicus"
+	W.access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks,
+				access_construction, access_atmospherics, access_tcomsat, access_robotics, access_tox, access_tox_storage, access_research,
+				access_xenobiology, access_mineral_storeroom)
+
+	W.assignment = "Skitarii Tech-Guard"
 	W.registered_name = real_name
 	W.update_label()
 	equip_to_slot_or_del(W, slot_wear_id)

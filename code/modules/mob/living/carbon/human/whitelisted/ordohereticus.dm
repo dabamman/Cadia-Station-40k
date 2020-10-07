@@ -226,7 +226,6 @@ Ordo Hereticus
 	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/inq/random, slot_wear_suit)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/head/inqhat, slot_head)
-	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistoli, slot_s_store)
 	equip_to_slot_or_del(new /obj/item/device/pda/lawyer, slot_in_backpack)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent

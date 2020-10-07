@@ -860,7 +860,7 @@ Lord Inquisitor Armor
 
 /obj/item/clothing/suit/armor/skitrobe
 	name = "skitarii robe"
-	desc = "A durable, rad-resistant rust red robe marked with the iconography and sigils of the Adeptus Mechanicus."
+	desc = "A durable, rad-resistant rust red robe marked with the iconography of the Adeptus Mechanicus and lined with tiny leaden leech-spheres that absorb harmful energies,"
 	icon_state = "skitrobe"
 	item_state = "skitrobe"
 	blood_overlay_type = "coat"

@@ -2317,3 +2317,27 @@ datum/reagent/growth2/on_mob_life(var/mob/living/H as mob)
 		M.health += 100
 	..()
 	return
+
+datum/reagent/medicine/mannitol
+	name = "Mannitol"
+	description = "Efficiently restores brain damage."
+	color = "#A0A0A0" //mannitol is light grey, neurine is lighter grey
+
+datum/reagent/medicine/mannitol/on_mob_life(mob/living/carbon/C)
+	C.adjustBrainLoss(-10)
+	..()
+
+datum/reagent/suboxone //Quickly fixs addiction
+	name = "Suboxone"
+	id = "legecillin"
+	description = "A liquid capable of curing ones addictions!"
+	reagent_state = LIQUID
+	color = "#C8A5DC" // rgb: 200, 165, 220
+
+datum/reagent/suboxone/on_mob_life(var/mob/living/carbon/M as mob)
+	if(!M) M = holder.my_atom
+	M.reagents.remove_all_type(/datum/reagent/toxin, 1, 0, 1)
+	if(istype(M, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = M
+		for(var/datum/addiction/A in H.addictions)
+			A.recovery -= 20
