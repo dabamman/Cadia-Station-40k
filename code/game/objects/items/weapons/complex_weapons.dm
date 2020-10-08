@@ -204,6 +204,7 @@ But ideally this will create an actual concept of melee dueling.
 	force = 50
 	piercingpower = 30
 
+
 /obj/item/weapon/chainsword/chainchoppa/attack(mob/living/M, mob/living/user, def_zone)
 	..()
 	if (M && (isliving(M)) && (M.stat != DEAD) && (M.stat != UNCONSCIOUS) && (!istype(M, /mob/living/carbon/human/ork))) //Everything before is default attack proc.
