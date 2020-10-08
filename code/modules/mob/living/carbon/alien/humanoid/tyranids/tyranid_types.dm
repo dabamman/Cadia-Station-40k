@@ -948,6 +948,7 @@ Hormagaunt
 	health = 125
 	plasma_rate = 40
 	var/speedmod = 1.8
+	var/venomous = 0
 
 /mob/living/carbon/alien/humanoid/tyranid/hormagaunt/movement_delay()
 	. = -speedmod
@@ -977,28 +978,18 @@ Hormagaunt
 	else
 		src << "\red You need more biomass."
 
-/mob/living/carbon/alien/humanoid/tyranid/proc/venom(var/mob/living/carbon/T in oview(1))
-	set name = "Venom (1500)"
+/mob/living/carbon/alien/humanoid/tyranid/hormagaunt/proc/venom()
+	set name = "Venom (1200)"
 	set desc = "Bite with a venom that makes it difficult to stand on tyranid weeds."
 	set category = "Alien"
-	if(powerc(1500))
-		if(!T)
-			var/list/victims = list()
-			for(var/mob/living/carbon/human/C in oview(1))
-				victims += C
-			//T = input(src, "Who should we hit?") as null|anything in victims
-			T = pick(victims)
-		if(T)
-			if(!istype(T))
-				src << "\red We only bite people!"
-				return
-			src << "We bite [T]."
-			visible_message("\red <B>[src] bites [T] with venomous fangs!</B>")
-			T.take_organ_damage(10, 0) //ignores armor
-			T.reagents.add_reagent("tyranid", 7)
-			adjustToxLoss(-1500)
+	src << "Pressing the button isn't broken at least. Please don't leave this debug message in."
+	if(powerc(1200))
+		if (venomous == 0)
+			venomous = 1
+			adjustToxLoss(-1200)
+			src << "\red We ready our fangs to inject a venomous bite in our next attack."
 		else
-			src << "\blue You cannot bite nothing!"
+			src << "\red We are already prepared to inject a venomous bite."
 	else
 		src << "\red You need more biomass."
 
@@ -1022,7 +1013,7 @@ Hormagaunt
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/hormagaunt/proc/talons)
 				src << "\red You adapt scything talons!"
 			if(4)
-				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/venom)
+				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/hormagaunt/proc/venom)
 				src << "\red You adapt a venomous bite! The venom will make targets react badly to harvest weeds, keeping them away from the hive."
 			if(5)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/tyranid/proc/spikes, /mob/living/carbon/alien/humanoid/tyranid/proc/mine)
@@ -1759,7 +1750,7 @@ This specific genestealer mob is the one used in 1-click antags, it has faster b
 				src << "<b>Your senses adapt to the dark!</b>"
 			if(3)
 				src.verbs.Add(/mob/living/carbon/alien/humanoid/proc/corrosive_acid)
-				src << "\red You gain the ability to tear through objects."			
+				src << "\red You gain the ability to tear through objects."
 			if(4)
 				var/choice = alert(src, "Enter an option.",,"Toughened Carapace","Fireproofed Scales")
 				switch(choice)
