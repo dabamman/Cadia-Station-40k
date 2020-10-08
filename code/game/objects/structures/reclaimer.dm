@@ -212,6 +212,7 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 	density = 0
 	opacity = 0
 	layer = 5
+	var/tripped = 0 //Added as acid/poison pods explode more based on how many times they're tripped and stepping onto a mine can trigger it twice.
 
 /obj/structure/alien/resin/spore/poison
 	desc = "Some sort of strange hovering organism. This one leaks traces of gas and smells foul."
@@ -234,6 +235,7 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 
 /obj/structure/alien/resin/spore/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(air_group || (height==0)) return 1
+	if(tripped) return
 	if(istype(mover, /mob/living/carbon/alien))
 		return 1
 	if(istype(mover, /mob/living/simple_animal/hostile/alien/ripper))
@@ -243,6 +245,7 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 		if(M.mind && M.mind.special_role == "Genestealer Cult Member")
 			return 1
 		mover.visible_message("The [src] begins to shake violently!")
+		tripped=1
 		spawn(10)
 			src.explode()
 		return 1
@@ -250,15 +253,18 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 		if(prob(65))
 			return 1
 		else
+			tripped=1
 			src.explode()
 	return 1
 
 /obj/structure/alien/resin/spore/HasProximity(atom/movable/AM as mob|obj)
+	if(tripped) return
 	if(istype(AM, /mob/living) && !istype(AM, /mob/living/carbon/alien) && !istype(AM, /mob/living/simple_animal/hostile/alien/ripper))
 		var/mob/living/carbon/human/T = AM
 		if (T.mind && T.mind.special_role == "Genestealer Cult Member") //Feels very messy but alternative is to define T before the first if check. Not sure if it'd be slightly heavier on performance to create a variable every time someone moves near a mine.
 			return
 		AM.visible_message("The [src] begins to shake violently!")
+		tripped=1
 		spawn(10)
 			src.explode()
 
