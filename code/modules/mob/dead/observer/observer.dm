@@ -688,7 +688,7 @@ Update: What have we created? something awful -wel ard
 			message_admins("[usr.key] executed RTD faction: RavenGuard Leader.", 0)
 			usr << "\blue You are a Raven Guard!"
 			usr.loc = get_turf(locate("landmark*rgstart"))
-			var/mob/living/carbon/human/whitelisted/ravenguardhead/new_character = new(usr.loc)
+			var/mob/living/carbon/human/whitelisted/rg/leader/new_character = new(usr.loc)
 			new_character.key = usr.key
 			qdel(src)
 
@@ -720,7 +720,7 @@ Update: What have we created? something awful -wel ard
 			message_admins("[usr.key] executed RTD faction: Plague Marine Leader.", 0)
 			usr << "\blue You are a Plague Marine of Nurgle!"
 			usr.loc = get_turf(locate("landmark*pmteam"))
-			var/mob/living/carbon/human/whitelisted/pmleader/new_character = new(usr.loc)
+			var/mob/living/carbon/human/whitelisted/pm/leader/new_character = new(usr.loc)
 			new /obj/warpin(usr.loc)
 			new_character.key = usr.key
 			qdel(src)
