@@ -204,14 +204,33 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 /obj/structure/mineral_door/resin/tyranid
 	icon = 'icons/mob/tyranids.dmi'
 
-/obj/structure/alien/resin/spore
+/obj/structure/alien/resin/spore //default is explosive/old spore mine.
 	name = "Spore Mine"
-	desc = "You might want to stay away from this if you aren't a wierd bug-alien."
+	desc = "Some sort of strange hovering organism. This one has has a strange yellow colour."
 	icon = 'icons/mob/tyranids.dmi'
 	icon_state = "mine"
 	density = 0
 	opacity = 0
 	layer = 5
+
+/obj/structure/alien/resin/spore/poison
+	desc = "Some sort of strange hovering organism. This one leaks traces of gas and smells foul."
+
+/obj/structure/alien/resin/spore/poison/New()
+	create_reagents(900)
+	reagents.add_reagent("venomthropes",300) //Equivalent to an evolved venomthrope's toxic gas. Playtesting found that you'll die if you hang about but it's easy to run away.
+	reagents.add_reagent("toxin",300)
+	reagents.add_reagent("chloromethane",300)
+
+/obj/structure/alien/resin/spore/frag
+	desc = "Some sort of strange hovering organism. This one has has a metallic shell."
+
+/obj/structure/alien/resin/spore/acid
+	desc = "Some sort of strange hovering organism. This one has has liquid filled sacs under the surface."
+
+/obj/structure/alien/resin/spore/acid/New()
+	create_reagents(100)
+	reagents.add_reagent("hacid",30) //Should be eacid to match canon strength but that's not balanced at all
 
 /obj/structure/alien/resin/spore/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(air_group || (height==0)) return 1
@@ -236,12 +255,32 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 
 /obj/structure/alien/resin/spore/HasProximity(atom/movable/AM as mob|obj)
 	if(istype(AM, /mob/living) && !istype(AM, /mob/living/carbon/alien) && !istype(AM, /mob/living/simple_animal/hostile/alien/ripper))
+		var/mob/living/carbon/human/T = AM
+		if (T.mind && T.mind.special_role == "Genestealer Cult Member") //Feels very messy but alternative is to define T before the first if check. Not sure if it'd be slightly heavier on performance to create a variable every time someone moves near a mine.
+			return
 		AM.visible_message("The [src] begins to shake violently!")
 		spawn(10)
 			src.explode()
 
 /obj/structure/alien/resin/spore/proc/explode()
-	explosion(src.loc,1,2,3,flame_range = 3)
+	if (istype(src, /obj/structure/alien/resin/spore/poison) || istype(src, /obj/structure/alien/resin/spore/acid))	//Can group these as they spit out different reagents
+		var/location = get_turf(src)
+		var/datum/effect/effect/system/chem_smoke_spread/S = new /datum/effect/effect/system/chem_smoke_spread //And time for toxic smokescreen.
+		S.attach(location)
+		playsound(location, 'sound/effects/smoke.ogg', 50, 1, -3)
+		spawn(0)
+			if(S)
+				S.set_up(src.reagents, 10, 0, location)
+				S.start()
+				sleep(4)
+				S.start()
+		spawn (10) //Momentary delay to set up chemsmoke.
+			qdel(src)
+		return
+	else if (istype(src, /obj/structure/alien/resin/spore/frag))
+		explosion(src.loc,0,0.5,1,flame_range = 2, shrapnel_count = 200) //Same shrapnel as a frag grenade.
+	else //defaults to explosive
+		explosion(src.loc,1,2,3,flame_range = 3)
 	qdel(src)
 
 /obj/structure/alien/resin/spore/healthcheck()
