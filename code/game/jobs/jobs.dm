@@ -12,7 +12,6 @@ var/const/ATMOSTECH			=(1<<7)
 var/const/ROBOTICIST		=(1<<8)
 var/const/AI				=(1<<9)
 var/const/CYBORG			=(1<<10)
-var/const/UGOOSE			=(1<<11)
 
 var/const/MEDSCI			=(1<<1)
 
@@ -60,7 +59,7 @@ var/list/command_positions = list(
 	"Lord Inquisitor, Ordo Xenos",
 	"Sister Hospitaller",
 	"Magos",
-	"Inquisitor",
+	"Inquisitorial Acolyte",
 	"Commissar"
 )
 
@@ -99,7 +98,7 @@ var/list/civilian_positions = list(
 	"Munitorum Priest",
 	"Munitorum Adept",
 	"Shaft Miner",
-	"Inquisitor",
+	"Inquisitorial Acolyte",
 	"Ministorum Priest",
 	"Celebrity",
 	"Mime",
@@ -120,7 +119,6 @@ var/list/security_positions = list(
 var/list/nonhuman_positions = list(
 	"AI",
 	"Cyborg",
-	"Undercover Goose",
 	"pAI"
 )
 

@@ -18,7 +18,7 @@
 	name = "desert eagle"
 	desc = "A robust handgun that uses .50 AE ammo"
 	icon_state = "deagle"
-	force = 14.0
+	force = 15.0
 	mag_type = /obj/item/ammo_box/magazine/m50
 
 /obj/item/weapon/gun/projectile/automatic/deagle/update_icon()
@@ -91,7 +91,7 @@
 	name = "\improper M1911"
 	desc = "An M1911 pistol. Uses .45 ammo."
 	icon_state = "m1911"
-	force = 13.0
+	force = 15.0
 	origin_tech = "combat=4;materials=4"
 	mag_type = /obj/item/ammo_box/magazine/sm45
 
@@ -162,10 +162,12 @@
 	var/oldsound = 0 //Stores the true sound the gun made before it was silenced
 
 /obj/item/weapon/gun/projectile/automatic/laspistol
-	name = "Laspistol"
-	desc = "The Codex Astartes names this pistol 'Complete Crap'."
+	name = "laspistol"
+	desc = "A standard-rate laspistol, one of the most common and widely-used energy weapons in the Imperium. "
 	icon_state = "laspistol2"
+	item_state = "laspistol2"
 	w_class = 2.0
+	force = 10.0
 	origin_tech = "combat=2;materials=2;syndicate=2"
 	mag_type = /obj/item/ammo_box/magazine/laspistolmag
 	fire_sound = 'sound/weapons/lasgun.ogg'
@@ -177,11 +179,28 @@
 
 
 /obj/item/weapon/gun/projectile/automatic/laspistol2
-	name = "Laspistol"
-	desc = "Top quality laspistol. Built on Terra and only given to the elite."
+	name = "laspistol"
+	desc = "A high quality laspistol, a rare piece of craftsmanship displayed on one of the most common and widely-used energy weapons in the Imperium."
 	icon_state = "laspistol"
+	item_state = "laspistol"
 	w_class = 2.0
-	force = 14.0
+	force = 12.0
+	origin_tech = "combat=2;materials=2;syndicate=2"
+	mag_type = /obj/item/ammo_box/magazine/laspistolmag
+	fire_sound = 'sound/weapons/lasgun.ogg'
+	slot_flags = SLOT_BELT
+	ejectcasing = 0 //Technically energy based! None of that!
+
+/obj/item/weapon/gun/projectile/automatic/laspistol2/process_chamber(var/eject_casing = 0, var/empty_chamber = 1)    //be afraid of my skill
+	..()
+
+/obj/item/weapon/gun/projectile/automatic/laspistoli
+	name = "laspistol"
+	desc = "A high quality laspistol produced for the Inquisition."
+	icon_state = "laspistoli"
+	item_state = "laspistoli"
+	w_class = 2.0
+	force = 12.0
 	origin_tech = "combat=2;materials=2;syndicate=2"
 	mag_type = /obj/item/ammo_box/magazine/laspistolmag
 	fire_sound = 'sound/weapons/lasgun.ogg'
@@ -199,7 +218,7 @@ Flare Gun
 	name = "Flare Gun"
 	desc = "A robust flare placement device. Warning: Flares use fire."
 	icon_state = "flaregun"
-	force = 14.0
+	force = 10.0
 	mag_type = /obj/item/ammo_box/magazine/flaremag
 
 /*
@@ -207,11 +226,28 @@ Hell Pistol
 */
 
 /obj/item/weapon/gun/projectile/automatic/hellpistol
-	name = "Hellpistol"
-	desc = "Top quality hellpistol. Built on Terra and only given to the elite."
+	name = "hellpistol"
+	desc = "A high quality hellpistol, a pattern of Imperial las weaponry that possesses a more advanced and powerful laser plasma generation system intended to provide more energetic laser fire on-target."
 	icon_state = "hellpistol"
+	item_state = "laspistol"
 	w_class = 2.0
-	force = 14.0
+	force = 15.0
+	origin_tech = "combat=2;materials=2;syndicate=2"
+	mag_type = /obj/item/ammo_box/magazine/hellgunmag
+	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+	slot_flags = SLOT_BELT
+	ejectcasing = 0 //Technically energy based! None of that!
+
+/obj/item/weapon/gun/projectile/automatic/hellpistol/process_chamber(var/eject_casing = 0, var/empty_chamber = 1)    //be afraid of my skill
+	..()
+
+/obj/item/weapon/gun/projectile/automatic/hellpistoli
+	name = "hellpistol"
+	desc = "A high quality hellpistol, a pattern of Imperial las weaponry that possesses a more advanced and powerful laser plasma generation system intended to provide more energetic laser fire on-target. This one seems to have been forged for Inquisition hands."
+	icon_state = "hellpistoli"
+	item_state = "laspistoli"
+	w_class = 2.0
+	force = 15.0
 	origin_tech = "combat=2;materials=2;syndicate=2"
 	mag_type = /obj/item/ammo_box/magazine/hellgunmag
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
@@ -226,7 +262,7 @@ Hell Pistol
 	desc = "A weapon that shoots toxic darts encased in lasers."
 	icon_state = "needler"
 	w_class = 2.0
-	force = 14.0
+	force = 12.0
 	mag_type = /obj/item/ammo_box/magazine/needlermag
 	slot_flags = SLOT_BELT
 	origin_tech = "combat=4;materials=2;syndicate=5"
@@ -238,6 +274,11 @@ Hell Pistol
 	desc = "A small, easily concealable handgun. Uses 12mm ammo."
 	icon_state = "heavypistol"
 	w_class = 2
+	force = 15.0
 	silenced = null
 	origin_tech = "combat=3;materials=3"
 	mag_type = /obj/item/ammo_box/magazine/m12mm
+
+/obj/item/weapon/gun/projectile/automatic/pistol/heavy/ox
+	name = "Scipio Pattern Stubber pistol"
+	desc = "A beautifally manufactuered Scipio Pattern stubber pistol with an Inquisitorial Sigil emblazoned boldy into the side, this belongs to a very important person."

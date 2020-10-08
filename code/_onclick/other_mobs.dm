@@ -25,7 +25,28 @@
 /mob/living/carbon/RestrainedClickOn(var/atom/A)
 	return 0
 
-/mob/living/carbon/human/RangedAttack(var/atom/A)
+/mob/living/carbon/human/RangedAttack(atom/A)
+	if(psymode == HUMANPSYKER || psymode == MUHREENPSYKER)
+		if(a_intent == "harm")
+			lightningbolt(A)
+			return
+		
+		if(a_intent == "grab")
+			imprison(A)	
+			return
+		
+		if(a_intent == "disarm")
+			var/obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall/M = new /obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall
+			if(Psy>=200)
+				Psy-=200
+				M.cast(list(A), src)
+
+			else
+				src << "\red You need more psy!"
+
+			return
+		return
+
 	if(!gloves && !mutations.len) return
 	var/obj/item/clothing/gloves/G = gloves
 	if((LASER in mutations) && a_intent == "harm")
@@ -35,7 +56,7 @@
 		return
 
 	else if(TK in mutations)
-		A.attack_tk(src)
+		A.attack_tk(src)			
 
 /*
 	Animals & All Unspecified

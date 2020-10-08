@@ -119,7 +119,7 @@
 	item_state = "slaverobe"
 	blood_overlay_type = "coat"
 	body_parts_covered = CHEST|ARMS
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|CHEST|LEGS|FEET|ARMS|GROIN
+	flags_inv = HIDEGLOVES|HIDESHOES|CHEST|LEGS|FEET|ARMS|GROIN
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS | HEAD
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	allowed = list(/obj/item/device/analyzer,/obj/item/stack/medical,/obj/item/weapon/dnainjector,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,/obj/item/weapon/reagent_containers/hypospray,/obj/item/device/healthanalyzer,/obj/item/device/flashlight/pen,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle,/obj/item/weapon/paper,/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/seclite)
@@ -127,5 +127,12 @@
 /obj/item/clothing/head/leper
 	name = "Torn Hood"
 	desc = "The torn hood of a penitent"
+	flags = BLOCKHAIR
 	icon_state = "leper"
-	item_state = "leper"	
+	item_state = "leper"
+
+/obj/item/clothing/under/penitent
+	name = "Tattered clothing"
+	desc = "Torn clothing of a penitent"
+	icon_state = "urchin_body_s"
+	item_state = "urchin_body_s"

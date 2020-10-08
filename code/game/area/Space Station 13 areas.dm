@@ -928,8 +928,11 @@ Droppod
 	icon_state = "yellow"
 	requires_power = 0
 
-
-
+/area/ruins/sleptisresearchoutpost
+	name = "Abandoned Research Outpost"
+	icon_state = "blue"
+	requires_power = 1
+	lighting_use_dynamic = 1
 
 
 
@@ -1267,6 +1270,9 @@ Droppod
 	name = "\improper Bar"
 	icon_state = "bar"
 
+/area/crew_quarters/bar/backroom
+	name = "Bar Backroom"
+
 /area/crew_quarters/theatre
 	name = "\improper Theatre"
 	icon_state = "Theatre"
@@ -1345,8 +1351,10 @@ Droppod
 	icon_state = "DK"
 
 /area/factions/stargazer
-	name = "Imperial Cruiser 'Stargazer'"
+	name = "Inquisitorial Black Ship 'Marinaeque Testudinis'"
 	icon_state = "SG"
+	requires_power = 1
+	lighting_use_dynamic = 1
 
 
 
@@ -2149,6 +2157,13 @@ Droppod
 	luminosity = 1
 	lighting_use_dynamic = 0
 	requires_power = 0
+
+//drukhari
+/area/drukhari_ship
+	name = "\improper Drukhari Ship"
+	icon_state = "yellow"
+	requires_power = 0
+	has_gravity = 1
 
 
 /////////////////////////////////////////////////////////////////////

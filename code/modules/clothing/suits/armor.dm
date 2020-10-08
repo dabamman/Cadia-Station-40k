@@ -330,7 +330,7 @@ Lord Inquisitor Armor
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	blood_overlay_type = "armor"
 	slowdown = 1
-	armor = list(melee = 60, bullet = 50, laser = 70, energy = 80, bomb = 80, bio = 80, rad = 95)
+	armor = list(melee = 80, bullet = 70, laser = 70, energy = 80, bomb = 80, bio = 95, rad = 90) //Bonus 10  to bullet.
 	astartes = 1
 
 /obj/item/clothing/suit/armor/smurfparmor
@@ -378,25 +378,28 @@ Lord Inquisitor Armor
 	desc = "Ultra Marine Captain Armor"
 	icon_state = "umcap"
 	item_state = "umcpt_armor"
-	armor = list(melee = 85, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 90, rad = 95) //Very small stats bonus.
+	armor = list(melee = 85, bullet = 70, laser = 70, energy = 80, bomb = 80, bio = 95, rad = 90) //Bonus to melee
 
 /obj/item/clothing/suit/armor/umpowerarmor/apoth
 	name = "Ultra Marine Apothecary Power Armor"
 	desc = "Ultra Marine Apothecary Armor"
 	icon_state = "um_apotharmor"
 	item_state = "um_apotharmor"
+	armor = list(melee = 80, bullet = 70, laser = 70, energy = 80, bomb = 80, bio = 100, rad = 90) //Bonus to bio
 
 /obj/item/clothing/suit/armor/umpowerarmor/librarian
 	name = "Ultra Marine Librarian Power Armor"
 	desc = "Ultra Marine Librarian Armor, covered in holy seals and writs."
 	icon_state = "um_lib"
 	item_state = "um_lib"
+	armor = list(melee = 80, bullet = 70, laser = 70, energy = 85, bomb = 80, bio = 95, rad = 90) //Bonus to energy
 
 /obj/item/clothing/suit/armor/umpowerarmor/tech
 	name = "Ultra TechMarine Power Armor"
 	desc = "Ultra TechMarine Armor"
 	icon_state = "um_techarmor"
 	item_state = "um_techarmor"
+	armor = list(melee = 80, bullet = 70, laser = 70, energy = 80, bomb = 80, bio = 95, rad = 95) //Bonus to rad
 
 /obj/item/clothing/suit/armor/rgpowerarmor
 	name = "Raven Guard Power Armor"
@@ -414,7 +417,7 @@ Lord Inquisitor Armor
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	blood_overlay_type = "armor"
 	slowdown = 1
-	armor = list(melee = 80, bullet = 60, laser = 60, energy = 80, bomb = 80, bio = 80, rad = 95)
+	armor = list(melee = 90, bullet = 60, laser = 70, energy = 80, bomb = 80, bio = 95, rad = 90) //Bonus to melee
 	astartes = 1
 
 /obj/item/clothing/suit/armor/rgpowerarmor/apoth
@@ -422,18 +425,22 @@ Lord Inquisitor Armor
 	desc = "Raven Guard Apothecary Armor"
 	icon_state = "rg_apotharmor"
 	item_state = "rg_apotharmor"
+	armor = list(melee = 90, bullet = 60, laser = 70, energy = 80, bomb = 80, bio = 100, rad = 90) //Bonus to bio
+
 
 /obj/item/clothing/suit/armor/rgpowerarmor/librarian
 	name = "Raven Guard Librarian Power Armor"
 	desc = "Raven Guard Librarian Armor, decorated in sacred runes."
 	icon_state = "rg_lib"
 	item_state = "rg_lib"
+	armor = list(melee = 90, bullet = 60, laser = 70, energy = 85, bomb = 80, bio = 95, rad = 90) //Bonus to energy
 
 /obj/item/clothing/suit/armor/rgpowerarmor/tech
 	name = "Raven Guard TechMarine Power Armor"
 	desc = "Raven Guard TechMarine Armor"
 	icon_state = "rg_techarmor"
 	item_state = "rg_techarmor"
+	armor = list(melee = 90, bullet = 60, laser = 70, energy = 80, bomb = 80, bio = 95, rad = 95) //Bonus to rad
 
 /obj/item/clothing/suit/armor/rgpowerarmor/shadowcaptain
 	name = "Shadow Captain Armor"
@@ -441,6 +448,7 @@ Lord Inquisitor Armor
 	icon_state = "rgcpt_armor"
 	item_state = "rgcpt_armor"
 	astartes = 0 //Can't add apothecary / tech overlays
+	armor = list(melee = 95, bullet = 60, laser = 70, energy = 80, bomb = 80, bio = 95, rad = 90) //Bonus to melee
 
 /obj/item/clothing/suit/armor/bpimperialarmor
 	name = "Armor"
@@ -543,7 +551,7 @@ Lord Inquisitor Armor
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	blood_overlay_type = "armor"
 	slowdown = 1
-	armor = list(melee = 80, bullet = 60, laser = 70, energy = 90, bomb = 80, bio = 80, rad = 95)
+	armor = list(melee = 80, bullet = 60, laser = 70, energy = 90, bomb = 80, bio = 95, rad = 90) //Bonus to energy
 	astartes = 1
 
 /obj/item/clothing/suit/armor/spowerarmor/captain
@@ -551,25 +559,28 @@ Lord Inquisitor Armor
 	desc = "Salamander Marine Captain Armor"
 	icon_state = "slcpt_armor"
 	item_state = "slcpt_armor"
-	armor = list(melee = 85, bullet = 60, laser = 70, energy = 80, bomb = 80, bio = 90, rad = 95) //Very small stats bonus.
+	armor = list(melee = 80, bullet = 60, laser = 70, energy = 90, bomb = 80, bio = 95, rad = 90) //Bonus to melee
 
 /obj/item/clothing/suit/armor/spowerarmor/apoth
 	name = "Salamander Marine Apothecary Power Armor"
 	desc = "Salamander Marine Apothecary Armor"
 	icon_state = "sl_apotharmor"
 	item_state = "sl_apotharmor"
+	armor = list(melee = 80, bullet = 60, laser = 70, energy = 90, bomb = 80, bio = 100, rad = 90) //Bonus to bio
 
 /obj/item/clothing/suit/armor/spowerarmor/tech
 	name = "Salamander TechMarine Power Armor"
 	desc = "Salamander TechMarine Armor"
 	icon_state = "sl_techarmor"
 	item_state = "sl_techarmor"
+	armor = list(melee = 80, bullet = 60, laser = 70, energy = 90, bomb = 80, bio = 95, rad = 95) //Bonus to rad
 
 /obj/item/clothing/suit/armor/spowerarmor/librarian
 	name = "Salamander Marine Librarian Power Armor"
 	desc = "Salamander Marine blessed Librarian Armor"
 	icon_state = "sl_lib"
-	item_state = "sl_lib"	
+	item_state = "sl_lib"
+	armor = list(melee = 80, bullet = 60, laser = 70, energy = 95, bomb = 80, bio = 95, rad = 90) //Bonus to energy
 
 /obj/item/clothing/suit/armor/sister
 	name = "Sister of Battle Armor"
@@ -652,6 +663,18 @@ Lord Inquisitor Armor
 /obj/item/clothing/suit/armor/inq/random/New()
 	..()
 	icon_state = pick("inq", "inqalt", "inqold", "inqcape", "inqcapeo", "inqaltcape")
+
+/obj/item/clothing/suit/armor/acolyte
+	name = "Acolyte's Suit"
+	desc = "A stylish way to scare the shit out of people."
+	icon_state = "arbit"
+	icon_state = "arbit"
+	blood_overlay_type = "armor"
+	flags = STOPSPRESSUREDMAGE | THICKMATERIAL|HEADCOVERSEYES|HEADCOVERSMOUTH|BLOCKHAIR|!CANSTUN|!CANWEAKEN
+	body_parts_covered = CHEST|ARMS|GROIN
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	armor = list(melee = 55, bullet = 35, laser = 55, energy = 15, bomb = 25, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/fwarmor
 	name = "Fire Caste Armor"
@@ -822,3 +845,27 @@ Lord Inquisitor Armor
 		usr.alpha = 255
 		usr << "\blue You are now visible."
 		return
+
+/obj/item/clothing/suit/armor/acolytecoat
+	name = "acolyte's coat"
+	desc = "A thick brown coat lined with a tough layer of flak-weave, dotted with the occassional Inquisitorial seal or holy sigil."
+	icon_state = "acolytecoat"
+	item_state = "acolytecoat"
+	blood_overlay_type = "coat"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	flags = THICKMATERIAL
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 50, rad = 50)
+
+/obj/item/clothing/suit/armor/skitrobe
+	name = "skitarii robe"
+	desc = "A durable, rad-resistant rust red robe marked with the iconography of the Adeptus Mechanicus and lined with tiny leaden leech-spheres that absorb harmful energies,"
+	icon_state = "skitrobe"
+	item_state = "skitrobe"
+	blood_overlay_type = "coat"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	flags = THICKMATERIAL
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 50, rad = 50)

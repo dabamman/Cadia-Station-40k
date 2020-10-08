@@ -209,8 +209,8 @@
 		src.pixel_y = rand(-10.0, 10)
 
 /obj/item/weapon/reagent_containers/food/drinks/beer
-	name = "Goose Island Beer"
-	desc = "The best beer in the galaxy. This beer is brewed and bottled by geese on the fabled 'Goose Island' on planet Goose in the Goose subsector. *This beer is not affiliated with Norc."
+	name = "Beer"
+	desc = "The best beer in the galaxy. Looks like there used to be some sorta bird label on it, but it's been scratched off. Huh."
 	icon_state = "beer"
 	New()
 		..()

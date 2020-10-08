@@ -322,3 +322,24 @@ obj/item/projectile/kinetic/New()
 	flag = "energy"
 	trace_residue = null
 	piercing = 10 //armor can't save you from sound
+
+/obj/item/projectile/beam/lightningbolt
+	name = "lightning bolt"
+	icon = 'icons/obj/projectiles.dmi'
+	icon_state = "lbolt"
+	trace_residue = null
+	damage = 45
+	damage_type = BURN
+	woundtype = null
+
+/obj/item/projectile/beam/horrororb
+	name = "orb of fear"
+	icon = 'icons/obj/projectiles.dmi'
+	icon_state = "dark2"
+	damage = 10
+	damage_type = TOX
+	woundtype = null
+	on_hit(var/atom/target, var/blocked = 0)
+		if(ishuman(target))
+			var/mob/living/carbon/M = target
+			M.paralysis = 7

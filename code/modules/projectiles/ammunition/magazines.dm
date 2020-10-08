@@ -219,7 +219,7 @@
 	caliber = "75"
 	max_ammo = 30
 	multiple_sprites = 2
-	
+
 /obj/item/ammo_box/magazine/boltermag/update_icon()
 	..()
 	icon_state = "[initial(icon_state)]-[round(ammo_count(),30)]"
@@ -248,14 +248,16 @@
 	icon_state = "[initial(icon_state)]-[round(ammo_count(),25)]"
 
 /obj/item/ammo_box/magazine/lasgunmag
-	name = "Lasgun Mag"
+	name = "lasgun power pack"
 	icon_state = "lasgunmag"
+	desc = "A small, portable capacitor power pack fit for a lasgun."
 	ammo_type = /obj/item/ammo_casing/lasgun
 	caliber = "laser"
 	max_ammo = 150
 
 /obj/item/ammo_box/magazine/evmag
-	name = "Lasgun Mag"
+	name = "lasgun power pack"
+	desc = "A small, portable capacitor power pack fit for a lasgun, specifically the Lucious pattern."
 	icon_state = "evmag"
 	ammo_type = /obj/item/ammo_casing/lasgun
 	caliber = "laser"
@@ -275,14 +277,15 @@
 	ammo_type = /obj/item/ammo_casing/hellgun
 	caliber = "laser"
 	max_ammo = 25
-	
+
 /obj/item/ammo_box/magazine/laspistolmag
-	name = "Laspistol Mag"
+	name = "laspistol power pack"
+	desc = "A small, portable capacitor power pack fit for a laspistol."
 	icon_state = "laspistolmag"
 	ammo_type = /obj/item/ammo_casing/lasgun
 	caliber = "laser"
 	max_ammo = 80
-	
+
 /obj/item/ammo_box/magazine/lascannonmag
 	name = "Lascannon Power Pack"
 	icon_state = "lasgunmag"

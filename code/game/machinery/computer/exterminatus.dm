@@ -11,10 +11,10 @@
 
 /obj/machinery/computer/exterminatus/attack_hand(mob/user as mob)	//Starting menu
 	if(user.faction != "Inquisitor")								//Not an inquisitor- we don't want to hear it.
-		usr << "\red The Captain of the Stargazer ignores you. Apparantly he only communicates with Inquisitors. What a snob."
+		usr << "\red The Navigator of the Marinaeque Testudinis ignores you. Apparantly he only communicates with Inquisitors. What a snob."
 		return
 	user.set_machine(src)
-	var/dat = "<B>Stargazer Weapons Array:</B><BR>"
+	var/dat = "<B>Marinaeque Testudinis Weapons Array:</B><BR>"
 	if (inrange)
 		dat += "Locked on to ArchAngel IV, Sector 9<BR>"
 	if (!inrange)
@@ -41,11 +41,11 @@
 	if (usr.stat || usr.restrained()) return //Nope! We are either dead or restrained!
 	if (href_list["fire"])
 		if (firing)
-			usr << "\red The Stargazer is already firing."
+			usr << "\red The Black Ship Marinaeque Testudinis is already firing."
 			return
 
 		if (!inrange)
-			usr << "\red The stargazer is not yet in range."
+			usr << "\red The Black Ship Marinaeque Testudinis is not yet in range."
 			return
 
 		else
@@ -54,10 +54,10 @@
 
 	if (href_list["range"])
 		if (firing)
-			usr << "\red The Stargazer is already firing at ArchAngel IV!"
+			usr << "\red The Black Ship Marinaeque Testudinis is already firing at ArchAngel IV!"
 			return
 		if (inrange)
-			usr << "\red The stargazer already in range of ArchAngel IV!"
+			usr << "\red The Black Ship Marinaeque Testudinis is already in range of ArchAngel IV!"
 			return
 		else
 			if (!inrange)
@@ -79,7 +79,8 @@
 			moving = 1
 			playsound(src.loc,'sound/effects/droppod.ogg',75,1)
 			sleep(240)
-			priority_announce("*PROXIMITY ALERT* New Contact moving into low orbit.")
+			priority_announce("Attention... Attention.... Attention... Inquisitorial Black Ship detected in orbit.... Prepare the TITH*T*TH*E*H**------ When the people forget their duty they are no longer human and become something less than beasts. They have no place in the bosom of humanity nor in the heart of the Emperor. Let them die and be forgotten......__*(@%*@%*.....")
+			world << "As you peer into the sky, a dreaded chill runs down your spine. For you thought that the utter monstrosity you are having the misfortune of gazing upon was legend, not reality.. A Black Ship of the Ordo Hereticus coldly stares back at you. Pray to your god, or gods, for there is no escaping the Emperor's Wrath..."
 			inrange = 1	//Now in range
 			moving = 0
 			return

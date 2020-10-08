@@ -5,7 +5,7 @@
 	icon_state = "dread2"
 	//pixel_x = -10
 	bound_width = 32
-	step_in = 5
+	step_in = 4
 	health = 1500
 	deflect_chance = 50
 	damage_absorption = list("brute"=0.3,"fire"=0.3,"bullet"=0.4,"laser"=0.5,"energy"=0.3,"bomb"=1)
@@ -67,7 +67,7 @@
 	set category = "Object"
 	set name = "Enter Dreadnought"
 	set src in oview(1)
-	if(istype(usr, /mob/living/carbon/human/whitelisted) && !istype(usr, /mob/living/carbon/human/whitelisted/eldar))
+	if(istype(usr, /mob/living/carbon/human/whitelisted/um) && !istype(usr, /mob/living/carbon/human/whitelisted/eldar))
 		var/confirm = alert("If you enter the [src.name], you will be entombed in its ceramite casing until death. Are you sure?", "Enter?", "Yes", "No")
 		if(confirm == "Yes")
 			if(enter_after(40,usr))

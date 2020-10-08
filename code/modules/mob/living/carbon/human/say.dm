@@ -46,7 +46,7 @@
 						for(var/word in words)
 							message += "/"
 							message += word
-						message += "/var/[pick("bread","goose","code","marshall","cron","byond")] = 1"
+						message += "/var/[pick("bread","code","marshall","cron","byond")] = 1"
 				if(6)
 					message = pick("src.handle_environment()","src.handle_breathe()","src.handle_regular_status_updates()")
 				if(7)

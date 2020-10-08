@@ -63,8 +63,6 @@
 	var/childtype = null
 	var/scan_ready = 1
 	var/species //Sorry, no spider+corgi buttbabies.
-	var/isgoose = 0
-	var/isugoose = 0
 	var/asleep = 1
 
 /mob/living/simple_animal/New()
@@ -476,28 +474,6 @@
 	icon_state = icon_dead
 	stat = DEAD
 	density = 0
-	if(isgoose)
-		if(client)
-			playsound(src.loc,'sound/voice/gooselaugh.ogg',75,0)
-			var/mob/living/simple_animal/ugoose/p = new(loc)
-			p.loc = get_turf(locate("landmark*goose")) //Hardcoding this because I have no idea why it's not working.
-			p.key = key
-			p << "<B>Go forth and conquer!</B>"
-			. = p
-			p.verbs += /mob/living/simple_animal/ugoose/proc/changedisguise
-			new /obj/item/fakegoose(src.loc)
-			qdel(src)
-		else
-			new /obj/item/fakegoose(src.loc)
-			playsound(src.loc,'sound/voice/gooselaugh.ogg',75,1)
-			qdel(src)
-	if(isugoose)
-		usr << "\blue YOU WERE EXPOSED!!"
-		var/mob/living/simple_animal/hostile/retaliate/goose/P = new(src.loc)
-		P.key = key
-		playsound(P.loc,'sound/voice/ugoose.ogg',75,1)
-		qdel(src)
-	return
 
 /mob/living/simple_animal/death(gibbed)
 	if(stat == DEAD)

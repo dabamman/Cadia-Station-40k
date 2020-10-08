@@ -47,5 +47,6 @@ var/list/be_special_flags = list(
 	"Blob" = BE_BLOB,
 	"Ninja" = BE_NINJA,
 	"Celebrity" = BE_CELEBRITY,
-	"Necron" = BE_NECRON
+	"Necron" = BE_NECRON,
+	"Dark Eldar" = BE_DRUKHARI,
 	)

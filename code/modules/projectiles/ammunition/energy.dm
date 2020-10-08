@@ -50,7 +50,7 @@
 	e_cost = 1
 	select_name = "DESTROY"
 	fire_sound = 'sound/weapons/pulse.ogg'
-	
+
 /obj/item/ammo_casing/energy/laser/bluetag
 	projectile_type = /obj/item/projectile/lasertag/bluetag
 	select_name = "bluetag"
@@ -181,3 +181,9 @@
 	variance = 0.8
 	select_name = "scatter"
 	e_cost = 1
+
+/obj/item/ammo_casing/energy/latherifle
+	projectile_type = /obj/item/projectile/energy/laslathe
+	select_name = "lasfire"
+	fire_sound = 'sound/weapons/lasgun.ogg'
+	e_cost = 0

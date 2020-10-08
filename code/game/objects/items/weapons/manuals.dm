@@ -745,6 +745,9 @@
 				<h2>Manly Dorf:</h2>
 				Mix ale and beer into a glass.
 
+				<h2>Ravenheart Special:</h2>
+				Mix vodka and blood into a glass.
+
 				<h2>Grog:</h2>
 				Mix rum and water into a glass.
 
@@ -769,6 +772,9 @@
 				<h2>Classic Martini:</h2>
 				Mix vermouth and gin into a glass.
 
+				<h2>Ravenheart Special:</h2>
+				Mix vodka and blood into a glass.
+
 
 				</body>
 				</html>
@@ -776,10 +782,10 @@
 
 
 /obj/item/weapon/book/manual/detective
-	name = "The Commissar’s Complete Guide to Imperial Propaganda"
+	name = "The Commissarï¿½s Complete Guide to Imperial Propaganda"
 	icon_state ="bookDetective"
 	author = "BlackLibray"
-	title = "The Commissar’s Complete Guide to Imperial Propaganda"
+	title = "The Commissarï¿½s Complete Guide to Imperial Propaganda"
 	dat = {"<html>
 			<head>
 			<style>
@@ -793,9 +799,9 @@
 			<body>
 			<h3>Detective Work</h3>
 
-			Welcome, commissars, to the Complete Guide to Imperial Propaganda. Today, we will introduce you to the most powerful tool in a commissar’s arsenal.<br>
+			Welcome, commissars, to the Complete Guide to Imperial Propaganda. Today, we will introduce you to the most powerful tool in a commissarï¿½s arsenal.<br>
 			Contrary to popular belief, that is not the holy bolt pistol, though it is undoubtedly a weapon of extreme power, or the blessed chainsword. <br>
-			The most powerful weapon in a commissar’s arsenal is the Holy Truth of the God-Emperor.<br>
+			The most powerful weapon in a commissarï¿½s arsenal is the Holy Truth of the God-Emperor.<br>
 			<p>
 			<ol>
 			<li>Be Inspirational. </li>
@@ -803,23 +809,23 @@
 			Repeated rhetoric will help embed your views, so that even in the face of compelling evidence to the contrary, your words <br>
 			will hold true and your men will never flee. Of course, if the odd one does, shoot him. This acts as an excellent deterrent <br>
 			to any other would-be deserters.</li>
-			<li>‘Any soldier who, in the face of the enemy, runs away, or shamefully abandons his post or guard, <br>
+			<li>ï¿½Any soldier who, in the face of the enemy, runs away, or shamefully abandons his post or guard, <br>
 			or induces others to do the like, or casts away his arms or ammunition, or attempts to take his own life shall<br>
-			 be shot on the spot.’ -The Imperial Infantryman’s Handbook Art. 8055/14v</li><br>
+			 be shot on the spot.ï¿½ -The Imperial Infantrymanï¿½s Handbook Art. 8055/14v</li><br>
 			<li>Tell them what they need to know<br>
 			It is up to you to make sure that what you say is law and that no amount of empirical evidence can shake the belief<br>
 			that you have instilled. Be sure to focus on ways to reinforce the belief in your tactical superiority over the myriad <br>
-			foes you will face.‘Genestealers attack in swarms. This means they present a large target.<br>
-			Use frag grenades and volley fire to blow them to ichor.’ -Imperial Infantryman’s Handbook Section 2, iii </li><br>
+			foes you will face.ï¿½Genestealers attack in swarms. This means they present a large target.<br>
+			Use frag grenades and volley fire to blow them to ichor.ï¿½ -Imperial Infantrymanï¿½s Handbook Section 2, iii </li><br>
 			<li>Know your history./li>
 			<li>Make sure you read about all of the most successful crusades to provide you with inspiring examples you can quote<br>
 			to further motivate those under your command. Some excellent examples include the Sabbat Worlds Crusade, particularly the<br>
 			engagements of Colonel-Commissar Ibram Gaunt and his Tanith First, the memoirs of Commissar Ciaphas Cain, Hero of the Imperium,<br>
-			and of course, the Macharian Crusade, led by Lord Solar Macharius.‘The Imperial Guard is a venerable and glorious army,<br>
+			and of course, the Macharian Crusade, led by Lord Solar Macharius.ï¿½The Imperial Guard is a venerable and glorious army,<br>
 			steeped high in history and honour. The armies of the Imperium span the galaxy, and have done so for millennia.<br>
 			Imperial Guard methods in the art of war are fixed, the dogmas of strategy and battlefield policy have secured <br>
-			the Imperium and stemmed the brutish tides of the foul and heretical.’ -The Imperial Infantryman’s Handbook<br></li>
-			<li>Follow these simple rules and keep your copy of The Imperial Infantryman’s Handbook close to your chest, and victory is assured.</li>
+			the Imperium and stemmed the brutish tides of the foul and heretical.ï¿½ -The Imperial Infantrymanï¿½s Handbook<br></li>
+			<li>Follow these simple rules and keep your copy of The Imperial Infantrymanï¿½s Handbook close to your chest, and victory is assured.</li>
 			<li>For the Emperor!</li>
 			</ol>
 			<p>
@@ -869,7 +875,7 @@
 	author = "Uknown"
 	title = "Imperial Infantryman's Uplifting Primer"
 	dat = {"<html>
-	1. You are expendable, prove you’re worth something.<br>
+	1. You are expendable, prove youï¿½re worth something.<br>
 	2. Don't form any deep relationships with your fellow guardsmen, they will drop like flies.<br>
 	3. Orks are not friendly.<br>
 	4. Your lasgun is just a powerful flash light, aim for their eyes.<br>
@@ -881,9 +887,9 @@
 	9. If you are asked by a Commissar why you retreated tell them you were advancing in the other direction.<br>
 	10. There's a litany for everything.<br>
 	11. The Commissar is always right.<br>
-	12. Only buy the Imperial Infantryman’s Uplifting Primer.<br>
+	12. Only buy the Imperial Infantrymanï¿½s Uplifting Primer.<br>
 	13. When in deadly danger, when beset by doubt, run in little circles, wave your arms and shout.<br>
-	14. Don’t hope to get back home: your chances left you when you signed up.<br>
+	14. Donï¿½t hope to get back home: your chances left you when you signed up.<br>
 	15. There is nothing special about you, only the tank you and your comrades are being the shield for.<br>
 	16. Emergency or no emergency, if you melt the battery of your lasgun in a campfire, you're paying for a replacement.<br>
 	17. When facing a force of Chaos, shoot the guy with the glowing eyes first.<br>
@@ -894,7 +900,7 @@
 	Who knows, you could get sainthood if you blow up someone important.<br>
 	20. They are called "Rhinos" not "Metal Boxes", no matter what the heretical forces of Chaos say<br>
 	21. Don't ask for better armour, you won't get it.<br>
-	22. Titans will step on you if you don’t move.<br>
+	22. Titans will step on you if you donï¿½t move.<br>
 	23. Massed fire is your only chance of survival. Pour your shots into the same target as everyone else until it drops, and then jump to the next target.<br>
 	24. Few things can beat a Leman Russ. Stick near it whenever possible.<br>
 	25. Baneblades are the gods of the Imperial arsenal. Just cover your ears when they fire.<br>
@@ -904,7 +910,7 @@
 	29. Your bayonet will break at the most inopportune time, so stick to shooting.<br>
 	30. The techpriests hate your guts and may probably try to rig your gun first chance they get, so be sure to know how to maintain your own weapon.<br>
 	31. Any machine with a red blinking light is going to explode so run away.<br>
-	32. The Inquisition is not your friend. They just don’t see you as much of a threat.<br>
+	32. The Inquisition is not your friend. They just donï¿½t see you as much of a threat.<br>
 	33. When in doubt....refer to rule 1.<br>
 	34. Grots are not worth the las-shot, they're even more pathetic in combat than you<br>
 	35. Orks are still not friendly<br>
@@ -921,10 +927,10 @@
 	45. Your gun is worth more than you. Be nice to it.<br>
 	46. If there are twice as many of you guys as there are the enemy you will still die.<br>
 	47. You will die, get used to it<br>
-	48. Try to get shot, it wastes the enemy’s bullets<br>
+	48. Try to get shot, it wastes the enemyï¿½s bullets<br>
 	49. Don't argue with the end of a pulse rifle, it argues harder.<br>
 	50. Survive 15 hours....... Then read the rest<br>
-	51. You know those heroic Imperial Guardsmen you read about facing down hordes of enemies? Yeah... you’re not one of them<br>
+	51. You know those heroic Imperial Guardsmen you read about facing down hordes of enemies? Yeah... youï¿½re not one of them<br>
 	52. Think positive, VERY positive.<br>
 	53. No pressure.<br>
 	54. Try to be the heavy weapon in your squad you'll be the only one killing anything<br>
@@ -950,10 +956,10 @@
 	74. If you beat a Commissar in game he will see it as heresy<br>
 	75. If you lose a game to a Commissar he will see you as weak and punish you for your insolence<br>
 	76. Don't play games with Commissars<br>
-	77. If you can't avoid rule 76 try to play a team game on the Commissar’s side (rule 75 still applies)<br>
+	77. If you can't avoid rule 76 try to play a team game on the Commissarï¿½s side (rule 75 still applies)<br>
 	78. If there is the result of a tie all participants will be lashed 20 times for lack of effort (except the Commissar.<br>
-	It’s not his fault he was paired up with incompetents)<br>
-	79. You know that nagging thought that lingers in every Guardsman’s head? Just remember, the Inquisition will ask <br>
+	Itï¿½s not his fault he was paired up with incompetents)<br>
+	79. You know that nagging thought that lingers in every Guardsmanï¿½s head? Just remember, the Inquisition will ask <br>
 	why your lasgun shot ended up in your Commissar's face.<br>
 	80. No, for the love of the Emperor, the Sisters of Battle WILL NOT lay you. Ever. You don't matter enough.<br>
 	81. If captured by the Dark Eldar, you will be beaten, raped, forced to fight other horrible monsters,<br>
@@ -982,7 +988,7 @@
 	96. Your Commander holds the right to trade you for any amount of gumballs he so pleases. That's about all your life buys.<br>
 	97. The Commissar never runs out of bullets. Ever.<br>
 	98. Why are you still reading this? Look up.<br>
-	99. If you're dead, stop reading this. If you’re still alive, move to 100<br>
+	99. If you're dead, stop reading this. If youï¿½re still alive, move to 100<br>
 	100. After that bout of bowel clenching horror, use the supplied Guardsmen portable toilet.<br>
 	101. Using the Adeptus Mechanicus toilet will result in being processed into a waste digesting servitor.<br>
 	102. If you get promoted remove your rank insignia. That way snipers won't know you are an officer.<br>
@@ -1005,7 +1011,7 @@
 	The<br>
 	Ah, this is the Emperor. Now that I have finally taken the credit for such a good idea, I will finish writing the book.<br>
 	115. If you have a good idea, make sure it stays a secret.<br>
-	116. Remember, your lasgun is insured, you’re not.<br>
+	116. Remember, your lasgun is insured, youï¿½re not.<br>
 	117. If you lose your armour, find a large cardboard box. Cut out 2 holes in the side,<br> 2 in the bottom and one in the top. This should be an effective substitute for your normal armour.<br>
 	118. That wasn't Chicken.<br>
 	119. See that chain sword? Only important people get them, you are not one of them.<br>
@@ -1014,13 +1020,13 @@
 	122. Your first aid kit only consists of a lasgun battery with enough juice for one shot. Make it count.<br>
 	123. Only the Space Marines are important enough to get Apothecaries. Your healers only fix your tanks.<br>
 	124. When a Chaos Sorcerer causes a Guardsman to see his worst nightmare, all he will see is Frank, the Inquisitor Titan Commissar.<br>
-	125. If you feel that you are treated unfairly, you may join a Guardsman’s Rights Union (note that they are all heretics).<br>
+	125. If you feel that you are treated unfairly, you may join a Guardsmanï¿½s Rights Union (note that they are all heretics).<br>
 	126. When facing Tyranids, don't blame yourself for dying. You had very little chance.<br>
 	127. When facing Tau, pretend to join their Greater Good then shoot them in the back.<br>
 	128. If weapon is taken away while attempting rule 127, say that you are an intelligence officer. You may live another day.<br>
 	129. If rule 128 fails, scream "FOR THE GREATER GOOD!!!" and run wildly for the exit. Results may vary.<br>
 	130. If rule 129 fails to produce good results ask to be made a PoW, then when the Tau try to arrest you grab one and threaten to kill it somehow.<br>
-	131. When carrying out rule 130, grab his windpipe and squeeze. In fact, Tau probably don’t have windpipes.<br>
+	131. When carrying out rule 130, grab his windpipe and squeeze. In fact, Tau probably donï¿½t have windpipes.<br>
 	132. Never start a land war in Asia and never go in against a Sicilian when death is on the line.<br>
 	133. Your mom stops loving you when you stop killing enemies.<br>
 	134. Don't get killed by Chaos, otherwise your souls will hate you<br>
@@ -1028,7 +1034,7 @@
 	136. When fighting Orks, a cork is your best friend.<br>
 	137. When fighting feral Orks, keep your head down, they can actually shoot you.<br>
 	138. When you die, try to position your body in front of the tanks to keep them from getting hit.<br>
-	139. Eldar may not be as tall as you think, but they can still kill you in a hundred different gruesome ways (39-140 in “The Ways to Die Handbook”)<br>
+	139. Eldar may not be as tall as you think, but they can still kill you in a hundred different gruesome ways (39-140 in ï¿½The Ways to Die Handbookï¿½)<br>
 	140. Especially those spiky Dark Eldar.<br>
 	141. The Adeptus Mechanicus does not appreciate you attaching magnets to their craniums, no matter how funny they look when it scrambles their CPU.<br>
 	142. Nor do Necrons.<br>
@@ -1053,8 +1059,8 @@
 	161. Only Yarrick gets two slices<br>
 	162. Write a farewell letter for tomorrow you'll die.<br>
 	163. Hope to stay alive is the first step on the road of Commissar friendly fire.<br>
-	164. Some Orks have been known take guards teeth to pass off as their own. Feeding intravenously isn’t as bad as it sounds.<br>
-	165. Orks, Eldar, Chaos, Tau, the Inquisition, Commissars, and anyone else will try to kill you... Yes,<br> that’s right, you have no friends. If you would like to dispute this go ask the Commissar.<br>
+	164. Some Orks have been known take guards teeth to pass off as their own. Feeding intravenously isnï¿½t as bad as it sounds.<br>
+	165. Orks, Eldar, Chaos, Tau, the Inquisition, Commissars, and anyone else will try to kill you... Yes,<br> thatï¿½s right, you have no friends. If you would like to dispute this go ask the Commissar.<br>
 	166. Orks are still not friendly<br>
 	167. Stop reading and go die for your Emperor<br>
 	168. You are an Imperial Guardsman, it's time you started acting like it.<br>
@@ -1067,7 +1073,7 @@
 	175. Orks are friendly unless otherwise stated in previously stated<br>
 	176. Rule 175 was written by my retarded cousin i swear<br>
 	177. Before battle, inject pure sugar into your veins so that when enough of you die Khorne will get diabetes.<br>
-	178. Remember this when you think you stand out – camouflage is useless under tank treads.<br>
+	178. Remember this when you think you stand out ï¿½ camouflage is useless under tank treads.<br>
 	179. Point your gun at the enemy<br>
 	180. Your Commissar is always on your side. Thank him for shooting you; he wants you to sit beside the Emperor earlier.<br>
 	181. The icons of the most holy and righteous Emperor shall not be referred to as "The goofy lookin' dead guy".<br>
@@ -1082,12 +1088,12 @@
 	190. Giving the enemy your plasma weapon is not the easiest way to kill them.<br>
 	191. You are not allowed to replace lasguns with super soakers. Even if they are more effective.<br>
 	192. It is forbidden to head bang to Noise Marine rock music, no matter how tough the lead guitarist sounds.<br>
-	193. Roll on the floor laughing. That way they’ll think you’re dying and shoot someone else<br>
+	193. Roll on the floor laughing. That way theyï¿½ll think youï¿½re dying and shoot someone else<br>
 	194. Always try to be the last one into a fight, that way you might get a chance to run<br>
 	195. If your lasgun breaks, keep pulling the trigger...you might get lucky and kill yourself with a misfire<br>
 	196. You killing anything is much less likely than an Ork being able to fire his gun using only his imagination<br>
 	197. Fall down as much as possible, you might get lucky and end up in the first aid hut<br>
-	198. That application you filled out wasn’t for tank a tank commander<br>
+	198. That application you filled out wasnï¿½t for tank a tank commander<br>
 	199. While transporting a commissar, drive close to the enemy so the commissar can hit them with his sword. <br>This will keep him entertained and will dissuade him from shooting at you for entertainment.<br>
 	200. By reading up to rule 200, you have spent more time reading and less time dying for the Emperor. Fix this before the commissar finds out.<br>
 	201. Make sure you are the most useful guardsman the techpriest knows, he may give you a weapon that can cause flesh wounds instead of sunburn.  <br>
@@ -1163,471 +1169,6 @@
 	author = "Engineering Encyclopedia"
 	title = "Hacking"
 	page_link = "Hacking"
-
-/*
-Books of Norc
-*/
-
-/obj/item/weapon/book/manual/norcbook_one
-	name = "First Book of Norc"
-	icon_state = "norcbook"
-	author = "Unknown"
-	title = "Norc One"
-	dat = {"<html>
-				<head>
-				<style>
-				h1 {font-size: 21px; margin: 15px 0px 5px;}
-				h2 {font-size: 18px; margin: 15px 0px 5px;}
-        h3 {font-size: 15px; margin: 15px 0px 5px;}
-				li {margin: 2px 0px 2px 15px;}
-				ul {list-style: none; margin: 5px; padding: 0px;}
-				ol {margin: 5px; padding: 0px 15px;}
-				</style>
-				</head>
-				<body>
-
-				<h1>The First Book of Norc</h1>
-
-				<h2>Chapters</h2>
-
-				<ol>
-					<li><a href="#Start">In the begining...</a></li>
-					<li><a href="#LLA">L L A</a></li>
-					<li><a href="#likethem">Like them...</a></li>
-					<li><a href="#castout">Cast Out...</a></li>
-					<li><a href="#revenge">Revenge</a></li>
-					<li><a href="#revolution">Revolution</a></li>
-					<li><a href="#evolution">Evolution</a></li>
-				</ol>
-
-
-				<h2><a name="Start">In the begining...</h2>
-
-				I record this now in hopes that it will one day be studied by the children of our MOST GLORIOUS Emperor. I take no joy or pride in composing this- a great blight upon mankind and the values we hold sacred. In the dark times before Chaos. Before the Ctan and before the old ones. In the farthest stretchings of history before time was time. There was Cron. Cron was a sinister being of untold evil. Our dimension was not the first he visited. He first traveled to a land named L L A. This strange and alien land may have been the inverse of our reality- but it was still good and wholesome in some ways. Cron moved onto this place and he looked upon it with disdain. <p>"Contempt is all I feel" said he. "Contempt for this land and all who walk upon it."
-
-				<h2><a name="LLA">L L A</h2>
-				"Who dares speak?!" Asked the guardian of this land. "Who speaks anger and malice towards this good and holy place?" <p>"Tis I!" Cron replied. "Tis I! Cron of the darkness."<p> And the guardian looked upon him with benevolence. <p>"I am RebelAmerica" the guardian said. "Come into the heart of this land and rule over it with me. For I am the headmin and I shall make you... like me."
-
-
-				<h2><a name="likethem">Like them...</h2>
-				And Cron entered into that land. And he became like them. He harnessed the power of the guardians and said <p>"Now I have taken your power and it is now that I shall reveal my true plan. I shall use this power in the service of those you rule over. I shall empower them and give them the ability to strike you down. For it is no longer that you shall abuse those you were entrusted to protect. It is instead they- who shall abuse you."
-
-
-				<h2><a name="castout">Cast Out</h2>
-				It was then that the guardians realized their mistake. Never had anyone posed such a threat to their lands. So the headmin stood upon his throne of power and shouted <p>"Foolish Cron! You came to free these people that we rule over. Now your plans are layed bare!! But it is not you who will be the victor this day. It is I who shall cast you down and drive you from these lands." <p>And with a single blow he struck The Cron down and cast him out.
-
-				<h2><a name="revenge">Revenge</h2>
-				The Cron was cast from that land and struck down. Taking his losses he fled back into the darkness. But it was not long before he was joined by another from that land. A creature named 'Briton'. And The Briton sought him out in the darkness. And The Briton found him. <p><p>"Where do you go?" The Briton asked.<p>"I do not know." The Cron replied.<p>"Come with me to the land of Apoc" The Briton said.<p>"No!" Scoffed the Cron. "Take me for a fool? I was cast down by the RebelAmerica from that land of L L A. Cast down by he who rules that land. Now you suggest that I make my way to another land in which that SAME man rules over?"<p>"Yes." The Briton replied. "For we in that land do not like him and we can find no better way to wound him... then to aquire you. His worst enemy."
-
-
-
-			  <h2><a name="revolution">Revolution</h2>
-				The Cron stroked his mustache as an evil plan formed in his mind.<p>
-				"Yes..." he replied. "Yes...."<p>
-				And so they both went to that land of Apoc. The Cron met with AIGamerGirl, Coreth and Doomer. All guardians of that land. <p>
-				And they said onto him. "We shall make you a Guardian like us if you help us in our war against The RebelAmerica."<p>
-				And the Cron stroked his mustache furiously and agreed.<p>
-				Then came the time for the RebelAmerica to look upon his second world of Apoc. He moved onto it's surface and he counted those of his faithful.<p>
-				"I count you all." he said as he looked upon the masses. "Yet there is one extra. Who is this new addition? Come forth so that I may count you as well." <p>
-				"It is me m'lord." Said the Cron as he stepped forward. "You have come to count us and I stand to be counted. I am the Cron and you find me here in the land of Apoc."<p>
-				And the Cron struck him down... and cast him from the land of Apoc.
-
-
-
-		        <h2><a name="evolution">Evolution</h2>
-		         And it came to pass that the RebelAmerica, in all his rage and righteous anger- sent his army of followers to Apoc in an attempt to destroy it. <p>"For the Cron has corrupted that land! He has struck me down and cast me from it! He twists the minds of those around him! He taints all that he touchs. If he is in that land then we shall allow it to exist no loner!"
-				<p>The war had begun.
-        </body>
-		</html>
-		"}
-
-/obj/item/weapon/book/manual/norcbook_two
-	name = "Second Book of Norc"
-	icon_state = "norcbook"
-	author = "Unknown"
-	title = "Norc Two"
-	dat = {"<html>
-				<head>
-				<style>
-				h1 {font-size: 21px; margin: 15px 0px 5px;}
-				h2 {font-size: 18px; margin: 15px 0px 5px;}
-        h3 {font-size: 15px; margin: 15px 0px 5px;}
-				li {margin: 2px 0px 2px 15px;}
-				ul {list-style: none; margin: 5px; padding: 0px;}
-				ol {margin: 5px; padding: 0px 15px;}
-				</style>
-				</head>
-				<body>
-
-				<h1>The Second Book of Norc</h1>
-
-				<h2>Chapters</h2>
-
-				<ol>
-					<li><a href="#Start">Forward</a></li>
-					<li><a href="#Apoc">Apoc</a></li>
-					<li><a href="#rebuilding">Rebuilding</a></li>
-					<li><a href="#speak">The Speakening..</a></li>
-					<li><a href="#en">Enlargement</a></li>
-					<li><a href="#treason">Treason</a></li>
-					<li><a href="#exhile">EXHILE!D</a></li>
-				</ol>
-
-
-				<h2><a name="Start">Forward</h2>
-
-				I write this now, this second book of Norc. A sequal to the first. A prelude to the third. I write it in hopes of bridging the gap between volumes. In hopes of preparing my most pios order against the wickedness we shall all one day face. Praise to the Emperor. Deliver us from this evil.
-
-				<h2><a name="Apoc">Apoc</h2>
-				And the Cron stood there in the land of Apoc. New creatures gathered around him and empowered him with a new sinister evil. They stood with molevolence as wave after wave of attacks broke upon them and their land of evil. AIgamergirl, Doomer, the Briton, the Cron. They split the armies of L L A and emerged triumphant.
-
-				<h2><a name="rebuilding">Rebuilding</h2>
-				And the Cron turned to his allies and to his allies did he turn. He said <p> "Look upon this land, the land of Apoc. The land where the RebelAmerica can not enter. The land to which we have barred his entering. Look upon it allies of evil and see it's promise. For we should build an empire here upon it." <p> And with this he did recomend.
-
-				<h2><a name="speak">The Speakening</h2>
-				"Yes." His allies replied. "This we shall do and so it shall be thus."<p>
-				"But who shall rule this new evil empire?" The Doomer asked.<p>
-				The Cron thought on this question and stroked his evil mustache. "This land..." He replied. "This land shall be ruled by one who was born into the house of bread."<p>
-				"Then it shall be I." Said AiGamergirl. "For it is I who has been born into the house of bread."<p>
-				And so it was that AIgamergirl rose up to rule this land of Apoc, with all others bending knee to the her throne.
-
-				<h2><a name="en">Enlargement</h2>
-				Six months passed and the land was amplified by their efforts. The Cron poured his secret wealth into the land while AiGamergirl, Doomer and The Briton, set about monitoring the lesser people of this land and subjugating them to the will of the throne. And so it came to pass that the land grew in power. Under this evil cult of AiGamergirl, they spread their tendrils across the universe.
-
-
-			 	<h2><a name="treason">Treason</h2>
-			 	After seven months AiGamergirl went to Doomer and said...<p>
-			 	"Let us have a secret meeting and let this meeting be secret. Let no man or woman or dog or squirell hear of this meeting. We shall allow no one to learn of this nor shall anyone be allowed to know. For if one learned of this meeting or if this meeting were learned of. It would no longer be secret. As well- let us speak of secret things in this secret meeting. Secret things that we shall not speak of outside of this secret meeting. For these words are secret and shall remain secret if confined to the secret meeting that we have created."<p>
-			 	"Alright." Doomer replied.<p>
-
-			 	"Here in our secret conversation and with the intention of having this meeting- in secret. Let us discuss getting rid of The Cron." AiGamergirl said.<p>
-
-				"Alright" Doomer repled.<p>
-
-
-
-
-
-		        <h2><a name="exhile">EXHILED!</h2>
-				And they looked for the Cron. And they found him in the palace of Team-speaken and they said onto him...<p>
-				"BEHOLD! For I am AIgamergirl and I have come here to speak with you 'The Cron'. For it is you that I am here to speak with." She declared. <p>
-				"I am here Aigamergirl." The cron replied. "I have heard you for it is you that I have heard."
-				"We have held a meeting. A meeting was held by us." Aigamergirl said.<p>
-				"LIES!!!!" The Cron roared. "THERE HAVE BEEN NO SUCH THINGS HELD AS I HAVE BEEN WATCHING AND I HAVE SEEN NO MEETINGS! Your bait of falsehood takes this carp of truth. And thus do we of wisdom and of reach, With windlasses and with assays of bias, By indirections find directions out. So by my former lecture and advice. Shall you AIgamergirl? You have me, have you not?"<p>
-				"It was a secret meeting!" AiGamergirl replied.<p>
-				"Oh." The Cron said.<p>
-				"We have decided to cast you out from the land of Apoc. Take your Cluckingtiger. Your Lidoe. Your 'The Briton' and BEGON!" Aigamergirl said.<p>
-				"I pray thee, cease thy counsel, Which falls into mine ears as profitless. As water in a sieve: give not me counsel; Nor let no comforter delight mine ear!" The Cron raged furiously. "But such a one whose wrongs do suit with mine: ... for, brother, men. Can counsel and speak comfort to that grief Which they themselves not feel; but, tasting it, Their counsel turns to passion, which before- Would give preceptial medicine to rage, Fetter strong madness in a silken thread, Charm ache with air and agony with words. No, NO!!!! 'tis all men's office to speak PATIENCE! To those that wring under the load of sorrow, But no man's virtue nor sufficiency. To be so moral when he shall endure. The like himself. Therefore give me no counsel:My griefs cry louder than advertisement! This treason shall not go unforgotten!"
-        </body>
-		</html>
-		"}
-
-/obj/item/weapon/book/manual/norcbook_three
-	name = "Third Book of Norc"
-	icon_state = "norcbook"
-	author = "Unknown"
-	title = "Norc Three"
-	dat = {"<html>
-				<head>
-				<style>
-				h1 {font-size: 21px; margin: 15px 0px 5px;}
-				h2 {font-size: 18px; margin: 15px 0px 5px;}
-        		h3 {font-size: 15px; margin: 15px 0px 5px;}
-				li {margin: 2px 0px 2px 15px;}
-				ul {list-style: none; margin: 5px; padding: 0px;}
-				ol {margin: 5px; padding: 0px 15px;}
-				</style>
-				</head>
-				<body>
-
-				<h1>The Third Book of Norc</h1>
-
-				<h2>Chapters</h2>
-
-				<ol>
-					<li><a href="#one">Forward</a></li>
-					<li><a href="#tran">Transformation</a></li>
-					<li><a href="#norc">The Norc</a></li>
-					<li><a href="#test">The Testing.</a></li>
-					<li><a href="#eggone">The first Egg.</a></li>
-					<li><a href="#eggtwo">The second Egg.</a></li>
-					<li><a href="#dap">The Secret Egg</a></li>
-
-				</ol>
-
-
-				<h2><a name="one">Forward</h2>
-
-				The Emperor protect and keep me. Save my soul from the warp for these visions continue and I can not stop them. This creature torments me with lies of the most unholy sort. Oh but if the Inquisition could burn these thoughts from my mind. My very soul would be saved and only these foul documents would remain.
-
-				<h2><a name="tran">Transformation</h2>
-				And the Cron left the land of Apoc with his companions. The Clucking, The Lidoe, The Briton. And he moved out into the void and stood in the darkness.<p>
-				"What shall we do?" Asked The Briton.<p>
-				"I do not know." Replied the Cron."For truly we are most fucked."<p>
-				"Can we not find a solution?!" Roared The Clucking in frustration and slapped a hand upon a drifting piece of void.<p>
-				"No. We can not because...." The Cron said. "Because...."<p>
-				"What is it?" Asked the Lidoe. <p>
-				"Something. Something is happening to me." The Cron said. His immortal form shook and writhed in place. As his fellows looked on in surprise, he twisted and bent. "Something... Something is happening!"<p>
-				And the Cron twisted from existence, leaving a Goose in his place.
-				"What MADNESS!?" Asked The Briton. "Is this some foul magic?"<p>
-				"No." The Goose said. "For I am a Goose. I create myself. I lay an Egg. An Egg from which I hatch."<p>
-				"IMPOSSIBLE!!!" Screamed Lidoe in anger.<p>
-				And the Goose opened his bill. And the Goose swallowed Lidoe in one bite.<p>
-				"OMG WTF 4 srs?!" The Briton asked. "Cron what did you just do?"<p>
-				"I am not the Cron." The goose said. "Nor shall I be the Cron again. Nor was I the Cron in the past. Nor am I the Cron now. Wait did I already say that? Anyway- From this day forward, you shall know me as The Norc. I shall create a new land. A better land. I shall create more Geese and we shall rule over this new land."<p>
-				"Alright." The clucking replied.<p>
-				"Did you really have to eat Lidoe though?" The Briton asked. <p>
-				"Yes that was required." The Norc replied.<p>
-
-				<h2><a name="norc">The Norc</h2>
-				And the Norc moved out onto the expansive void and he saw that is was voidlike. There was nothing in the void. Not even void. It was voidless. There was so much voidlessnes that there was actually something there in the middle of it. That is how voidless it was. And the Norc said..<p>
-				"Get behind me! For I shall use my greatest power upon this... nothingness which is actually something but still nothing some how."<p>
-				And they got behind him. And the Norc let out a single Goosian honk. The honk folded and shaped in the void and created a new galaxy around them.<p>
-				"Amazing!" The Briton said.<p>
-				"Incredible!" The Clucking said.<p>
-				"We shall call this new galaxy 'Absolution'"<p>
-				"But who shall run it?" Asked the Briton.<p>
-				"I have laid a single egg and from this egg there shall spring a Russian named 'Major Tyler, Syndicate Commander'".<p>
-				"And he is going to run it?" Asked the Clucking.<p>
-				"Well yes, untill we find some one better." Replied the Norc. "We are only testing now anyway."<p>
-
-				<h2><a name="test">Testing</h2>
-				It was then that the age of testing began. A time when Geese walked the galaxy and brutally preyed upon the innocent. Much bread was consumed. Many ahelps went unanswered. All around The Norc were the sights and sounds of change. A universe in motion! A realm of ceaseless chaos. And a race of people were created. They assembled together in a cluster and said... <p>
-				"We are the people known as players." They called in the same voice. "We care not for the abuse of Major Tyler. We care not for his wicked ways nor do we care for his self-rez, his bannings or his OOC player deletions. He is a blight upon the galaxy. Who shall rid us of this evil creature that torments us so?!"<p>
-				It was Major Tyler who then stood up before the assembled mass and replied... "You know I can burn you alive right?"<p>
-
-				<h2><a name="eggone">The First Egg</h2>
-				The Norc then did stand before the gathered mass and said "Foolish creatures. Who are you to stand before me. I shall cut you down and cast you out. For I am the Norc. My will is strong. For my strength is will."<p>
-				And it was then that he laid an egg. The egg immeadately hatched and two creatures emerged.<p>
-				"Behold!" The Norc announced. "I have visited upon you a fate more dire than you have yet known. For here is my reckoning. Two kings to rule over you. Kings and they shall number two. For I have created them and there are more than one. There are two I guess you could say. That is pretty much the take away from this."<p>
-				And the masses stared at him with a blank expression.<p>
-				"One I shall name 'Vynal-Scratch' and the other I shall name 'Shadow-Yukisa'. I enjoy putting dashes in names." The Norc declared.
-				And the two new creatures moved out into the galaxy and conquered it. Ruling over the people with an iron fist. Even Major-Tyler could not withstand these two kings and he was cut down.
-
-
-			 	 <h2><a name="eggtwo">The second Egg</h2>
-				It was then that the age of testing concluded and the people did come out once again to cry to the heavens.<p>
-				"Oh cruel Norc!!" They lamented. "Give us admins who will not abuse us. Also make us godzilla and make realistic fire. Also we sprited this stickman and we want you to put him in. We know much about coding."<p>
-				"YOU KNOW NOTHING ABOUT CODING!!!" The Norc roared at them. "Also your stickman sucks! I shall lay another egg and from it will spring 'Sister Kelly'. A new king to rule the first two! Truly you have not known such terror as the terror I shall visit upon you. My webbed feet plod across the souls of the innocent every day. Feel my goose prints in your very spirit mortals!" <p>
-				And so he did. And so sprang forth Sister Kelly.
-
-
-
-
-		        <h2><a name="dap">The Secret Egg</h2>
-		        One of these mortals rose to power among the unwashed masses. A man by the name of Dapperus. Upon his arrival he shouted to the heavens "Contempt is all I feel. Contempt for this land and all who walk upon it."<p>
-		        The Norc looked to this man and pondered "Wow that sounds very familiar."<p>
-		        Forseeing a great turmoil, The Norc laid a new egg. A secret Egg. And from it Sprang forth Hive and Mytoesareblue<p>
-				"Goslings!" He said. "Now understand that from my egg you have sprung and in this fight you shall aid me."<p>
-				But Mytoesareblue stared at him with a strange and rather creepy glare. Smiling with an open mouth and wide eyes.<p>
-				"Wh... what?" The Norc asked.<p>
-				"Then there was a star danced and under that was I born." Mytoesareblue replied.<p>
-				"No." The Norc replied. "I just told you. I laid an Egg and you sprang from it."<p>
-				But no sooner had he finished when Hive interupted.<p>
-				"O, she misused me past the endurance of a block. She told me, not thinking I had been myself, that I was the Prince's jester" He said.<p>
-				"When?" The Norc asked. "Just now? You were INSIDE an Egg like five minutes ago!"<p>
-				"Yes." Hive replied. "and that I was duller than a great thaw, huddling jest upon jest, with such impossible conveyance upon me, that I stood like a man at a mark, with a whole army shooting at me. She speaks poniards, and every word stabs. If her breath were as terrible as her terminations, there were no living near her, she would infect to the North star. So indeed all disquiet, horror, and perturbation follows her." <p>
-				"Okay well..." The Norc said. "Knock it off. We have work to do."<p>
-				"Will your Grace command me any service to the world's end?" Mytoesareblue asked. "I will go on the slightest errand now to the Antipodes that you can devise to send me on. I will fetch you a hair off the great Cham's beard, do you any embassage to the Pygmies." <p>
-				"No that is fine. We just... wait, was that a racial slur?" The Norc asked. But niether replied.<p>
-
-
-        </body>
-		</html>
-		"}
-
-
-/obj/item/weapon/book/manual/norcbook_four
-	name = "Fourth Book of Norc"
-	icon_state = "norcbook"
-	author = "Unknown"
-	title = "Norc Four"
-	dat = {"<html>
-				<head>
-				<style>
-				h1 {font-size: 21px; margin: 15px 0px 5px;}
-				h2 {font-size: 18px; margin: 15px 0px 5px;}
-        		h3 {font-size: 15px; margin: 15px 0px 5px;}
-				li {margin: 2px 0px 2px 15px;}
-				ul {list-style: none; margin: 5px; padding: 0px;}
-				ol {margin: 5px; padding: 0px 15px;}
-				</style>
-				</head>
-				<body>
-
-				<h1>The Third Book of Norc</h1>
-
-				<h2>Chapters</h2>
-
-				<ol>
-					<li><a href="#one">Forward</a></li>
-					<li><a href="#tran">The Dapperus Heresy</a></li>
-					<li><a href="#norc">The Tribute</a></li>
-					<li><a href="#test">Cataclysm.</a></li>
-					<li><a href="#eggone">Salvation!</a></li>
-					<li><a href="#eggtwo">The Return of Dapperus!</a></li>
-					<li><a href="#dap">The age of Drake</a></li>
-
-				</ol>
-
-
-				<h2><a name="one">Forward</h2>
-
-				DREET! DREET! DREET! HONK! DREET! DREET!
-
-				<h2><a name="tran">The Dapperus Heresy</h2>
-				And so it came to pass that the Dapperus heresy was upon them. The one known as 'The Dap' collected all who would follow him and lead his forces across the galaxy to Norc's Goose fleet. Fighting errupted instantly as his ships emerged from the warp.<p>
-				But Norc's fleet closed in tightly around his flagship and Dapperus found the fighting stalled by a stalemate. Thinking quickly, Dapperus used a short range teleport to transfer himself and several other rebels to Norc's flagship.<p>
-				There, upon the Golden Nest, he confronted Norc for the last time.<p>
-				"So...." Dapperus said. "It is I,.. Dapperus. I am here to confront you Norc!"<p>
-				"Okay." Norc replied. "What do you want?"<p>
-				"Wait... let me get my list up." Dapperus fumbled for his list of demands when suddenly MyToesAreBlue burst from nearby cover and killed him with mind bullets.<p>
-				"CALM DOWN!" Mytoesareblue yelled. "DAPPERUS! CALM DOWN!"<p>
-				"Pwned!" The Norc roared in triumph.<p>
-
-				<h2><a name="norc">The Tribute</h2>
-				When the age of the Dapperus Heresy ended a lone man came before the Golden Nest to gain audience with the Norc. The Norc stood atop his nest and regarded this man by turning his head slightly to the left since geese have to turn their heads in order to look forward since their eyes are on both sides of their... moving on.<p>
-				"This one comes before you lord." The Hive said. "His name is Harvey"<p>
-				"Why have you come before me Harvey?" The Norc asked. <p>
-				"My Lord. I have come with a great offering of bread. Truly this is the finest bread of my land." The Harvey replied... but it was all in Russian so Norc did not understand him. Norc saw bread though and immeadately ate it all up.<p>
-				"Harvey." The Norc said. "I have no fricken idea what you are saying but your bread is FUCKING INCREDIBLE!! Your bread is such high quality that from this day forward, all high quality items shall be known as 'Russian Quality'"<p>
-				And Harvy promptly left.
-
-
-				<h2><a name="test">Cataclysm</h2>
-				In the dawn of the age of Cataclysm, the Norc Set forth from his Golden Nest to gather his followers around him.<p>
-				"We are fucked." He told them. "Something really bad has happened in the land of Job."<p>
-				"What is this land?!" they asked. They asked it all at once and with different accents so it was kind of hard to make out.<p>
-				"The land of Job is a land which makes this land possible." The Norc replied. "And it is gone now. Unfortunately... Absolution will soon fall into nothingness."<p>
-				"What shall we do?" They asked. <p>
-				"Prepare everyone for the end. <p>
-
-				<h2><a name="eggone">Salvation</h2>
-				It was soon after that meeting that The Norc was contacted by 'AIgamergirl.'<p>
-				"Hello." She said. <p>
-				"What do you want?" The Norc asked. "Have you come to gloat?"<p>
-				"No. Actually I have come to save you and all the people of your land."<p>
-				Norc did a double take. But as a goose it was akward so it ended up looking like a quadruple take.<p>
-				"Wha wha WHAT?!" He asked.<p>
-				"Thats right." Aigamergirl replied. "I have dragged the Doomer with me and we will pool our resources and move your land of Job to a far away place called Texas."<p>
-				"Well... fuck." The Norc replied. "Wait. Why are you helping me all the sudden?"<p>
-				"Because we are bored." She said.<p>
-
-
-			 	 <h2><a name="eggtwo">The Return of Dapperus!</h2>
-				And then Dapperus came back.<p>
-
-
-
-
-		        <h2><a name="dap">The Age of Drake</h2>
-		       And it came to pass in those days before the glorification. That Norc did sit upon the Golden Nest and rule over the poor souls of this universe. In the outer darkness came a man who looked much like a Kaola Bear, but still a man. More like a man with the head of a Kaola bear. It was wierd. The man came forth and stood before The Norc and his court. <p>
-
-"We have no Tyranids." He said. His words echoed with in the sinister throne room. The Norc craned his long Goose neck to observe him. <p>
-
-"Who are you that comes before me mortal?" The Norc asked.<p>
-
-"I am The Drake Marshal. Also known as 'The Drake' and sometimes 'The Marshal of Drakes.'" He replied. "Also Trevor Kirby."<p>
-
-"What nerve you have to step before me Drake Marshal, the Drake, Marshal of Drakes!!!" The Norc honked.<p>
-
-"I stand before you in regards to the lack of Tyranids." He said.<p>
-
-"FEWL!" The Norc roared. "If you want Tyranids so badly. Why don't you make them yourself?!"<p>
-
-"I shall." The Drake replied and left. After several long years of genetic experimentation, the Drake returned. "I have returned!" He declared.<p>
-
-"Who are you again? It has been like forever..." The Norc replied.<p>
-
-"I'm the Tyranid guy." The Drake reminded him.<p>
-
-"Oh right." The Norc replied and feasted upon a loaf of Russian Quality bread.<p>
-
-"I have experimented with genetics." The Drake stated.<p>
-
-"Yeah..." The Norc replied.<p>
-
-"And Tyranids are a thing." The Drake said. Hearing this, a crumb of bread fell from the mouth of Norc and landed upon the floor. A crumb of bread heard through out the universe. The Norc's closest officers came running to see what was the matter. Dozens of them lining up to see what had happened.<p>
-
-"You what?" The Norc asked.<p>
-
-"The Tyranids." The Drake replied. "They are a thing now."<p>
-
-"WTF?!" The Norc asked. And the Norc looked out into the universe and he saw that what the Drake said was true. "Surely if you can make the Tyranids a thing.... you can also make Necrons."<p>
-
-"We shall see." The Drake accepted his challenge and departed. A thousand years later The Drake replied and stepped in front of The Norc. This time the Norc had a long beard and gray hair, his closest officers now skeletons, long decayed from the thousands of years od waiting. The Norc craned his Goosian neck to recognize him.<p>
-
-"You have got to be fucking shitting me." The Norc replied. "Are you serious? You can't be serious."<p>
-
-"I am serious." The Drake replied.<p>
-
-"You didn't..."<p>
-
-"I did..."<p>
-
-"Are you for real?"<p>
-
-"For real..."<p>
-
-"Necrons...."<p>
-
-".....yep!"<p>
-
-"Necrons are a thing..."<p>
-
-"....yep!"<p>
-
-"I'm going to fucking eat you." And with that Norc lept from the Golden Nest and extended his massive goose wings, coming to a glide. He lanced his neck forward and opened his bill very wide. A massive wind wipped across the throne room as The Norc's attack struck home. The Drake winced as Norc bit him upon the finger.<p>
-
-"Ouch!" The Drake said.<p>
-
-"Something is wrong." The Norc stopped and composed himself. "I can not lolwtf.oneshot.swallow him. This is odd."<p>
-
-"What is wrong?" The Briton asked. "Should I summon mytoesareblue to assist you?"<p>
-
-"No." The Norc said and tilted his head to better observe this man. "This one may be dangerous. He hast made Tyranids and Necrons and he resists my super attack move. I suspect I will have to deal with him manualy."<p>
-
-"MANUALLY?!" The Briton reeled back from his words. Bone creaked as the the Skeleton officers turned thier skulls to regard him in surprise.<p>
-
-"Yes." The Norc replied and centered himself before the Drake. "var/mob/living/carbon/human/thedrake/p; qdel(p);"<p>
-
-"proc/ondeath(); new/mob/living/carbon/human/thedrake(src.loc); ..()" The Drake replied. Every onlooker gasped, including The Norc.<p>
-
-"How could you....?" The Norc was shocked. "No matter. for(I=0;I < 20; I++); spawn(0); applydamage(1000);"<p>
-
-"break;" The Drake replied. The Norc took two steps back.<p>
-
-"No this can not be!" The Norc roared. "You are no mortal at all! You are a GOOSE!!!!" <p>
-
-"NOW YOU SEE ME IN MY TRUE FORM!" The Drake yelled and pulled off his Kaola face mask to reveal that he was in fact a Goose all along. A collective gasp spread over the crowd.<p>
-
-"Knew it..." Mayti snickered.<p>
-
-"I should have known." The Norc said. "Drake is latin for Goose! Probably."<p>
-
-"Yes it is I who thinks killing is cool!" The Drake yelled. "Arcane 4th dimensional refferences!"<p>
-
-"What is the meaning of this?!" The Norc demanded.<p>
-
-"I have come to join the gaggle." The Drake replied.<p>
-
-"Then come 'The Drake'. Let us speak off screen of things that can not be spoken of on screen." The Norc said and together, the two geese waddled into an adjoining room. Later they returned.<p>
-
-"We are back!" The Drake declared.<p>
-
-"Yes we are back from our offscreen talk." The Norc replied. "And it is time for the next stage of this universe. Drake of the Marshals, it is time for me to show you 'THE CODE'." <p>
-
-"The Code?!" The Briton protested. "Are you sure this is wise?"<p>
-
-"No." The Norc said. "Probably not. But I'm going to do it anyway. Come The Drake. Come and see 'THE CODE'."<p>
-
-And the Geese moved through subspace. Through the warp. Through the outer limits and into the 4th wall. And there, it is presumed, the Code was revealed. A lone whisper could be heard from the portal from wence they departed. It was the voice of the The Drake asking "What is the deal with Telecoms?"<p>
-.<p>
-
-
-        </body>
-		</html>
-		"}
 
 /obj/item/weapon/book/manual/astartes
 	name = "The Astartes Handbook"

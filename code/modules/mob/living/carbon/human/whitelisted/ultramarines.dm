@@ -180,10 +180,9 @@ UltraMarines
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				maxHealth = 240 //trait: nerd -10 hp
 				maxPsy += 1000
-				verbs += /mob/living/carbon/human/whitelisted/proc/imprison
-				verbs += /mob/living/carbon/human/whitelisted/proc/smite
-				verbs += /mob/living/carbon/human/whitelisted/proc/quickening
-				verbs += /mob/living/carbon/human/whitelisted/proc/telepath
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/quickening
+				verbs += /mob/living/carbon/human/proc/telepath
 				var/obj/item/weapon/card/id/W = new
 				W.icon_state = "umcard"
 				W.access = get_all_accesses()
@@ -194,6 +193,7 @@ UltraMarines
 				equip_to_slot_or_del(W, slot_wear_id)
 				sleep(10)
 				regenerate_icons()
+				rename_self("[name]")
 											//this is a new experimental choose your own loadout build
 	/*spawn(20)
 				var/obj/item/weapon/card/id/W = new

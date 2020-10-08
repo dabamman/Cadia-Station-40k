@@ -3,7 +3,7 @@
 	desc = "It's a bucket. With a sensor attached."
 	name = "proxy bucket"
 	icon = 'icons/obj/aibots.dmi'
-	icon_state = "bucket_proxy"
+	icon_state = "servoclean"
 	force = 3.0
 	throwforce = 5.0
 	throw_speed = 2
@@ -45,7 +45,7 @@
 /obj/machinery/bot/cleanbot/New()
 	..()
 	src.get_targets()
-	src.icon_state = "cleanbot[src.on]"
+	src.icon_state = "servoclean[src.on]"
 
 	should_patrol = 1
 
@@ -59,7 +59,7 @@
 
 /obj/machinery/bot/cleanbot/turn_on()
 	. = ..()
-	src.icon_state = "cleanbot[src.on]"
+	src.icon_state = "servoclean[src.on]"
 	src.updateUsrDialog()
 
 /obj/machinery/bot/cleanbot/turn_off()
@@ -67,7 +67,7 @@
 	src.target = null
 	src.oldtarget = null
 	src.oldloc = null
-	src.icon_state = "cleanbot[src.on]"
+	src.icon_state = "servoclean[src.on]"
 	src.path = new()
 	src.updateUsrDialog()
 
@@ -316,13 +316,13 @@ text("<A href='?src=\ref[src];operation=oddbutton'>[src.oddbutton ? "Yes" : "No"
 
 /obj/machinery/bot/cleanbot/proc/clean(var/obj/effect/decal/cleanable/target)
 	src.anchored = 1
-	src.icon_state = "cleanbot-c"
+	src.icon_state = "servoclean"
 	visible_message("<span class='danger'>[src] begins to clean up [target]</span>")
 	src.cleaning = 1
 	spawn(50)
 		src.cleaning = 0
 		qdel(target)
-		src.icon_state = "cleanbot[src.on]"
+		src.icon_state = "servoclean[src.on]"
 		src.anchored = 0
 		src.target = null
 

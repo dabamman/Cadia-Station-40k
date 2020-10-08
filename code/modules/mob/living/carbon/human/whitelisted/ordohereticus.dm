@@ -174,11 +174,10 @@ Ordo Hereticus
 				regenerate_icons()
 				rename_self("[name]")
 				verbs += /mob/living/carbon/human/proc/renderaid
-				maxPsyk += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
-				verbs += /mob/living/carbon/human/proc/imprisonn
-				verbs += /mob/living/carbon/human/proc/smitee
-				verbs += /mob/living/carbon/human/proc/quickeningg
-				verbs += /mob/living/carbon/human/proc/telepathh
+				maxPsy += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/quickening
+				verbs += /mob/living/carbon/human/proc/telepath
 	//extra letters added on end to avoid duplicate definitions/clash with Librarians, real goose tape code I know - Wel								 //This is how we get the verb!
 /mob/living/carbon/human/OHstormtrooper/leader/New()
 	..()
@@ -211,7 +210,12 @@ Ordo Hereticus
 	universal_speak = 1
 	gender = "male"
 	faction = "Inquisitor"
+
 /mob/living/carbon/human/OHinq/leader
+	name = "Lady Inquisitor Eleanora Rose"
+	real_name = "Lady Inquisitor Eleanora Rose"
+	gender = "female"
+
 /mob/living/carbon/human/OHinq/New()
 	..()
 	sleep (5)
@@ -219,32 +223,104 @@ Ordo Hereticus
 	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/inq, slot_back)
 	equip_to_slot_or_del(new /obj/item/clothing/under/inq, slot_w_uniform)
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/inq, slot_wear_suit)
+	equip_to_slot_or_del(new /obj/item/clothing/suit/armor/inq/random, slot_wear_suit)
 	equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots, slot_shoes)
 	equip_to_slot_or_del(new /obj/item/clothing/head/inqhat, slot_head)
-	equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistol2, slot_s_store)
 	equip_to_slot_or_del(new /obj/item/device/pda/lawyer, slot_in_backpack)
-	equip_to_slot_or_del(new /obj/item/weapon/powersword/pknife, slot_belt)
-	equip_to_slot_or_del(new /obj/item/device/hdetector, slot_in_backpack)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/inquisitor, slot_gloves)
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
 	R.set_frequency(1441)
 	equip_to_slot_or_del(R, slot_ears)
-	var/obj/item/weapon/card/id/ordohereticus/W = new
-	W.access = get_all_accesses()
-	W.access += get_centcom_access("Inquisitor")
-	W.registered_name = real_name
-	W.update_label()
-	equip_to_slot_or_del(W, slot_wear_id)
 	sleep(20)
 	regenerate_icons()
 	rename_self("[name]")
 	verbs += /mob/living/carbon/human/proc/renderaid
+	spawn(20)
+		var/weaponchoice = input("Ordo.","Select an Ordo") as null|anything in list("Ordo Hereticus","Ordo Xenos","Ordo Malleus", "Ordo Hereticus - Psyker", "Ordo Xenos - Psyker", "Ordo Malleus - Psyker")
+		switch(weaponchoice)
+			if ("Ordo Hereticus")
+				equip_to_slot_or_del (new /obj/item/weapon/powersword/burning, slot_r_hand)
+				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/inferno, slot_s_store)
+				equip_to_slot_or_del (new /obj/item/device/hdetector, slot_in_backpack)
+				var/obj/item/weapon/card/id/ordohereticus/W = new
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("Inquisitorial Acolyte")
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
+
+			if ("Ordo Xenos")
+				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/plasma/pistol, slot_s_store)
+				equip_to_slot_or_del (new /obj/item/device/refractor, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/device/xdetector, slot_in_backpack)
+				var/obj/item/weapon/card/id/ordohereticus/ordoxenos/X = new
+				X.access = get_all_accesses()
+				X.access += get_centcom_access("Inquisitorial Acolyte")
+				X.registered_name = real_name
+				X.update_label()
+				equip_to_slot_or_del(X, slot_wear_id)
+
+			if ("Ordo Malleus")
+				equip_to_slot_or_del (new /obj/item/weapon/powersword/mace/om, slot_r_hand)
+				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
+				var/obj/item/weapon/card/id/ordohereticus/ordomalleus/M = new
+				M.access = get_all_accesses()
+				M.access += get_centcom_access("Inquisitorial Acolyte")
+				M.registered_name = real_name
+				M.update_label()
+				equip_to_slot_or_del(M, slot_wear_id)
+
+			if ("Ordo Hereticus - Psyker")
+				equip_to_slot_or_del (new /obj/item/weapon/powersword/burning, slot_r_hand)
+				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/inferno, slot_s_store)
+				equip_to_slot_or_del (new /obj/item/device/hdetector, slot_in_backpack)
+				maxPsy += 500
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/quickening
+				verbs += /mob/living/carbon/human/proc/telepath
+				var/obj/item/weapon/card/id/ordohereticus/W = new
+				W.access = get_all_accesses()
+				W.access += get_centcom_access("Inquisitorial Acolyte")
+				W.registered_name = real_name
+				W.update_label()
+				equip_to_slot_or_del(W, slot_wear_id)
+
+			if ("Ordo Xenos - Psyker")
+				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/plasma/pistol, slot_s_store)
+				equip_to_slot_or_del (new /obj/item/device/refractor, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/device/xdetector, slot_in_backpack)
+				maxPsy += 500
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/telepath
+				var/obj/item/weapon/card/id/ordohereticus/ordoxenos/X = new
+				X.access = get_all_accesses()
+				X.access += get_centcom_access("Inquisitorial Acolyte")
+				X.registered_name = real_name
+				X.update_label()
+				equip_to_slot_or_del(X, slot_wear_id)
+
+			if ("Ordo Malleus - Psyker")
+				equip_to_slot_or_del (new /obj/item/weapon/powersword/mace/om, slot_r_hand)
+				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
+				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
+				maxPsy += 500
+				verbs += /mob/living/carbon/human/proc/psymode
+				verbs += /mob/living/carbon/human/proc/telepath
+				var/obj/item/weapon/card/id/ordohereticus/ordomalleus/M = new
+				M.access = get_all_accesses()
+				M.access += get_centcom_access("Inquisitorial Acolyte")
+				M.registered_name = real_name
+				M.update_label()
+				equip_to_slot_or_del(M, slot_wear_id)
+
 /*
 Shuttle verb
 */
 /mob/living/carbon/human/proc/ohshuttle()
-	set category = "Ordo Hereticus"
+	set category = "Inquisitor"
 	set name = "Move ship"
 	set desc = "Like an obediant dog... your ship comes on command."
 	//set src in usr

@@ -208,7 +208,7 @@
 	item_state = "Skit_shoes"
 	permeability_coefficient = 0.01
 	flags = NOSLIP
-	armor = list(melee = 60, bullet = 50, laser = 30,energy = 15, bomb = 30, bio = 30, rad = 30)
+	armor = list(melee = 15, bullet = 15, laser = 15,energy = 15, bomb = 10, bio = 30, rad = 30)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET
@@ -219,3 +219,18 @@
 	desc = "A pair of fairly uncomfortable boots usually found on the feet of the Sanctioned Psyker. "
 	icon_state = "spsykerboots"
 	item_state = "spsykerboots"
+	cold_protection = FEET
+	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+	heat_protection = FEET
+	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
+
+/obj/item/clothing/shoes/acolyteboots
+	name = "acolyte's boots"
+	desc = "A well-made pair of boots lined with a thin but tough layer of flak-weave."
+	icon_state = "acolyteboots"
+	item_state = "acolyteboots"
+	armor = list(melee = 20, bullet = 20, laser = 20,energy = 20, bomb = 20, bio = 0, rad = 0)
+	cold_protection = FEET
+	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+	heat_protection = FEET
+	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT

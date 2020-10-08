@@ -350,7 +350,7 @@ Hdetector
 	user.show_message("Growth progress: [T.amount_grown]/10")
 
 /obj/item/device/hdetector
-	name = "Warp Energy Analzyer"
+	name = "Warp Energy Analyzer"
 	icon_state = "hdetector"
 	item_state = "analyzer"
 	desc = "A hand-held body scanner able to distinguish a subject's heretical connection to the warp."
@@ -362,9 +362,12 @@ Hdetector
 	throw_range = 7
 	m_amt = 200
 	origin_tech = "magnets=1;biotech=1"
-	var/heresychance = 25 // % the scanned will declare some one evil
+	var/heresychance// % the scanned will declare some one evil
 
 /obj/item/device/hdetector/attack(mob/living/M as mob, mob/living/user as mob)
+	if (isnull(heresychance))
+		user.show_message("Device not calibrated.")
+		return
 	user.show_message("Scanning...")
 	sleep(60)
 	if (!istype(M, /mob/living/carbon/human))
@@ -373,13 +376,73 @@ Hdetector
 	if (istype(M, /mob/living/carbon/human))
 		if(prob(heresychance))
 			user.show_message("\red There is a great deal of warp energy around this person. This person may be in league with the forces of Chaos! prehaps you better keep your eye on them. . .")
+			user.visible_message("The [src] in [user]'s hand beeps rapidly.")
 		else
 			user.show_message("\blue There is nothing unusual about this person.")
+			user.visible_message("The [src] in [user]'s hand emits a single low beep.")
+		heresychance = null
 	else
 		return
 
 /obj/item/device/hdetector/attack_self(mob/user, slot)
 	user.show_message("Calibrating...")
 	sleep(60)
+	var/newheresychance = input ("Estimate probability that the scanned individual is an agent of chaos", "Device Calibration", heresychance) as num|null
+	if(isnull(newheresychance))	return
+	heresychance = newheresychance
+	user.show_message("\blue Device has been properly calibrated...")
+
+
+/obj/item/device/xdetector
+	name = "Xenos Corruption Analyzer"
+	icon_state = "hdetector"
+	item_state = "analyzer"
+	desc = "A hand-held body scanner able to detect xenos genetic material. It must be recalibrated frequently."
+	flags = CONDUCT
+	slot_flags = SLOT_BELT
+	throwforce = 3
+	w_class = 1.0
+	throw_speed = 3
+	throw_range = 7
+	m_amt = 200
+	origin_tech = "magnets=1;biotech=1"
+	var/inaccuracy = 5 // Increases by 5 per use.
+
+/obj/item/device/xdetector/attack(mob/living/M as mob, mob/living/user as mob)
+	user.show_message("Scanning...")
+	sleep(60)
+	if (!istype(M, /mob/living/carbon/human))
+		user.show_message("This can only be used on people.")
+		return
+	if (isork(M) || istype(M, /mob/living/carbon/human/whitelisted/eldar) || istype(M, /mob/living/carbon/human/tau)) //Not making it detect the eldar spy by design.
+		user.show_message("No human genetic material detected. Termination recommended.")
+		return
+	if (istype(M, /mob/living/carbon/human))
+		if(M.mind.special_role == "Genestealer Cult Member")
+			if(prob(100-inaccuracy))
+				user.show_message("\red Xenos genetic material detected in subject. Re-scanning and terminating recommended.")
+				user.visible_message("The [src] in [user]'s hand beeps rapidly.")
+				inaccuracy += 5
+			else
+				user.show_message("\blue No xenos genetic material detected.")
+				user.visible_message("The [src] in [user]'s hand emits a single low beep.")
+				inaccuracy += 5
+		else
+			if(prob(inaccuracy))
+				user.show_message("\red Xenos genetic material detected in subject. Re-scanning and terminating recommended.")
+				user.visible_message("The [src] in [user]'s hand beeps rapidly.")
+				inaccuracy += 5
+			else
+				user.show_message("\blue No xenos genetic material detected.")
+				user.visible_message("The [src] in [user]'s hand emits a single low beep.")
+				inaccuracy += 5
+	else
+		return
+
+
+/obj/item/device/xdetector/attack_self(mob/user, slot)
+	user.show_message("Calibrating...")
+	sleep(60)
+	inaccuracy = 5
 	user.show_message("\blue Device has been properly calibrated...")
 

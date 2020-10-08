@@ -16,7 +16,7 @@ Assistant
 
 /datum/job/assistant/equip_items(var/mob/living/carbon/human/H)
 	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/color/grey(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/penitent(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/slave(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/leper(H), slot_head)

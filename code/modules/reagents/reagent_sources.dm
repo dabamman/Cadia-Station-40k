@@ -121,15 +121,6 @@ This is so that some of the chems in game can be a bit more difficult to acquire
 		..()
 		reagents.add_reagent("marshellium", 30)
 
-/obj/item/weapon/reagent_containers/glass/bottle/norcacillin
-	name = "Norcacillin Flask"
-	desc = "A small bottle. Contains the stuff of absolution."
-	icon = 'icons/obj/drinks.dmi'
-	icon_state = "holyflask"
-	New()
-		..()
-		reagents.add_reagent("norcacillin", 30)
-
 /obj/item/weapon/reagent_containers/food/snacks/ration //This should go in the armory, kitchen, emergency storage, something.
 	name = "Imperial Ration"
 	desc = "A ration of the Imperium. It is unsure if this is really edible."
