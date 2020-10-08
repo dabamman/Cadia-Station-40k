@@ -461,12 +461,12 @@ steam.start() -- spawns the effect
 /obj/effect/effect/chem_smoke/Move()
 	..()
 	for(var/atom/A in view(1, src))
-		if(reagents.has_reagent("radium")||reagents.has_reagent("uranium")||reagents.has_reagent("carbon")||reagents.has_reagent("thermite"))//Prevents unholy radium spam by reducing the number of 'greenglows' down to something reasonable -Sieve
-			if(prob(5))
+		if (reagents) //Stops runtime errors at the end of an acidic chemsmoke cloud.
+			if(reagents.has_reagent("radium")||reagents.has_reagent("uranium")||reagents.has_reagent("carbon")||reagents.has_reagent("thermite"))//Prevents unholy radium spam by reducing the number of 'greenglows' down to something reasonable -Sieve
+				if(prob(5))
+					reagents.reaction(A)
+			else
 				reagents.reaction(A)
-		else
-			reagents.reaction(A)
-
 	return
 
 /obj/effect/effect/chem_smoke/Crossed(mob/living/carbon/M as mob )
