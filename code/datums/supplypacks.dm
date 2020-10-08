@@ -373,7 +373,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 
 /datum/supply_packs/armory/bpistol
 	name = "Bolt pistol crate"
-	contains = list(/obj/item/weapon/gun/projectile/automatic/bpistol, 
+	contains = list(/obj/item/weapon/gun/projectile/automatic/bpistol,
 					/obj/item/weapon/gun/projectile/automatic/bpistol)
 	cost = 60
 	containername = "Bolt Pistol Crate"
@@ -620,11 +620,11 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 	containername = "Imperium of Man Lot# 277301"
 
 /datum/supply_packs/engineering/skitariiparts
-	name = "Box Of Parts (Skitarii Parts)"
+	name = "Skitarii cryostasis coffin"
 	contains = null
-	cost = 700
+	cost = 450
 	containertype = /obj/structure/skitariiparts
-	containername = "Adeptus Mechanicus, from Mars, Lot# 5743501"
+	containername = "Skitarii cryostasis coffin"
 
 
 /datum/supply_packs/engineering/tools		//the most robust crate
