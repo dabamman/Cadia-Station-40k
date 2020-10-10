@@ -2,7 +2,7 @@
 AI
 
 /datum/job/ai
-	title = "AI"
+	title = "Machine Spirit"
 	flag = AI
 	department_flag = ENGSEC
 	faction = "Station"
@@ -32,7 +32,7 @@ Cyborg
 	faction = "Station"
 	total_positions = 0
 	spawn_positions = 1
-	supervisors = "Just about everyone in the imperium"	//Nodrak
+	supervisors = "The Adeptus Mechcanicus"	// Fixing stupid shit
 	selection_color = "#ddffdd"
 	minimal_player_age = 21
 

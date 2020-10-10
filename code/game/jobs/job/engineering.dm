@@ -35,7 +35,7 @@ Chief Engineer
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/rig/elite(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistol2(H), slot_l_store)
 	H.faction = "Mechanicus"
-
+	H << "\blue The Leader of the local Tech Priest you're to maintain the Engine Temple and provide for its needs. Ensure your priests and other servants to the Omnissiah are not comitting any tech heresy. Ensure that the engines are well protected and that skitarii are provided. Assist the station in repairs and maintaing the Machine Spirit." // Job Explanation
 	if(H.backbag != 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/melee/telebaton(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/weapon/reagent_containers/syringe(H), slot_in_backpack)
@@ -101,7 +101,7 @@ Station Engineer
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/rig(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/laspistol2(H), slot_l_store)
 	H.faction = "Mechanicus"
-
+	H << "\blue Ensure the Engine Temple is well maintained. Head out with the miners and explore the mine or strike out on the surface in an attempt to locate xenos. Follow what your Magos instructs of you, and always follow the tenets of the Omnissiah. You're the embodiment of the quest for knowledge." // Job Explanation
 	spawn(10)
 		var/augmentchoice = input(H, "Select an augmented location.","Augment selection") as null|anything in list("Head", "Chest", "Left Arm", "Right Arm", "Left Leg", "Right Leg")
 		switch(augmentchoice)  //Based on the IG weapon selection code.
