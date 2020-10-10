@@ -37,13 +37,12 @@
 		
 		if(a_intent == "disarm")
 			var/obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall/M = new /obj/effect/proc_holder/spell/aoe_turf/conjure/warpwall
-			if(Psy>=200)
-				Psy-=200
+			if(Stress + 30 <= maxStress)
+				Stress += 30
 				M.cast(list(A), src)
 
 			else
-				src << "\red You need more psy!"
-
+				src << "\red Your soul cant handle that!!"
 			return
 		return
 

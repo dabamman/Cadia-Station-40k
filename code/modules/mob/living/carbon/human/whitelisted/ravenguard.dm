@@ -168,7 +168,7 @@ RavenGuard
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ravenbolter, slot_s_store)
 				maxHealth = 240 //trait: nerd -10 hp
-				maxPsy += 1000
+				maxStress += 120
 				verbs += /mob/living/carbon/human/proc/psymode
 				verbs += /mob/living/carbon/human/proc/quickening
 				verbs += /mob/living/carbon/human/proc/telepath

@@ -220,7 +220,7 @@ Sanctioned Psyker
 	H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
 
-	H.maxPsy += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+	H.maxStress += 100 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
 	H.verbs += /mob/living/carbon/human/proc/psymode
 	H.verbs += /mob/living/carbon/human/proc/quickening
 	H.verbs += /mob/living/carbon/human/proc/telepath
