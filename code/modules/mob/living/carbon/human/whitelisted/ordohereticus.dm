@@ -174,7 +174,7 @@ Ordo Hereticus
 				regenerate_icons()
 				rename_self("[name]")
 				verbs += /mob/living/carbon/human/proc/renderaid
-				maxPsy += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+				maxStress += 100 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
 				verbs += /mob/living/carbon/human/proc/psymode
 				verbs += /mob/living/carbon/human/proc/quickening
 				verbs += /mob/living/carbon/human/proc/telepath
@@ -276,7 +276,7 @@ Ordo Hereticus
 				equip_to_slot_or_del (new /obj/item/weapon/powersword/burning, slot_r_hand)
 				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/inferno, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/device/hdetector, slot_in_backpack)
-				maxPsy += 500
+				maxStress += 100
 				verbs += /mob/living/carbon/human/proc/psymode
 				verbs += /mob/living/carbon/human/proc/quickening
 				verbs += /mob/living/carbon/human/proc/telepath
@@ -291,7 +291,7 @@ Ordo Hereticus
 				equip_to_slot_or_del (new /obj/item/weapon/gun/energy/plasma/pistol, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/device/refractor, slot_in_backpack)
 				equip_to_slot_or_del (new /obj/item/device/xdetector, slot_in_backpack)
-				maxPsy += 500
+				maxStress += 100
 				verbs += /mob/living/carbon/human/proc/psymode
 				verbs += /mob/living/carbon/human/proc/telepath
 				var/obj/item/weapon/card/id/ordohereticus/ordoxenos/X = new
@@ -306,7 +306,7 @@ Ordo Hereticus
 				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
 				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
-				maxPsy += 500
+				maxStress += 100
 				verbs += /mob/living/carbon/human/proc/psymode
 				verbs += /mob/living/carbon/human/proc/telepath
 				var/obj/item/weapon/card/id/ordohereticus/ordomalleus/M = new

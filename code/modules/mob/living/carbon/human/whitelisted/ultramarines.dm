@@ -179,7 +179,7 @@ UltraMarines
 				equip_to_slot_or_del(new /obj/item/weapon/storage/umbackpack, slot_back)
 				equip_to_slot_or_del(new /obj/item/clothing/mask/breath/marine, slot_wear_mask)
 				maxHealth = 240 //trait: nerd -10 hp
-				maxPsy += 1000
+				maxStress += 120
 				verbs += /mob/living/carbon/human/proc/psymode
 				verbs += /mob/living/carbon/human/proc/quickening
 				verbs += /mob/living/carbon/human/proc/telepath
