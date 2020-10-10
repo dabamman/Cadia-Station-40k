@@ -80,7 +80,7 @@ Roboticist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
-	supervisors = "Magos, Ordo Xenos Inquisitor"
+	supervisors = "Magos"
 	selection_color = "#ffeeff"
 
 	default_pda = /obj/item/device/pda/roboticist
@@ -97,6 +97,7 @@ Roboticist
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/labcoat/science(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/cybernetica(H), slot_gloves)
 	H.equip_to_slot_or_del(new /obj/item/weapon/paper/roboto(H), slot_in_backpack)
+	H << "\blue The maker of blessed robotics and exosuits. You're primarily going to be making mechadendrites using your USB Implant and transplanting dead people over to cyborgs. Do not gift the blessings of mechadendrites to the lesser folk, only the technically savvy are allowed this blessing. Breaking of this tenent is clear tech heresy and will result in death. Repair broken areas of the station and issue the Miners clamps if requested. Expect to recieve minerals or request them." // Job Explanation
 
 	spawn(10)
 		var/augmentchoice = input(H, "Select an augmented location.","Augment selection") as null|anything in list("Head", "Chest", "Left Arm", "Right Arm", "Left Leg", "Right Leg")

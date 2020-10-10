@@ -5,7 +5,7 @@
 	return list()
 
 /*
-Head of Shitcurity
+Head of Guardsmen
 */
 /datum/job/hos
 	title = "Commissar"
@@ -46,6 +46,7 @@ Head of Shitcurity
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/security/sunglasses(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/sechailer(H), slot_wear_mask)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt(H), slot_belt)
+	H << "\blue Your regiment was bought out by a Rogue Trader, whom you now serve. You are charged with maintaining the morale of your men and detaining any harmful unsavory citizens. Brief your men and then assign them tasks. Ensure the guards stay vigilant and on task." // Job Explanation
 
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_l_store)
@@ -98,7 +99,7 @@ Warden
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt(H), slot_belt)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/security/sunglasses(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/device/flash(H), slot_l_store)
-
+	H << "\blue As a Sergeant you are tasked with keeping a watchful vigil over the Armory and the Brig if anyone is in it, lacking any heretical prisoners you are usually the eyes and ears for the Commissiar and Rogue trader regarding the happenings of the guardsmen. Enforce what discipline in the guards the commissiar fails to, and ensure the guardsmen remain on the assigned task." // Job explanation
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_l_hand)
 	else
@@ -154,7 +155,7 @@ Detective
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/uzi(H), slot_s_store)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/gun(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/uzim45(H), slot_in_backpack)
-
+	H << "\blue Watch the citizens of the station and investigate any possible heresy, bring it up to the Rogue Trader. Collect evidence and bring it to bear down on the person in question." // Job Explanation
 	var/obj/item/clothing/mask/cigarette/cig = new /obj/item/clothing/mask/cigarette(H)
 	cig.light("")
 	H.equip_to_slot_or_del(cig, slot_wear_mask)
@@ -213,14 +214,14 @@ Sanctioned Psyker
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/spsykerblindfold(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt(H), slot_belt)
 	H.equip_to_slot_or_del(new /obj/item/weapon/staff(H), slot_r_hand)
-	H << "\red An Imperial Sanctioned Psyker is an abomination in the eyes of many, a cursed existence only allowed its life by the mercy and benevolence of the God-Emperor of Mankind. After you were taken by the Black Ships at a young age, you were soulbound to the God-Emperor on Holy Terra and now use your psychic mutation in service of the Imperial Guard. Follow your orders wisely or you may well be put down, like the despicable mutant you are."
+	H << "\red An Imperial Sanctioned Psyker is an abomination in the eyes of many, a cursed existence only allowed its life by the mercy and benevolence of the God-Emperor of Mankind. After you were taken by the Black Ships at a young age, you were soulbound to the God-Emperor on Holy Terra and now use your psychic mutation in service of the Imperial Guard. Follow your orders wisely or you may well be put down, like the despicable mutant you are. Due note you carry no rank over anyone and at best will be a target if any warp manifestations are taking hold on the station."
 
 	H.equip_to_slot_or_del(new /obj/item/weapon/bible(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/weapon/book/manual/security_space_law(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/seclite, slot_in_backpack)
 
-	H.maxStress += 100 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
+	H.maxPsy += 500 // Primaris Psykers are powerful, but not as powerful as Librarians, so they get half the amount Librarians do.
 	H.verbs += /mob/living/carbon/human/proc/psymode
 	H.verbs += /mob/living/carbon/human/proc/quickening
 	H.verbs += /mob/living/carbon/human/proc/telepath
@@ -267,6 +268,7 @@ Security Officer
 	H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_s_store)
 	H.equip_to_slot_or_del(new /obj/item/device/flash(H), slot_l_store)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/imperialbelt(H), slot_belt)
+	H << "\blue As a guardsmen you have dedicated your life in service to the God Emperor for the time being, your regiment was acquired by a Rogue Trader and is led by a Commissiar. On the station you may be tasked to a variety of things depending on the stated objective. You will be called upon in times of great need, carry on you the burden of protecting everyone else on the station." // Job Explanation
 
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/handcuffs(H), slot_r_store)
