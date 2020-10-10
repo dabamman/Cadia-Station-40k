@@ -3,6 +3,17 @@
 		visible_message("<span class='danger'>[M] attempted to touch [src]!</span>")
 		return 0
 
+	if(istype(M, /mob/living/carbon/alien/humanoid/tyranid/hormagaunt))
+		var/mob/living/carbon/alien/humanoid/tyranid/hormagaunt/H = M
+		if (H.venomous == 1)
+			if(istype(src)) // If this is false, it'll attack normally so you can still kill non-people.
+				M << "We bite [src]."
+				visible_message("\red <B>[M] bites [src] with venomous fangs!</B>")
+				src.take_organ_damage(10, 0) //ignores armor
+				src.reagents.add_reagent("tyranid", 7)
+				H.venomous = 0
+				return //returns to stop it from continuing the attack after biting.
+
 	switch(M.a_intent)
 		if ("help")
 			visible_message("<span class='warning'> [M] caresses [src] with its scythe like arm.</span>")
