@@ -197,7 +197,7 @@
 				U << text("<span class='notice'>Some kind of room... It must be hidden now.</span>")
 				U.purity--
 			if(-31)
-				U << text("<span class='notice'>The mining station. There is something at the mining station. Go to the eastern building down the pathway.</span>")
+				U << text("<span class='notice'>The mining station. There is something at the mining station. Go to the western building down the pathway.</span>")
 				U.purity--
 				new /mob/living/eventmob/darkeldarfour(U.loc)
 			if(-32)
