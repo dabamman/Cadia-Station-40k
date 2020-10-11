@@ -123,6 +123,7 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 	var/points_per_crate = 20
 	var/points_per_intel = 100
 	var/plasma_per_point = 0.2 //5 points per plasma sheet due to increased rarity
+	var/points_per_item = 5
 	var/centcom_message = "" // Remarks from Centcom on how well you checked the last order.
 	// Unique typepaths for unusual things we've already sent CentComm, associated with their potencies
 	var/list/discoveredPlants = list()
@@ -231,6 +232,7 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 		var/plasma_count = 0
 		var/intel_count = 0
 		var/crate_count = 0
+		var/item_count = 0
 
 		centcom_message = ""
 
@@ -240,6 +242,16 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 			// Sell plasma (HIJACKED! Now it is coins only!
 			if(istype(MA, /obj/item/hopcoin))
 				plasma_count += 20
+
+			if(istype(MA, /obj/item/weapon/coin/plasma))
+				item_count += 20
+			
+			if(istype(MA, /obj/item/weapon/coin/diamond))
+				item_count += 10
+			
+			if(istype(MA, /obj/item/weapon/coin/gold))
+				item_count += 5
+			
 
 			// Must be in a crate (or a critter crate)!
 			if(istype(MA,/obj/structure/closet/crate) || istype(MA,/obj/structure/closet/critter))
@@ -290,7 +302,16 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 					// Sell plasma (HIJACKED! Now it is coins only!
 					if(istype(A, /obj/item/hopcoin))
 						plasma_count += 20
-
+					
+					if(istype(A, /obj/item/weapon/coin/plasma))
+						item_count += 20
+					
+					if(istype(A, /obj/item/weapon/coin/diamond))
+						item_count += 10
+					
+					if(istype(A, /obj/item/weapon/coin/gold))
+						item_count += 5
+					
 					// Sell syndicate intel
 					if(istype(A, /obj/item/documents/syndicate))
 						intel_count += 1
@@ -311,6 +332,7 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 							discoveredPlants[S.type] = S.potency
 							centcom_message += "<font color=green>+[S.rarity]</font>: New species discovered: \"[capitalize(S.species)]\".  Excellent work.<BR>"
 							points += S.rarity // That's right, no bonus for potency.  Send a crappy sample first to "show improvement" later
+
 			qdel(MA)
 
 		if(plasma_count)
@@ -324,6 +346,10 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 		if(crate_count)
 			centcom_message += "<font color=green>+[round(crate_count*points_per_crate)]</font>: Received [crate_count] crate(s).<BR>"
 			points += crate_count * points_per_crate
+		
+		if(item_count)
+			centcom_message += "<font color=green+[round(item_count+points_per_item)]</font>: Received [item_count] of Coin(s).<BR>"
+			points += round(item_count+points_per_item)
 
 	//Buyin
 	proc/buy()
