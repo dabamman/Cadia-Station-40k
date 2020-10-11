@@ -49,7 +49,7 @@ Bartender
 		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
-
+	H << "\blue Keep the crew happy by providing fine imperial liquor to their needy souls." // Job Explanation
 /*
 Chef
 */
@@ -76,7 +76,7 @@ Chef
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/chef(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/chefhat(H), slot_head)
-
+	H << "\blue Make food for the crew. Experiment with different recipes." // Job Explanation
 /*
 Botanist
 */
@@ -104,7 +104,7 @@ Botanist
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/botanic_leather(H), slot_gloves)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/apron(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/device/analyzer/plant_analyzer(H), slot_s_store)
-
+	H << "\blue Ensure that natural resources are present on station, keep food growing, and export exotic plants through the Munitorum." // Job Explanation
 /*
 Quartermaster
 */
@@ -132,7 +132,7 @@ Quartermaster
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/fingerless(H), slot_gloves)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/weapon/clipboard(H), slot_l_hand)
-
+	H << "\blue Approve or deny order requests, and wrangle your adepts, keep valuables flowing out and keep requried materials flowing in. If you need a shot of points ask the Seneschal." // Job Explanation
 /*
 Cargo Technician
 */
@@ -158,7 +158,7 @@ Cargo Technician
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/cargotech(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/fingerless(H), slot_gloves)
-
+	H << "\blue The moving of goods from the station off station while keeping the station supplied with necessities. Take care of the goods and ensure on time delievery. Explore the maintenance tunnels for forgotten gear so that it may be use to turn a profit." // Job Explanation
 /*
 Shaft Miner
 */
@@ -187,7 +187,7 @@ Shaft Miner
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/miner(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/fingerless(H), slot_gloves)
-
+	H << "\blue Hired by the Rogue Trader to use the mining vessels to mine out valuable ores and return them for a profit. Take care though, in the mines lay a hidden enemy long forgotten." // Job Explanation
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/crowbar(H), slot_l_hand)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/bag/ore(H), slot_l_store)
@@ -208,7 +208,7 @@ Celebrity
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Rock and Roll"
+	supervisors = "Your Free spirit and the Rogue Trader"
 	selection_color = "#dddddd"
 
 	access = list(access_theatre, access_maint_tunnels)
@@ -231,7 +231,7 @@ Celebrity
 	H.rename_self("clown")
 	if(prob(25))
 		H.verbs += /mob/living/carbon/human/proc/celebfall //I was changing them back and forth RAPIDLY //This is how we get the verb!
-
+	H << "\blue You were hired by the Rogue Trader to entertain the crew, the is a theatre and various costumes which you can utilise to achieve this goal and recieve compensation, or you could follow the quest." // Job Explanation
 /*
 Mime
 */
@@ -277,7 +277,7 @@ Mime
 			H.mind.spell_list += new /obj/effect/proc_holder/spell/targeted/mime/concentrate(null)
 
 	H.rename_self("mime")
-
+	H << "\blue Do the quest or just fuck with people. Have fun." // Job Explannation
 /*
 Janitor
 */
@@ -302,7 +302,7 @@ Janitor
 	H.verbs += /mob/living/carbon/human/proc/renderaid									 //This is how we get the verb!
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/janitor(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
-
+	H << "\blue Clean the station, and report signs of heresy, you very loyal imperial citizen. Note a servitor could easily take your job." // Job Explanation
 /*
 Librarian
 */
@@ -359,6 +359,7 @@ Inquisitorial Acolyte
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/acolyte(H), slot_belt)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/acolytegloves(H), slot_gloves)
 	H.faction = "Inquisitor"
+	H <<  "\blue You have been chosen by an Inquisitor to be their very eyes, your main goal is to look out for heresy and report it back to them, if you can handle it yourself do so, but always keep your Inquisitor informed on what is happening. Do this using your vox communicator located in the Liar. Refrain from raining ordance down via the stationed blackship. Keep in mind that you do not wield the power of the inquisitor and you have a target on your back. Your power comes from your connections not your rank. Detaining heretics and arresting them is on par with you, but ordering executions is left to the Rogue Trader and Inquisition."
 
 	if (prob(50))
 		var/obj/item/weapon/implant/loyalty/E = new/obj/item/weapon/implant/loyalty(H)
@@ -427,7 +428,7 @@ Inquisitorial Acolyte
 	H.equip_to_slot_or_del(new /obj/item/weapon/card/id/syndicate(H), slot_wear_id)
 	H.equip_to_slot_or_del(new /obj/item/device/pda(H), slot_belt)
 
-	H << "\blue To forge your ID, pull out the card and click on it, you can then insert it into your PDA to update its info." // Tells people how to use the Agent Card
+	H << "\blue To forge your ID, pull out the card and click on it, you can then insert it into your PDA to update its info. You are an Eldar, a xenos to the Imperium of Mankind. Your local Seer Council has tasked you with maintaining an eye on the newly established mining outpost, they know not of the other dangers that lurk here. Don't get found out. You can either choose to protect them from these dangers or outright slaughter with just cause those that are seeking to exploit the world. You must have a justified reason to kill anyone. You can also simply choose to observe and report in." // Job Explanation
 
 datum/job/assistant/get_access()
 	if(config.jobs_have_maint_access & ASSISTANTS_HAVE_MAINT_ACCESS) //Config has assistant maint access set
