@@ -1,5 +1,5 @@
  //very big WIP testing ideas with these boys - it seems to be much easier to get them functioning as humans rather than silicon as that entails a whole lot of craziness. Really need to make them unable to wear anything but give them base armor/biotic weps
-/mob/living/carbon/human/skitarii_ranger
+/mob/living/carbon/human/skitarii_hypaspist
 	name = "Unknown"
 	real_name = "Unknown"
 	universal_speak = 1
@@ -10,14 +10,12 @@
 	factions = list("imperium")//new
 	var/isempty = 0
 
-/mob/living/carbon/human/skitarii_ranger/New()
+/mob/living/carbon/human/skitarii_hypaspist/New()
 	..()
 	spawn(5)
 		if(!src.ckey)
 			isempty = 1 //Then the larva can be possessed by any ghost.
 			request_player()
-	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_eng
-	R.set_frequency(1459)
 	equip_to_slot_or_del(new /obj/item/clothing/glasses/bioniceye, slot_glasses)
 	equip_to_slot_or_del(new /obj/item/clothing/gloves/skitarii, slot_gloves)
 	equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/security, slot_back)
@@ -37,21 +35,21 @@
 				access_construction, access_atmospherics, access_tcomsat, access_robotics, access_tox, access_tox_storage, access_research,
 				access_xenobiology, access_mineral_storeroom)
 
-	W.assignment = "Skitarii Tech-Guard"
+	W.assignment = "Skitarii Hypaspist"
 	W.registered_name = real_name
 	W.update_label()
 	equip_to_slot_or_del(W, slot_wear_id)
 	sleep (10)
 	regenerate_icons()
 
-/mob/living/carbon/human/skitarii_ranger/Life()
+/mob/living/carbon/human/skitarii_hypaspist/Life()
 	..()
 	if(iscarbon(src))
-		icon = 'icons/mob/skitarii.dmi'
-		icon_state = "skitarii-ranger"
+		icon = 'icons/mob/human.dmi'
+		icon_state = "skitarii-hypaspist_s"
 
 //Procs for grabbing players.
-/mob/living/carbon/human/skitarii_ranger/proc/request_player()
+/mob/living/carbon/human/skitarii_hypaspist/proc/request_player()
 	for(var/mob/dead/observer/O in player_list)
 		if(jobban_isbanned(O, "Syndicate"))
 			continue
@@ -59,10 +57,10 @@
 			if(O.client.prefs.be_special & BE_ALIEN)
 				question(O.client)
 
-/mob/living/carbon/human/skitarii_ranger/proc/question(var/client/C)
+/mob/living/carbon/human/skitarii_hypaspist/proc/question(var/client/C)
 	spawn(0)
 		if(!C)	return
-		var/response = alert(C, "An agent of the Adpetus Mechanicus needs a player. Are you interested?", "Skitarii Ranger", "Yes", "No", "Never for this round")
+		var/response = alert(C, "An agent of the Adpetus Mechanicus needs a player. Are you interested?", "Skitarii Hypaspist", "Yes", "No", "Never for this round")
 		if(!C || ckey)
 			return
 		if(response == "Yes")
@@ -70,7 +68,7 @@
 		else if (response == "Never for this round")
 			C.prefs.be_special ^= BE_ALIEN
 
-/mob/living/carbon/human/skitarii_ranger/proc/transfer_personality(var/client/candidate)
+/mob/living/carbon/human/skitarii_hypaspist/proc/transfer_personality(var/client/candidate)
 
 	if(!candidate)
 		return

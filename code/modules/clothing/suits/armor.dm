@@ -635,7 +635,7 @@ Lord Inquisitor Armor
 
 /obj/item/clothing/suit/armor/inq
 	name = "Inquisitor Suit"
-	desc = "A stylish way to scare the shit out of people."
+	desc = "A black coat with armored plates stiched inline."
 	icon_state = "inq"
 	icon_state = "inq"
 	blood_overlay_type = "armor"
@@ -643,7 +643,7 @@ Lord Inquisitor Armor
 	body_parts_covered = CHEST|ARMS|GROIN
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
-	armor = list(melee = 55, bullet = 35, laser = 55, energy = 15, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 55, bullet = 60, laser = 55, energy = 60, bomb = 55, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/inq/alt
 	icon_state = "inqalt"

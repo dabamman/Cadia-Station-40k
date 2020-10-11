@@ -34,7 +34,7 @@ Captain
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/caphat(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/lordcommander(H), slot_gloves)
-
+	H <<  "\blue You're the the owner of this station your word and place is over everyone due to your writ of trade. Your goal is make a proft through mining on this station. The guard at hand are owned by you, the commissiar and sergeant will enforce your word to them. On planet are several xenos artficats that would catch quite the pretty penny. Use your voxcaster to communicate with other local vessels. It may save your outpost." // Job Explanation
 	//Equip ID box & telebaton
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H), slot_l_hand)
@@ -135,6 +135,7 @@ Head of Personnel
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/head_of_personnel(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/hopboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/hopcap(H), slot_head)
+	H << "\blue You're the right hand The Rogue Trader uses, you have deep ties to the local segmentum and are well versed in using clerical paperwork to breeze through the administratum. You're equipped with several valuable coins which in the time of need will help supply the vessel with equipment. Your job is to oversee each section and ensure they're working on task.Enforce the agreement each section has to the running of this station. If it isn't up to snuff then use your connections to keep them in line. They can easily lose pay and resources at your command or the the Trader's." // Job Explanation
 
 	//Equip ID box & telebaton
 	if(H.backbag == 1)

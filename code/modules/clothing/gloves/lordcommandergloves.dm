@@ -86,7 +86,7 @@
 			award(usr, "Send me everyone. EV-RY-ONE!!!!")
 			for(var/mob/dead/G in world)
 				G << "\red \b Distress Signal Sent. Krieg Officers now available to deploy."
-//making some skitarii ranger gloves for biotic guns - wel
+//making some skitarii gloves for biotic guns - wel
 /obj/item/clothing/gloves/skitarii
 	desc = "A set of augmetic limbs  with a lathe-crafted lasrifle integrated into the forearm."
 	name = "skitarii weapon implant"

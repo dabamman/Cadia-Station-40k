@@ -42,7 +42,7 @@ Chief Medical Officer
 	var/obj/item/weapon/implant/loyalty/E = new/obj/item/weapon/implant/loyalty(H)
 	E.imp_in = H
 	E.implanted = 1
-
+	H << "\blue You're the leader of all medical relations on obard this vessel, from the hidden viral threats to the clearly mass casualty events, it all falls on your shoulders. Instruct the trauma medicus under you and perserve the life the Emperor of mankind has blessed all of his followers with. You are a sister of battle and shouldn't shy away from combat." // Job Explanation
 	if(H.backbag != 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/paper/hospitalar(H), slot_in_backpack)
 	H.rename_self("first_female")
@@ -77,6 +77,7 @@ Medical Doctor
 	H.equip_to_slot_or_del(new /obj/item/weapon/paper/medicus(H), slot_s_store)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/night(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/medicus, slot_wear_mask)
+	H << "\blue You're a well trained medical savant, your main job is support the station forces by applying medical aid to whom ever needs it. Support the Sister Hospitaller by listening to what she tells you, and stay loyal to the Emperor." // Job Explanation
 
 	if(H.backbag != 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/paper/medicus(H), slot_in_backpack)
@@ -110,6 +111,7 @@ Chemist
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/bio_suit/medicus(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/medicus, slot_wear_mask)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/night(H), slot_glasses)
+	H << "\blue Start by making commonly used medicines and then take direction from the Hospitaller. Take requests from the Adeptus Mechanicus as well, if you have the time." //  Job Explanation
 
 	if(H.backbag != 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/paper/medicus(H), slot_in_backpack)
@@ -141,6 +143,7 @@ Geneticist
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/white(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/labcoat/genetics(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/pen(H), slot_s_store)
+	H << "\blue Experiment on living creatures in the name of the Quest for Knowledge. Provide minimual medical aid if the staff are swamped with dying citizens. Create benefical mutations and call it evolution. Just don't get caught out as a heretic." // Job Explanation
 
 /*
 Virologist

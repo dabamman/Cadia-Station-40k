@@ -237,16 +237,18 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/dead/observer/verb/lookforskitarii()
 	set category = "Ghost"
-	set name = "Try to be a Skitarii Ranger"
-	set desc= "Look for a Skitarii Ranger to become (warning, this could overwrite all other RTD for the round.)"
-	var/response = alert(src, "Would like to search for an empty Skitarii Ranger to possess?", "Skitarii Ranger request", "Yes", "No")
+	set name = "Try to be a Skitarii Hypaspist"
+	set desc= "Look for a Skitarii Hypaspist to become (warning, this could overwrite all other RTD for the round.)"
+	var/response = alert(src, "Would like to search for an empty Skitarii Hypaspist to possess?", "Skitarii Hypaspist request", "Yes", "No")
 
 	if(response == "Yes")
-		for(var/mob/living/carbon/human/skitarii_ranger/M in world)
+		for(var/mob/living/carbon/human/skitarii_hypaspist/M in world)
 			if(M.isempty == 1)
 				if(M.health > 0)
-					src << "\blue Found one!"
-					src << "\red Your mind enters the body of a skilled Skitarii Ranger! You serve and are commanded by the Adeptus Mechanicus. Obey them and carry out their will."
+					src << "\green ++PRAISE TO THE MACHINE GOD, THE OMNISSIAH, AND THE MOTIVE FORCE++"
+					src << "\blue You are a Skitarii Hypaspist, a cybernetically-enhanced foot-soldier of the Adeptus Mechanicus and recently awakenened from your cryostasis. You may have been a naturally-born menial worker or perhaps grown in a vat by the Divisio Genetor, but you can't remember. You underwent a series of psychosurgeries, wiping away most of your human emotions and memories and replacing them with mental directives implanted into the neurocircuitry lacing your brain, ensuring your complete loyalty to the Cult Mechanicus."
+					src << "\red Follow the orders of members of the Cult Mechanicus without fail, in order of their rank and role."
+					src << "\green ++FROM THE WEAKNESS OF THE MIND, OMNISSIAH SAVE US++"
 					M.key = usr.key
 					M.isempty = 0
 					break
@@ -436,7 +438,7 @@ Update: What have we created? something awful -wel ard
 		return
 	if (mind && mind.current)
 		if (mind.current.stat != DEAD)
-			usr << "\blue Yeah like I didn't think of that. Your body is still alive dumbass."
+			usr << "\blue Your body is still alive. You'll need to actually die to use the RTD system."
 			return
 		else
 			usr <<	"\blue You have a body but it is dead. Proceeding."
@@ -688,7 +690,7 @@ Update: What have we created? something awful -wel ard
 			message_admins("[usr.key] executed RTD faction: RavenGuard Leader.", 0)
 			usr << "\blue You are a Raven Guard!"
 			usr.loc = get_turf(locate("landmark*rgstart"))
-			var/mob/living/carbon/human/whitelisted/ravenguardhead/new_character = new(usr.loc)
+			var/mob/living/carbon/human/whitelisted/rg/leader/new_character = new(usr.loc)
 			new_character.key = usr.key
 			qdel(src)
 
@@ -720,7 +722,7 @@ Update: What have we created? something awful -wel ard
 			message_admins("[usr.key] executed RTD faction: Plague Marine Leader.", 0)
 			usr << "\blue You are a Plague Marine of Nurgle!"
 			usr.loc = get_turf(locate("landmark*pmteam"))
-			var/mob/living/carbon/human/whitelisted/pmleader/new_character = new(usr.loc)
+			var/mob/living/carbon/human/whitelisted/pm/leader/new_character = new(usr.loc)
 			new /obj/warpin(usr.loc)
 			new_character.key = usr.key
 			qdel(src)
