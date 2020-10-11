@@ -30,7 +30,7 @@
 
 God Emperor		= +EVERYTHING
 
-Inquisitor		= +Everything
+Custodian		= +Everything
 Adeptus Mechanicus 	= +Everything
 Admin			= +ADMIN +BAN +REJUV +VAREDIT +SPAWN +SERVER +FUN +SOUND
 Junior Admin            = +ADMIN +BAN +VAREDIT
