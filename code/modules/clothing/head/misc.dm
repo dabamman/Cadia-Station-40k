@@ -274,16 +274,16 @@ Eldar Hat
 /obj/item/clothing/head/tau/watercaste
 	name = "Tau merchant hat"
 	desc = "It's a very nice hat."
-	icon_state = "por"
-	item_state = "por"
+	icon_state = "Tau_M"
+	item_state = "Tau_M"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/head/tau/watercasteold
 	name = "Tau hat"
 	desc = "It's a hat."
-	icon_state = "poro"
-	item_state = "poro"
+	icon_state = "Tau_T"
+	item_state = "Tau_T"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 

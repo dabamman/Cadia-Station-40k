@@ -485,9 +485,9 @@
 /obj/item/clothing/under/tau/watercaste
 	desc = "Nice fine clothes fitting for a diplomat"
 	name = "Tau merchant clothes"
-	icon_state = "por"
-	item_state = "por"
-	item_color = "por"
+	icon_state = "taut_s"
+	item_state = "taut_s"
+	item_color = "taut_s"
 	gender = PLURAL
 	body_parts_covered = GROIN|LEGS
 	fitted = 0
@@ -496,9 +496,9 @@
 /obj/item/clothing/under/tau/watercasteold
 	desc = "Clothes of the humble"
 	name = "Tau old robes"
-	icon_state = "poro"
-	item_state = "poro"
-	item_color = "poro"
+	icon_state = "taum_s"
+	item_state = "taum_s"
+	item_color = "taum_s"
 	gender = PLURAL
 	body_parts_covered = GROIN|LEGS
 	fitted = 0

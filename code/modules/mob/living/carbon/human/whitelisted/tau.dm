@@ -8,7 +8,7 @@
 /mob/living/carbon/human/tau/leader/New()
 	..()
 	sleep (10)
-	if (usr.key == "thexdkidoflol")
+	if (usr.key == "")
 		name = "Shas Ui Viorla Ripyka"
 		real_name = "Shas'El Shi"
 	equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
