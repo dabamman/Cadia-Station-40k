@@ -176,9 +176,7 @@
 
 /obj/item/weapon/grenade/krak/prime()
 	update_mob()
-	explosion(src.loc,2,2,2,flame_range = 2)
-	spawn(1) explosion(src.loc,1,1,1,flame_range = 0) //Heavy hitter in the epicenter of the blast.
-	spawn(2) explosion(src.loc,1,1,1,flame_range = 0)
+	explosion(src.loc,1.5,1.5,1.5,flame_range = 1.5)
 	qdel(src)
 
 /obj/item/weapon/grenade/krak/suicide_act(var/mob/user)

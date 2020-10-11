@@ -18,24 +18,20 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 	if(istype(user,/mob/living/carbon/alien/humanoid/tyranid))
 		var/mob/living/carbon/alien/humanoid/tyranid/T = user
 		var/choice
-		if (istype(user,/mob/living/carbon/alien/humanoid/tyranid/genestealerantag))
-			choice = alert(T, "Enter an option.","Produce Ripper (80)",)
+		if (istype(user,/mob/living/carbon/alien/humanoid/tyranid/genestealer/antag))
+//			choice = input("Choose:","Biomass Pool") as null|anything in list("Produce Ripper (80)") //Commented out but left here if genestealer antags are meant to be able to make ripper swarms. Also useful if we add more options to the pool so the genestealer list can be added without fuss
+			user << "You have no need to change your form or create other Tyranids to spread your cult."
 		else
-			choice = alert(T, "Enter an option.","Produce Ripper (80)", "Evolve", "Cont.")
+			choice = input("Choose:","Biomass Pool") as null|anything in list("Evolve", "Produce Larva (1000)", "Produce Parasite (500)", "Produce Ripper (80)")
 		switch(choice)
-			if("Cont.")
-				var/choice2 = alert(T, "Enter an option.",,"Produce Larva (1000)", "Produce Parasite (500)", "Cancel")
-				switch(choice2)
-					if("Produce Parasite (500)")
-						if(T.powerc(500))
-							T.adjustToxLoss(-500)
-							new /mob/living/simple_animal/hostile/alien/parasite(src.loc)
-					if("Produce Larva (1000)")
-						if(T.powerc(1000))
-							T.adjustToxLoss(-1000)
-							new /mob/living/carbon/alien/larva/tyranid(src.loc)
-					if("Cancel")
-						return
+			if("Produce Parasite (500)")
+				if(T.powerc(500))
+					T.adjustToxLoss(-500)
+					new /mob/living/simple_animal/hostile/alien/parasite(src.loc)
+			if("Produce Larva (1000)")
+				if(T.powerc(1000))
+					T.adjustToxLoss(-1000)
+					new /mob/living/carbon/alien/larva/tyranid(src.loc)
 			if("Produce Ripper (80)")
 				if(istype(T, /mob/living/carbon/alien/humanoid/tyranid/hormagaunt))
 					T << "\red You can't make rippers in this evolution."
@@ -98,6 +94,7 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 							if(T.mind)	T.mind.transfer_to(new_xeno)
 							new_xeno.adjustToxLoss(T.getPlasma()) //Any biomass on top of what you spend evolving you keep.
 							qdel(T)
+
 
 /obj/structure/alien/resin/wall/tyranid //Better looking resin walls and membranes.
 	name = "wall"
@@ -218,10 +215,11 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 	desc = "Some sort of strange hovering organism. This one leaks traces of gas and smells foul."
 
 /obj/structure/alien/resin/spore/poison/New()
-	create_reagents(900)
-	reagents.add_reagent("venomthropes",300) //Equivalent to an evolved venomthrope's toxic gas. Playtesting found that you'll die if you hang about but it's easy to run away.
-	reagents.add_reagent("toxin",300)
-	reagents.add_reagent("chloromethane",300)
+	create_reagents(1000)
+	reagents.add_reagent("lesservenomthropes",250) //Non-melting version of venomthrope poison..
+	reagents.add_reagent("toxin",250) //This and chloromethane are in a venomthrope's gas.
+	reagents.add_reagent("chloromethane",250)
+	reagents.add_reagent("tyranid",250) //Hormagaunt venomous bite.
 
 /obj/structure/alien/resin/spore/frag
 	desc = "Some sort of strange hovering organism. This one has has a metallic shell."
@@ -277,10 +275,14 @@ var/tyranids = list() //You probably want to put this somewhere else I am just s
 		spawn(0)
 			if(S)
 				S.set_up(src.reagents, 10, 0, location)
+				S.start() //Should be balanced to keep an area filled for a few seconds but not break the game with lag.
+				sleep(30)
 				S.start()
-				sleep(4)
+				sleep(30)
 				S.start()
-		spawn (10) //Momentary delay to set up chemsmoke.
+				sleep(30)
+				S.start()
+		spawn (92) //Sticks around making chemsmoke for a while.
 			qdel(src)
 		return
 	else if (istype(src, /obj/structure/alien/resin/spore/frag))

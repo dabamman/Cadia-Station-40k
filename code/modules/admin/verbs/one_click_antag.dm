@@ -569,7 +569,7 @@ Shenanigan Spawner
 			return 0
 		else
 			for(var/mob/c in chosen)
-				var/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/new_character=makegsBody(c)
+				var/mob/living/carbon/alien/humanoid/tyranid/genestealer/antag/new_character=makegsBody(c)
 				new_character.mind.make_GS()
 
 	return 1
@@ -578,7 +578,7 @@ Shenanigan Spawner
 	if(!G_found || !G_found.key)	return
 
 	//First we spawn a dude.
-	var/mob/living/carbon/alien/humanoid/tyranid/genestealerantag/new_character = new(pick(latejoin))//The mob being spawned.
+	var/mob/living/carbon/alien/humanoid/tyranid/genestealer/antag/new_character = new(pick(latejoin))//The mob being spawned.
 
 	ready_dna(new_character)
 	new_character.key = G_found.key
