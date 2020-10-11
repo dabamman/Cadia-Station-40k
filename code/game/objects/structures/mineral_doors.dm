@@ -267,6 +267,10 @@
 /obj/structure/mineral_door/resin/TryToSwitchState(atom/user)
 	if(isalien(user))
 		return ..()
+	else if (ishuman(user))
+		var/mob/living/carbon/human/T = user
+		if (T.mind && T.mind.special_role == "Genestealer Cult Member")
+			return ..()
 
 /obj/structure/mineral_door/resin/Dismantle(devastated = 0)
 	qdel(src)

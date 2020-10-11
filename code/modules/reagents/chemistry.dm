@@ -2145,7 +2145,7 @@ datum/reagent/toxin/plague
 
 datum/reagent/toxin/plague/on_mob_life(var/mob/living/carbon/M as mob)
 	if(!M) M = holder.my_atom
-	if(istype(M, /mob/living/carbon/human/whitelisted/pmleader) || istype(M, /mob/living/carbon/human/whitelisted/pm)) return
+	if(istype(M, /mob/living/carbon/human/whitelisted/pm)) return
 	for(var/datum/disease/plague/D in M.viruses) //Don't do anything if they are already infected.
 		src.effect = D.effect //But mimic their effect, because maybe this is the infected person emitting the stuff.
 		..()

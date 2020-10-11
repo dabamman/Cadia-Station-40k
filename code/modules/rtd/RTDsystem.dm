@@ -570,13 +570,13 @@ Eldar
 Raven Guard
 */
 
-/mob/living/carbon/human/whitelisted/ravenguardhead/verb/edit_faction()
+/mob/living/carbon/human/whitelisted/rg/leader/verb/edit_faction()
 	set category = "OOC"
 	set name = "Faction Panel"
 	set desc = "Edit Faction Membership"
 	edit_faction_membership()
 
-/mob/living/carbon/human/whitelisted/ravenguardhead/proc/edit_faction_membership()
+/mob/living/carbon/human/whitelisted/rg/leader/proc/edit_faction_membership()
 	var/editchoice
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")
 	switch(editchoice)
@@ -605,7 +605,7 @@ Raven Guard
 		else
 			return
 
-/mob/living/carbon/human/whitelisted/ravenguardhead/proc/ravenguardDisplay()
+/mob/living/carbon/human/whitelisted/rg/leader/proc/ravenguardDisplay()
 	var/name = "Current RavenGuard"
 
 	var/msg = "<b>Current Members: (MAKE SURE THESE CKEYS ARE EXACT!):</b>\n"
@@ -945,13 +945,13 @@ Orks
 Plague Marines
 */
 
-/mob/living/carbon/human/whitelisted/pmleader/verb/edit_faction()
+/mob/living/carbon/human/whitelisted/pm/leader/verb/edit_faction()
 	set category = "OOC"
 	set name = "Faction Panel"
 	set desc = "Edit Faction Membership"
 	edit_faction_membership()
 
-/mob/living/carbon/human/whitelisted/pmleader/proc/edit_faction_membership()			//my editor template
+/mob/living/carbon/human/whitelisted/pm/leader/proc/edit_faction_membership()			//my editor template
 	var/editchoice																		//start the var
 	editchoice = input("Select an action:","Faction Management") as null|anything in list("Add a Member","Remove a Member", "List members", "Cancel")	//surprise! var is input
 	switch(editchoice)
@@ -980,7 +980,7 @@ Plague Marines
 		else
 			return
 
-/mob/living/carbon/human/whitelisted/pmleader/proc/pmlistDisplay()
+/mob/living/carbon/human/whitelisted/pm/leader/proc/pmlistDisplay()
 	var/name = "Current Plague Marines"
 
 	var/msg = "<b>Current Members: (MAKE SURE THESE CKEYS ARE EXACT!):</b>\n"

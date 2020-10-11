@@ -160,18 +160,38 @@
 		new /obj/effect/resinspikes(loc)
 	return
 
-/mob/living/carbon/alien/humanoid/tyranid/proc/mine()
+/mob/living/carbon/alien/humanoid/tyranid/proc/mine() //Consider adding a weak/mini mine? Costs 300 but has only a quarter of the effect.
 	set name = "Spore Mine (1000)"
 	set desc = "Produce an explosive spore mine."
 	set category = "Alien"
 
 	if(powerc(1000))
+		var/choice = input("Choose this spore mine's form.","Spore mine building") as null|anything in list("Poison Spore Mine","Frag Spore Mine","Bio-Acid Spore Mine", "Explosive Spore Mine")
+		if (!choice) return
+		src << "\red We begin creating a spore mine. We must stay still to do this."
+		//stay still for 3 seconds. Short but this is only to stop the tyranid putting the mine down as they run around in an enemy group.
+		if(!do_after(src, 30))
+			src <<"\ We must stay still to create the spore mine. A small amount of biomass was lost."
+			adjustToxLoss(-rand(10, 60))
+			return
 		adjustToxLoss(-1000)
-		src << "<span class='userdanger'>You produce a spore mine.</span>"
 		for(var/mob/O in viewers(src, null))
 			O.show_message(text("<span class='userdanger'>[src] produces a spore mine!</span>"), 1)
-		new /obj/structure/alien/resin/spore(loc)
+		switch(choice)
+			if("Poison Spore Mine")
+				src << "<span class='userdanger'>We produce a poisonous spore mine.</span>"
+				new /obj/structure/alien/resin/spore/poison(loc, choice)
+			if("Frag Spore Mine")
+				src << "<span class='userdanger'>We produce a frag spore mine.</span>"
+				new /obj/structure/alien/resin/spore/frag(loc, choice)
+			if("Bio-Acid Spore Mine")
+				src << "<span class='userdanger'>We produce an acidic spore mine.</span>"
+				new /obj/structure/alien/resin/spore/acid(loc, choice)
+			if("Explosive Spore Mine")
+				src << "<span class='userdanger'>We produce an explosive spore mine.</span>"
+				new /obj/structure/alien/resin/spore(loc, choice) //Explosive by default.
 	return
+
 
 /mob/living/carbon/alien/humanoid/tyranid/verb/plant2()
 	set name = "Spread the nest (5)"
