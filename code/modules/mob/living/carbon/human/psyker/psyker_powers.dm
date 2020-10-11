@@ -14,9 +14,11 @@
 
 /mob/living/carbon/human/Life()
 	..()
+	updatesoulstatus()
 	if(Stress > 0)
 		Stress = min(Stress-Stress_rate, maxStress)
 
+/mob/living/carbon/human/proc/updatesoulstatus()
 	if(maxStress > 0)
 		if(SoulStatus == "Stable")
 			adjustFireLoss(0)
@@ -41,53 +43,53 @@
 				Stress_rate = 5
 
 	if(istype(src, /mob/living/carbon/human/whitelisted/eldar))
-		if(Stress < 80)
+		if(Stress < 80 && SoulStatus != "Stable")
 			SoulStatus = "Stable"
 			src << "\green Your soul becomes stable again."
 
-		if(Stress >= 80 && Stress < 120)
+		if(Stress >= 80 && Stress < 120 && SoulStatus != "Unstable")
 			SoulStatus = "Unstable"
 			src << "\blue Your soul begins to become unstable."
 
-		if(Stress >= 120 && Stress < 160)
+		if(Stress >= 120 && Stress < 160 && SoulStatus != "Highly Unstable")
 			SoulStatus = "Highly Unstable"
 			src << "\red Your soul is dangerously unstable."
 
-		if(Stress == 160)
+		if(Stress == 160 && SoulStatus != "Critical State")
 			SoulStatus = "Critical State"
 			src << "\red Your soul is in critical state!!"
 
 	else if(istype(src, /mob/living/carbon/human/whitelisted))
-		if(Stress < 60)
+		if(Stress < 60 && SoulStatus != "Stable")
 			SoulStatus = "Stable"
 			src << "\green Your soul becomes stable again."
 
-		if(Stress >= 60 && Stress < 100)
+		if(Stress >= 60 && Stress < 100 && SoulStatus != "Unstable")
 			SoulStatus = "Unstable"
 			src << "\blue Your soul begins to become unstable."
 
-		if(Stress >= 100 && Stress < 120)
+		if(Stress >= 100 && Stress < 120 && SoulStatus != "Highly Unstable")
 			SoulStatus = "Highly Unstable"
 			src << "\red Your soul is dangerously unstable."
 
-		if(Stress == 120)
+		if(Stress == 120 && SoulStatus != "Critical State")
 			SoulStatus = "Critical State"
 			src << "\red Your soul is in critical state!!"
 
 	else
-		if(Stress < 40)
+		if(Stress < 40 && SoulStatus != "Stable")
 			SoulStatus = "Stable"
 			src << "\green Your soul becomes stable again."
 
-		if(Stress >= 40 && Stress < 80)
+		if(Stress >= 40 && Stress < 80 && SoulStatus != "Unstable")
 			SoulStatus = "Unstable"
 			src << "\blue Your soul begins to become unstable."
 
-		if(Stress >= 80 && Stress < 100)
+		if(Stress >= 80 && Stress < 100 && SoulStatus != "Highly Unstable")
 			SoulStatus = "Highly Unstable"
 			src << "\red Your soul is dangerously unstable."
 
-		if(Stress == 100)
+		if(Stress == 100 && SoulStatus != "Critical State")
 			SoulStatus = "Critical State"
 			src << "\red Your soul is in critical state!!"
 
