@@ -3,7 +3,7 @@
 Plague Marines
 */
 
-/mob/living/carbon/human/whitelisted/pmleader
+/mob/living/carbon/human/whitelisted/pm/leader
 	name = "Kornus the Maledictor"
 	real_name = "Kornus the Maledictor"
 	universal_speak = 1
@@ -12,7 +12,7 @@ Plague Marines
 	health = 250
 	status_flags = 0
 
-/mob/living/carbon/human/whitelisted/pmleader/New()
+/mob/living/carbon/human/whitelisted/pm/leader/New()
 	..()
 
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
@@ -41,7 +41,7 @@ Plague Marines
 	regenerate_icons()
 	rename_self("[name]")
 
-/mob/living/carbon/human/whitelisted/pmleader/Life()
+/mob/living/carbon/human/whitelisted/pm/leader/Life()
 	..()
 	if(prob(1))
 		var/chat = pick('sound/voice/plaguemarines.ogg','sound/voice/plaguemarines2.ogg', 'sound/voice/plaguemarines3.ogg')

@@ -2,7 +2,7 @@
 RavenGuard
 */
 
-/mob/living/carbon/human/whitelisted/ravenguardhead
+/mob/living/carbon/human/whitelisted/rg/leader
 	name = "Shadow Captain Tylus Karvyn"
 	real_name = "Shadow Captain Tylus Karvyn"
 	universal_speak = 1
@@ -10,7 +10,7 @@ RavenGuard
 	status_flags = 0
 	factions = list("imperium")//new
 
-/mob/living/carbon/human/whitelisted/ravenguardhead/New()
+/mob/living/carbon/human/whitelisted/rg/leader/New()
 	..()
 	var/obj/item/device/radio/headset/R = new /obj/item/device/radio/headset/headset_cent
 	R.set_frequency(1441)
@@ -39,7 +39,7 @@ RavenGuard
 	sleep(20)
 	regenerate_icons()
 
-/mob/living/carbon/human/whitelisted/ravenguardhead/Life()
+/mob/living/carbon/human/whitelisted/rg/leader/Life()
 	..()
 	if(iscarbon(src))
 		var/mob/living/carbon/C = src
@@ -168,7 +168,7 @@ RavenGuard
 				equip_to_slot_or_del(new /obj/item/ammo_box/magazine/boltermag, slot_l_store)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/bolter/ravenbolter, slot_s_store)
 				maxHealth = 240 //trait: nerd -10 hp
-				maxPsy += 1000
+				maxStress += 120
 				verbs += /mob/living/carbon/human/proc/psymode
 				verbs += /mob/living/carbon/human/proc/quickening
 				verbs += /mob/living/carbon/human/proc/telepath

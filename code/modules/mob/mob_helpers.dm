@@ -20,6 +20,36 @@
 		return 1
 	return 0
 
+/proc/iseldar(A)
+	if(istype(A, /mob/living/carbon/human/whitelisted/eldar))
+		return 1
+	return 0
+
+/proc/isastartes(A)
+	if(istype(A, /mob/living/carbon/human/whitelisted) && !iseldar(A))
+		return 1
+	return 0
+
+/proc/istraitorastartes(A)
+	if(istype(A, /mob/living/carbon/human/whitelisted/noisemarines) || istype(A, /mob/living/carbon/human/whitelisted/ksons) || istype(A, /mob/living/carbon/human/whitelisted/pm))
+		return 1
+	return 0
+
+/proc/isloyalastartes(A)
+	if(istype(A, /mob/living/carbon/human/whitelisted/um) || istype(A, /mob/living/carbon/human/whitelisted/rg) || istype(A, /mob/living/carbon/human/whitelisted/sm))
+		return 1
+	return 0
+
+/proc/issob(A)
+	if(istype(A, /mob/living/carbon/human/sob))
+		return 1
+	return 0
+
+/proc/isnormalhuman(A)
+	if(ishuman(A) && !isork(A) && !iseldar(A) && !istau(A) && !isastartes(A) && !issob(A))
+		return 1
+	return 0
+
 /proc/ismonkey(A)
 	if(A && istype(A, /mob/living/carbon/monkey))
 		return 1
@@ -37,6 +67,11 @@
 
 /proc/isalienadult(A)
 	if(istype(A, /mob/living/carbon/alien/humanoid))
+		return 1
+	return 0
+
+/proc/istyranid(A)
+	if(istype(A, /mob/living/carbon/alien/humanoid/tyranid) || istype(A, /mob/living/carbon/alien/larva/tyranid) || istype(A, /mob/living/simple_animal/hostile/alien/ripper))
 		return 1
 	return 0
 
