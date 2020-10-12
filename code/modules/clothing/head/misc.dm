@@ -287,3 +287,8 @@ Eldar Hat
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
+/obj/item/clothing/head/inquisitorshat
+	name = "inquisitor's hat"
+	desc = "An iconic wide-brimmed hat usually found on the heads of Inquisitors."
+	icon_state = "inqhat3"
+	item_state = "inqhat3"

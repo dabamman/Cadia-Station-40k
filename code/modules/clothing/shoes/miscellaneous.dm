@@ -234,3 +234,15 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
+
+/obj/item/clothing/shoes/inquisitorboots
+	name = "inquisitor's boots"
+	desc = "A well-made pair of boots lined with a tough layer of flak-weave and plated with blessed silver. The soles seem to be designed for extra grip."
+	icon_state = "inqshoes"
+	item_state = "inqshoes"
+	armor = list(melee = 30, bullet = 30, laser = 20,energy = 20, bomb = 25, bio = 0, rad = 0)
+	cold_protection = FEET
+	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+	heat_protection = FEET
+	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
+	flags = NOSLIP
