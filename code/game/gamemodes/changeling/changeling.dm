@@ -5,8 +5,8 @@ var/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","Epsilon"
 
 
 /datum/game_mode/changeling
-	name = "changeling"
-	config_tag = "changeling"
+	name = "Callidus Assassin"
+	config_tag = "callidus"
 	antag_flag = BE_CHANGELING
 	restricted_jobs = list("AI", "Servitor")
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain")

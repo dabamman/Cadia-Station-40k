@@ -5,9 +5,9 @@
 # Ranks can be anything defined in admin_ranks.txt           ~Carn   #
 ######################################################################
 Bobrossnibba = God Emperor
-PresidentPutin = Inquisitor
-Conzie = Inquisitor
-Cre8me = Inquisitor
+PresidentPutin = Custodian
+Conzie = Custodian
+Cre8me = Custodian
 stevemaybe = Adeptus Mechanicus
 Captainmojo47 = Inquisitor
 mocatheporg1 = Admin
@@ -15,5 +15,4 @@ Alanii = Admin
 apple5382 = Admin
 TheDarkKnight224 = Admin
 Sancronis = Coder
-Glarbog = Admin
 Dantzy = Admin

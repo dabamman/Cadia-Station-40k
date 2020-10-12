@@ -59,9 +59,9 @@
 /proc/toggle_ooc()
 	ooc_allowed = !( ooc_allowed )
 	if (ooc_allowed)
-		world << "<B>The OOC channel has been globally enabled!</B>"
+		world << "<B>Connections in the warp have opened back up!</B>"
 	else
-		world << "<B>The OOC channel has been globally disabled!</B>"
+		world << "<B>The warp has closed itself off from moral ears!</B>"
 
 /proc/auto_toggle_ooc(var/on)
 	if(!config.ooc_during_round && ooc_allowed != on)

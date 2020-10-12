@@ -775,6 +775,7 @@ Droppod
 
 /area/centcom/ferry
 	name = "\improper Centcom Transport Shuttle"
+	ambientsounds = list('sound/ambience/chapel.ogg')
 
 /area/centcom/prison
 	name = "\improper Admin Prison"
@@ -1284,7 +1285,7 @@ Droppod
 /area/chapel/main
 	name = "\improper Chapel"
 	icon_state = "chapel"
-	ambientsounds = list('sound/ambience/ambicha4.ogg')
+	ambientsounds = list('sound/ambience/chapel.ogg')
 
 
 /area/chapel/office

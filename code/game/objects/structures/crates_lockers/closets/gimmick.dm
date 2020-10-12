@@ -159,6 +159,13 @@ obj/structure/closet/ork/piloguns
 	new /obj/item/weapon/grenade/stickbomb(src)
 	new /obj/item/weapon/grenade/stickbomb(src)
 	new /obj/item/weapon/grenade/stickbomb(src)
+	var/extragun
+	if (prob(10)) //10% chance for a normal weapon
+		extragun = pick(/obj/item/weapon/gun/projectile/automatic/lasgun, /obj/item/weapon/gun/projectile/automatic/autogun2, /obj/item/weapon/gun/projectile/shotgun)
+		new extragun(src)
+	else if (prob(2)) //1.8% chance for a rare weapon. No plasma, tau or missiles though.
+		extragun = pick(/obj/item/weapon/gun/projectile/automatic/bpistol , /obj/item/weapon/gun/projectile/automatic/tommygun , /obj/item/weapon/gun/projectile/handflamer)
+		new extragun(src)
 
 /obj/structure/closet/tau/supply
 	name = "Tau Supplies"

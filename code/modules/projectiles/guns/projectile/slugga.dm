@@ -59,7 +59,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/gun/projectile/automatic/bolter)||istype(I,/obj/item/weapon/gun/projectile/automatic/bpistol))
+	else if(istype(I, /obj/item/weapon/gun/projectile/automatic/bolter)||istype(I,/obj/item/weapon/gun/projectile/automatic/bpistol))
 		taped = 0
 		bolter++
 		state++
@@ -67,7 +67,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/gun/projectile/flamer)||istype(I,/obj/item/weapon/gun/projectile/handflamer)||istype(I,/obj/item/weapon/twohanded/required/hflamer)||istype(I,/obj/item/weapon/gun/projectile/sbolter))
+	else if(istype(I, /obj/item/weapon/gun/projectile/flamer)||istype(I,/obj/item/weapon/gun/projectile/handflamer)||istype(I,/obj/item/weapon/twohanded/required/hflamer)||istype(I,/obj/item/weapon/gun/projectile/sbolter))
 		taped = 0
 		flamer++
 		state++
@@ -75,7 +75,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/gun/projectile/autogun)||istype(I,/obj/item/weapon/gun/projectile/snazzgun)||istype(I,/obj/item/weapon/gun/projectile/shoota)||istype(I,/obj/item/weapon/gun/projectile/slugga))
+	else if(istype(I, /obj/item/weapon/gun/projectile/automatic/autogun2)||istype(I,/obj/item/weapon/gun/projectile/snazzgun)||istype(I,/obj/item/weapon/gun/projectile/shoota)||istype(I,/obj/item/weapon/gun/projectile/slugga))
 		taped = 0
 		auto++
 		state++
@@ -83,7 +83,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/twohanded/required/hbolter)||istype(I,/obj/item/weapon/gun/projectile/automatic/tommygun)||istype(I,/obj/item/weapon/gun/projectile/automatic/l6_saw)||istype(I,/obj/item/weapon/gun/projectile/automatic/BPAP))
+	else if(istype(I, /obj/item/weapon/twohanded/required/hbolter)||istype(I,/obj/item/weapon/gun/projectile/automatic/tommygun)||istype(I,/obj/item/weapon/gun/projectile/automatic/l6_saw)||istype(I,/obj/item/weapon/gun/projectile/automatic/BPAP))
 		taped = 0
 		hauto++
 		state++
@@ -91,7 +91,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/gun/projectile/BPMP)||istype(I,/obj/item/weapon/gun/projectile/automatic/hellgun)||istype(I,/obj/item/weapon/gun/projectile/meltagun))
+	else if(istype(I, /obj/item/weapon/gun/projectile/BPMP)||istype(I,/obj/item/weapon/gun/projectile/automatic/hellgun)||istype(I,/obj/item/weapon/gun/projectile/meltagun))
 		taped = 0
 		hell++
 		state++
@@ -99,7 +99,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/gun/projectile/shotgun)||istype(I,/obj/item/weapon/gun/projectile/shotgun/shotta)||istype(I,/obj/item/weapon/gun/projectile/revolver/doublebarrel)||istype(I,/obj/item/weapon/gun/projectile/automatic/deagle))
+	else if(istype(I, /obj/item/weapon/gun/projectile/shotgun)||istype(I,/obj/item/weapon/gun/projectile/shotgun/shotta)||istype(I,/obj/item/weapon/gun/projectile/revolver/doublebarrel)||istype(I,/obj/item/weapon/gun/projectile/automatic/deagle))
 		taped = 0
 		shotgun++
 		state++
@@ -107,7 +107,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/gun/energy/plasma)||istype(I,/obj/item/weapon/gun/energy/plasma/pistol)||istype(I,/obj/item/weapon/gun/energy/plasma/rifle)||istype(I,/obj/item/weapon/gun/energy/tesla/taurail)||istype(I,/obj/item/weapon/gun/projectile/automatic/lascannon))
+	else if(istype(I, /obj/item/weapon/gun/energy/plasma)||istype(I,/obj/item/weapon/gun/energy/plasma/pistol)||istype(I,/obj/item/weapon/gun/energy/plasma/rifle)||istype(I,/obj/item/weapon/gun/energy/tesla/taurail)||istype(I,/obj/item/weapon/gun/projectile/automatic/lascannon))
 		taped = 0
 		plasma++
 		state++
@@ -115,7 +115,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/gun/energy/pulse_rifle/trifle)||istype(I,/obj/item/weapon/gun/energy/pulse_rifle/tpc)||istype(I,/obj/item/weapon/gun/projectile/burstcannon)||istype(I,/obj/item/weapon/gun/energy/pulse_rifle)||istype(I,/obj/item/weapon/gun/energy/taser))
+	else if(istype(I, /obj/item/weapon/gun/energy/pulse_rifle/trifle)||istype(I,/obj/item/weapon/gun/energy/pulse_rifle/tpc)||istype(I,/obj/item/weapon/gun/projectile/burstcannon)||istype(I,/obj/item/weapon/gun/energy/pulse_rifle)||istype(I,/obj/item/weapon/gun/energy/taser))
 		taped = 0
 		tau++
 		state++
@@ -123,7 +123,7 @@
 		qdel(I)
 		update_icon()
 		playsound(src, 'sound/machines/click.ogg', 25, 1)
-	if(istype(I, /obj/item/weapon/gun/magic/staff/misslelauncher))
+	else if(istype(I, /obj/item/weapon/gun/magic/staff/misslelauncher))
 		taped = 0
 		missle++
 		state++
