@@ -92,8 +92,8 @@ Zoanthropes
 	icon = 'icons/mob/tyranidsmedium.dmi'
 	name = "zoanthropes"
 	icon_state = "zoanthropes"
-	maxHealth = 300
-	health = 300
+	maxHealth = 200
+	health = 200
 	plasma_rate = 20
 	layer = 5
 	ventcrawler = 0
@@ -301,8 +301,8 @@ Warriors
 /mob/living/carbon/alien/humanoid/tyranid/warrior
 	name = "warrior"
 	icon_state = "warrior"
-	maxHealth = 325
-	health = 325
+	maxHealth = 250
+	health = 250
 	plasma_rate = 20
 	luminosity = 3
 	ventcrawler = 0
@@ -661,8 +661,8 @@ Lictor
 /mob/living/carbon/alien/humanoid/tyranid/lictor //Stealthy. Like all 'nids, also telepathic. Finally, they devour people's brains.
 	name = "lictor"
 	icon_state = "lictor"
-	maxHealth = 325
-	health = 325
+	maxHealth = 200
+	health = 200
 	var/speed_bonus = 2
 	var/lingual = 0
 	var/piercing = 0
