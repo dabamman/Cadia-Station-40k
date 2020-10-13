@@ -898,7 +898,7 @@ Lord Inquisitor Armor
 	can_toggle = 1
 	is_toggled = 1
 	slowdown = 1
-	armor = list(melee = 75, bullet = 75, laser = 75, energy = 90, bomb = 75, bio = 80, rad = 85)
+	armor = list(melee = 75, bullet = 60, laser = 70, energy = 80, bomb = 70, bio = 70, rad = 70)
 
 	verb/togglehood()
 		set name = "Toggle Hood"
