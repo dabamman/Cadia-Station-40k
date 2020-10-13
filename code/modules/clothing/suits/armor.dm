@@ -895,8 +895,6 @@ Lord Inquisitor Armor
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	blood_overlay_type = "armor"
-	can_toggle = 1
-	is_toggled = 1
 	slowdown = 1
 	armor = list(melee = 75, bullet = 60, laser = 70, energy = 80, bomb = 70, bio = 70, rad = 70)
 
