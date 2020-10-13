@@ -254,6 +254,11 @@
 	ammo_type = /obj/item/ammo_casing/lasgun
 	caliber = "laser"
 	max_ammo = 150
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/lasgunmag/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[ammo_count() ? "150" : "0"]"
 
 /obj/item/ammo_box/magazine/evmag
 	name = "lasgun power pack"
@@ -262,21 +267,38 @@
 	ammo_type = /obj/item/ammo_casing/lasgun
 	caliber = "laser"
 	max_ammo = 150
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/evmag/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[ammo_count() ? "150" : "0"]"
 
 /obj/item/ammo_box/magazine/stutterlas
-	name = "Stutter Lasgun Mag"
+	name = "modified lasgun power pack"
+	desc = "A small, portable capacitor power pack fit for a lasgun. The overheating safety setting seems to have been tampered with."
 	icon_state = "lasgunmag"
 	ammo_type = /obj/item/ammo_casing/stutterlas
 	caliber = "laser"
 	max_ammo = 150
 	multiple_sprites = 2
 
+/obj/item/ammo_box/magazine/stutterlas/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[ammo_count() ? "150" : "0"]"
+
 /obj/item/ammo_box/magazine/hellgunmag
-	name = "Hellgun Magazine"
-	icon_state = "lasgunmag"
+	name = "hellgun power pack"
+	desc = "A small, portable capacitor power pack of superior quality, fit for the Imperial Hellgun."
+	icon_state = "hellgunmag"
 	ammo_type = /obj/item/ammo_casing/hellgun
 	caliber = "laser"
 	max_ammo = 25
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/hellgunmag/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[ammo_count() ? "25" : "0"]"
+
 
 /obj/item/ammo_box/magazine/laspistolmag
 	name = "laspistol power pack"
@@ -285,6 +307,11 @@
 	ammo_type = /obj/item/ammo_casing/lasgun
 	caliber = "laser"
 	max_ammo = 80
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/laspistolmag/update_icon()
+	..()
+	icon_state = "[initial(icon_state)]-[ammo_count() ? "80" : "0"]"
 
 /obj/item/ammo_box/magazine/lascannonmag
 	name = "Lascannon Power Pack"

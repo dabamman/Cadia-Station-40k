@@ -856,7 +856,7 @@ Lord Inquisitor Armor
 	flags = THICKMATERIAL
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 50, rad = 50)
+	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 25, rad = 0)
 
 /obj/item/clothing/suit/armor/skitrobe
 	name = "skitarii robe"
@@ -869,3 +869,50 @@ Lord Inquisitor Armor
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 30, bio = 50, rad = 50)
+
+/obj/item/clothing/suit/armor/inquisitorcoat
+	name = "inquisitor's coat"
+	desc = "A thick black coat plated with holy silver and reinforced with a layer of flak-weave stitched into the inner lining. A necklace bearing an Inquisitorial Rosette hangs from the silver breastplate."
+	icon_state = "inqcoat"
+	item_state = "inqcoat"
+	blood_overlay_type = "coat"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	flags = THICKMATERIAL
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 65, bullet = 60, laser = 55, energy = 55, bomb = 60, bio = 30, rad = 0)
+
+/obj/item/clothing/suit/armor/inquisitorarmor
+	name = "inquisitor's power armor"
+	desc = "A suit of human-sized power armor inlaid with sanctified truesilver, actuated by electrically motivated fibre bundles to replicate and enhance the movements of the wearer. Pentagramatic wards, holy sigils, and the iconography of the Ordo Malleus have been engraved onto the armor to shield the wearer from the unholy denizens of the Warp."
+	icon_state = "inqarmor"
+	item_state = "inqarmor"
+	w_class = 4
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	flags = THICKMATERIAL | STOPSPRESSUREDMAGE
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	blood_overlay_type = "armor"
+	slowdown = 1
+	armor = list(melee = 75, bullet = 60, laser = 70, energy = 80, bomb = 70, bio = 70, rad = 70)
+
+	verb/togglehood()
+		set name = "Toggle Hood"
+		set category = "Object"
+		set src in usr
+		if(!usr.canmove || usr.stat || usr.restrained())
+			return
+		if(!can_toggle)
+			usr << "You can't toggle this hood."
+			return
+		if(src.is_toggled == 2)
+			src.icon_state = initial(icon_state)
+			usr << "You lower your hood."
+			src.is_toggled = 1
+		else
+			src.icon_state += "_hooded"
+			usr << "You raise your hood."
+			src.is_toggled = 2
+		usr.update_inv_wear_suit()
