@@ -41,8 +41,25 @@
 			Stress_rate = 0
 			spawn(300)
 				Stress_rate = 5
+	
+	if(istype(src, /mob/living/carbon/human/whitelisted/eldar/leader))
+		if(Stress < 80 && SoulStatus != "Stable")
+			SoulStatus = "Stable"
+			src << "\green Your soul becomes stable again."
 
-	if(istype(src, /mob/living/carbon/human/whitelisted/eldar))
+		if(Stress >= 100 && Stress < 140 && SoulStatus != "Unstable")
+			SoulStatus = "Unstable"
+			src << "\blue Your soul begins to become unstable."
+
+		if(Stress >= 140 && Stress < 180 && SoulStatus != "Highly Unstable")
+			SoulStatus = "Highly Unstable"
+			src << "\red Your soul is dangerously unstable."
+
+		if(Stress == 180 && SoulStatus != "Critical State")
+			SoulStatus = "Critical State"
+			src << "\red Your soul is in critical state!!"
+
+	else if(istype(src, /mob/living/carbon/human/whitelisted/eldar))
 		if(Stress < 80 && SoulStatus != "Stable")
 			SoulStatus = "Stable"
 			src << "\green Your soul becomes stable again."
@@ -94,15 +111,23 @@
 			src << "\red Your soul is in critical state!!"
 
 /mob/living/carbon/human/proc/psymode()
-	set name = "Psyker Mode (ON)"
+	set name = "Psyker Mode (OFF)"
 	set desc = "Using this puts you into a psychic mode, in this mode you can use your main spells."
 	set category = "Psy"
-	psymode = HUMANPSYKER
+	
+	if(istype(src, /mob/living/carbon/human/whitelisted/eldar/leader))
+		psymode = WARLOCK
+	
+	else if(istype(src, /mob/living/carbon/human/whitelisted/eldar))
+		psymode = ELDARPSYKER
 
-	if(istype(src, /mob/living/carbon/human/whitelisted))
+	else if(istype(src, /mob/living/carbon/human/whitelisted))
 		psymode = MUHREENPSYKER
 
-	if(psymode == HUMANPSYKER || psymode == MUHREENPSYKER)
+	else
+		psymode = HUMANPSYKER
+
+	if(psymode == HUMANPSYKER || psymode == MUHREENPSYKER || psymode == ELDARPSYKER)
 		src << "\blue Your mind starts casting the powers of the warp in your soul, you are able to use your main spells."
 	else
 		src << "\blue Your mind starts to cool down and you feel the warp pressure lifting from your soul, you arent able to use your main spells."
@@ -111,7 +136,7 @@
 	verbs -= /mob/living/carbon/human/proc/psymode
 
 /mob/living/carbon/human/proc/psymodeoff()
-	set name = "Psyker Mode (OFF)"
+	set name = "Psyker Mode (ON)"
 	set desc = "Using this will put off the psyker mode, making you unable to use your main spells."
 	set category = "Psy"
 	psymode = NON_PSYKERS
@@ -185,7 +210,7 @@
 		src << "\red Your soul cant handle that!"
 
 /mob/living/carbon/human/proc/quickening()
-	set name = "Mind Over Matter (300)"
+	set name = "Mind Over Matter"
 	set desc = "Use your psychich energy to stimulate reflexes to insane levels and negate all knockouts."
 	set category = "Psy"
 	if (stat != CONSCIOUS)

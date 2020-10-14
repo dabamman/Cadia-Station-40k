@@ -26,7 +26,7 @@
 	return 0
 
 /mob/living/carbon/human/RangedAttack(atom/A)
-	if(psymode == HUMANPSYKER || psymode == MUHREENPSYKER)
+	if(psymode == HUMANPSYKER || psymode == MUHREENPSYKER || psymode == WARLOCK)
 		if(a_intent == "harm")
 			lightningbolt(A)
 			return
