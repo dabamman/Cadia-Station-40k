@@ -33,10 +33,16 @@
 	item_state = "comissar2"
 
 /obj/item/clothing/shoes/swat/corsair
-	name = "corsair boots"
+	name = "Corsair boots"
 	desc = "Armored corsair boots."
 	icon_state = "corsair"
 	item_state = "corsair"
+
+/obj/item/clothing/shoes/swat/guardian
+	name = "Guardian boots"
+	desc = "Armored guardian boots."
+	icon_state = "guardian"
+	item_state = "guardian"
 
 /obj/item/clothing/shoes/DK
 	name = "Krieg low marching boots"

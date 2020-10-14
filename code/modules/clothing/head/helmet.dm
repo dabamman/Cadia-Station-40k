@@ -37,6 +37,19 @@
 	heat_protection = HEAD
 	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
 
+/obj/item/clothing/head/guardian
+	name = "Guardian Helmet"
+	desc = "A wraithbone helmet made in the forges of the Craftworld Biel-Tan"
+	icon_state = "guardian"
+	item_state = "guardian"
+	armor = list(melee = 55, bullet = 20, laser = 55, energy = 15, bomb = 25, bio = 70, rad = 70)
+	flags = HEADCOVERSEYES
+	flags_inv = HIDEEARS|HIDEEYES
+	cold_protection = HEAD
+	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
+	
 /obj/item/clothing/head/cadianhelmet
 	name = "Cadian Helmet"
 	desc = "Standard gear for a Cadian Shock Trooper."

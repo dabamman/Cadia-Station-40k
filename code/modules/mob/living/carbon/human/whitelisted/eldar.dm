@@ -33,9 +33,14 @@ Eldar
 		equip_to_slot_or_del(new /obj/item/weapon/powersword/eldar, slot_belt)
 		equip_to_slot_or_del(new /obj/item/weapon/card/id/syndicate, slot_wear_id)
 		equip_to_slot_or_del(new /obj/item/device/chameleon, slot_r_store)
+		maxStress += 180
+		verbs += /mob/living/carbon/human/proc/psymode
+		verbs += /mob/living/carbon/human/proc/telepath
+		verbs += /mob/living/carbon/human/proc/quickening
 		sleep(5)
 		regenerate_icons()
 		rename_self("[name]")
+
 /mob/living/carbon/human/whitelisted/eldar
 	name = "Unknown"
 	real_name = "Unknown"
@@ -80,13 +85,13 @@ Eldar
 				regenerate_icons()
 				rename_self("[name]")
 			if("Guardian") // Makes no difference right now; Waiting on sprites
-				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/corsair, slot_back)
+				equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/warlock, slot_back)
 				equip_to_slot_or_del(new /obj/item/device/radio/headset, slot_ears)
 				equip_to_slot_or_del(new /obj/item/clothing/under/color/lightpurple, slot_w_uniform)
-				equip_to_slot_or_del(new /obj/item/clothing/suit/space/rig/wizard/corsair, slot_wear_suit)
-				equip_to_slot_or_del(new /obj/item/clothing/head/eldarhat, slot_head)
+				equip_to_slot_or_del(new /obj/item/clothing/suit/space/rig/wizard/guardian, slot_wear_suit)
+				equip_to_slot_or_del(new /obj/item/clothing/head/guardian, slot_head)
 				equip_to_slot_or_del(new /obj/item/clothing/glasses/night, slot_glasses)
-				equip_to_slot_or_del(new /obj/item/clothing/shoes/swat/corsair, slot_shoes)
+				equip_to_slot_or_del(new /obj/item/clothing/shoes/swat/guardian, slot_shoes)
 				equip_to_slot_or_del(new /obj/item/device/webwaysummons, slot_in_backpack)
 				equip_to_slot_or_del(new /obj/item/device/soulstone, slot_in_backpack)
 				equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/scatapult, slot_in_backpack)
@@ -96,8 +101,8 @@ Eldar
 				equip_to_slot_or_del(new /obj/item/weapon/card/id/syndicate, slot_wear_id)
 				equip_to_slot_or_del(new /obj/item/device/chameleon, slot_r_store)
 				regenerate_icons()
-				rename_self("[name]") 
-		
+				rename_self("[name]")
+
 
 //lunge
 
@@ -208,4 +213,15 @@ Eldar
 				H << "<i><font color=#800080><b>[user.name]:</b> [message]</font></i>"
 				//return - technically you can add more aliens to a team
 	return ""
+
+	-------------------
+	if(s_cooldown)
+			src << "\red Ability is still charging..."
+			return
+		s_cooldown = 1
+		spawn(160) s_cooldown = 0 //Ten seconds unstealthed for every thirty stealthed. Still pretty robust, just not limitless.
+
+	''''''''''''''''''''
+	sleep (360)
+		cancel_stealth()
 	*/

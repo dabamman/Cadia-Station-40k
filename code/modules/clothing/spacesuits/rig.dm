@@ -188,6 +188,15 @@
 	armor = list(melee = 65, bullet = 50, laser = 50,energy = 70, bomb = 35, bio = 100, rad = 100)
 	allowed = list(/obj/item/weapon/gun/projectile/scatapult)
 
+/obj/item/clothing/suit/space/rig/wizard/guardian
+	name = "Guardian Armor"
+	desc = "A wraithbone, space-proof suit of eldar guardian armor."
+	item_state = "guardian"
+	icon_state = "guardian"
+	slowdown = 0
+	armor = list(melee = 65, bullet = 50, laser = 50,energy = 70, bomb = 35, bio = 100, rad = 100)
+	allowed = list(/obj/item/weapon/gun/projectile/scatapult)
+
 //Medical Rig
 /obj/item/clothing/head/helmet/space/rig/medical
 	name = "medical hardsuit helmet"
