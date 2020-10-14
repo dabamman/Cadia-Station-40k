@@ -375,7 +375,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_armory
 	name = "Bolt pistol crate"
 	contains = list(/obj/item/weapon/gun/projectile/automatic/bpistol,
 					/obj/item/weapon/gun/projectile/automatic/bpistol)
-	cost = 70
+	cost = 80
 	containername = "Bolt Pistol Crate"
 
 /datum/supply_packs/armory/bpistol_ammo
