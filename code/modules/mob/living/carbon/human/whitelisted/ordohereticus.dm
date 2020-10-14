@@ -265,6 +265,7 @@ Ordo Hereticus
 				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
 				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/clothing/suit/armor/inquisitorarmor, slot_l_hand)
 				var/obj/item/weapon/card/id/ordohereticus/ordomalleus/M = new
 				M.access = get_all_accesses()
 				M.access += get_centcom_access("Inquisitorial Acolyte")
@@ -306,6 +307,7 @@ Ordo Hereticus
 				equip_to_slot_or_del (new /obj/item/weapon/gun/projectile/automatic/bolter, slot_s_store)
 				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
 				equip_to_slot_or_del (new /obj/item/ammo_box/magazine/boltermag, slot_in_backpack)
+				equip_to_slot_or_del (new /obj/item/clothing/suit/armor/inquisitorarmor, slot_l_hand)
 				maxStress += 100
 				verbs += /mob/living/carbon/human/proc/psymode
 				verbs += /mob/living/carbon/human/proc/telepath
